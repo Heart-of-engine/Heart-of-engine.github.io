@@ -1,0 +1,2242 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <meta charset="utf-8">
+    <meta name="keywords" content="明日方舟干员立绘爬虫, Python,HTML">
+    <meta name="description" content="专注于数学与编程的完美结合,分享生活,分享知识">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>明日方舟干员立绘爬虫 | 李拙诚的个人博客</title>
+    <link rel="icon" type="image/png" href="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/olig48/resources@latest/css/loading.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"></head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    
+<div id="loading-box">
+    <div class="loading-left-bg"></div>
+    <div class="loading-right-bg"></div>
+    <div class="spinner-box">
+        <div class="configure-border-1">
+            <div class="configure-core"></div>
+        </div>
+        <div class="configure-border-2">
+            <div class="configure-core"></div>
+        </div>
+        <div class="loading-word">加载中...</div>
+    </div>
+</div>
+<script>
+    window.addEventListener('load', function(){
+        document.body.style.overflow = 'auto';
+        document.getElementById('loading-box').classList.add("loaded")
+    }, false)
+</script>
+
+    <header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">李拙诚的个人博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/tags" class="waves-effect waves-light">
+      
+      <i class="fas fa-tags" style="zoom: 0.6;"></i>
+      
+      <span>标签</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/archives" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>归档</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/entertainments" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-chess" style="zoom: 0.6;"></i>
+      
+      <span>娱乐</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/arknights">
+          
+          <i class="fas fa-chess-rook" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>明日方舟</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">李拙诚的个人博客</div>
+        <div class="logo-desc">
+            
+            专注于数学与编程的完美结合,分享生活,分享知识
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/tags" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-tags"></i>
+			
+			标签
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/archives" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			归档
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-chess"></i>
+			
+			娱乐
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/arknights " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-chess-rook" style="position: absolute;left:50px" ></i>
+			      
+		          <span>明日方舟</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Heart-of-engine" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/9.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">明日方舟干员立绘爬虫</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                    <div class="article-tag">
+                        
+                            <a href="/tags/%E7%88%AC%E8%99%AB/">
+                                <span class="chip bg-color">爬虫</span>
+                            </a>
+                        
+                            <a href="/tags/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+                                <span class="chip bg-color">文件处理</span>
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                    <div class="post-cate">
+                        <i class="fas fa-bookmark fa-fw icon-category"></i>
+                        
+                            <a href="/categories/Python/" class="post-category">
+                                Python
+                            </a>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2020-12-31
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-01-12
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    15.4k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    66 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <p>想要查看<a href="https://heart-of-engine.github.io/arknights/">明日方舟干员精二立绘、皮肤立绘</a>的可以直接点击该链接查看。（由于图片数目较多，该链接加载速度可能会较慢，大约30秒左右）</p>
+<h2 id="最初的想法"><a href="#最初的想法" class="headerlink" title="最初的想法"></a>最初的想法</h2><p>作为明日方舟的<del>高玩</del>，之前一直有做一个干员立绘爬虫的想法，但是却由于找不到链接的规律，任务无法进展下去。经过昨天与<a target="_blank" rel="noopener" href="https://noionion.top/">noionion</a>的讨论，我们发现PRTS图片的链接为URL转码，思路顿时清晰了起来。<br>这里以<a target="_blank" rel="noopener" href="http://prts.wiki/images/c/cf/%E7%AB%8B%E7%BB%98_%E5%B1%B1_2.png">干员“山”的立绘图片链接</a>为例<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E5%B1%B1%E5%9B%BE%E7%89%87%E9%93%BE%E6%8E%A5%E5%AF%B9%E6%AF%94.png" alt="“立绘_山_2”对应的图片链接"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/URL%E8%BD%AC%E7%A0%81.png" alt="对“立绘_山_2”文字进行URL转码"><br>我们可以发现，二者有惊人的一致性，也就是说：<a target="_blank" rel="noopener" href="http://prts.wiki/">PRTS</a>里立绘的图片链接为：<code>http://prts.wiki/images/*/**/“立绘_干员名”对应的URL转码 + &quot;_1/2/skin1/skin2/skin3&quot;（1为干员精英化0/1阶的默认皮肤，2为干员精英化2阶的默认皮肤，skin1/skin2/skin3为干员的其他皮肤）</code><br>所以只要输入所有方舟干员的名称，再让程序通过URL转码得到对应的图片链接，就可以爬取到对应链接的图片<br>PS：在编写代码时出现了一些小问题，首先是我发现URL转码需要用到新的库<code>urllib</code>，然而我现有的库里不包含它，之后我便准备使用命令行<code>conda</code>命令进行安装（相对于<code>pip</code>，<code>conda</code>命令安装的包质量有保障，版本没问题），却发现我上次装机后忘记重新安装<code>Miniconda</code>了，开始菜单里没有<code>Anaconda Prompt</code>，这就使得我无法使用<code>conda</code>命令，于是我又在网上查找<code>Anaconda Prompt</code>对应的文件位置）<br>后来我发现，python3.x版本已经把urllib库和urllib2库合并成了urllib库，anaconda3中集成了urllib，所以不用pip和conda命令安装，可以直接import urllib<br><del>虚惊一场</del><br>与此同时，在查找之前的方舟抽卡模拟器代码生成本代码的list时，我又发现了抽卡模拟器代码的问题：由于一直没有维护，其中<code>random.randint()</code>中的数值已经不符合list中的实际数值，即最大随机数已经不再是list中的最大位置，所以我又进行了一些更改。<br>代码原思路如下：</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import urllib
+import urllib.parse
+import random
+
+names &#x3D; [&quot;棘刺&quot;,&quot;铃兰&quot;,&quot;早露&quot;,&quot;温蒂&quot;,&quot;傀影&quot;,&quot;风笛&quot;,
+       &quot;刻俄柏&quot;,&quot;阿&quot;,&quot;煌&quot;,&quot;莫斯提马&quot;,&quot;麦哲伦&quot;,&quot;赫拉格&quot;,
+       &quot;黑&quot;,&quot;陈&quot;,&quot;斯卡蒂&quot;,&quot;银灰&quot;,&quot;塞雷娅&quot;,&quot;星熊&quot;,&quot;夜莺&quot;,
+       &quot;闪灵&quot;,&quot;安洁莉娜&quot;,&quot;艾雅法拉&quot;,
+       &quot;伊芙利特&quot;,&quot;推进之王&quot;,&quot;能天使&quot;,&quot;森蚺&quot;,&quot;史尔特尔&quot;,&quot;瑕光&quot;,&quot;泥岩&quot;,&quot;山&quot;,
+        &quot;安哲拉&quot;, &quot;贾维&quot;, &quot;蜜蜡&quot;, &quot;断崖&quot;, &quot;莱恩哈特&quot;,
+        &quot;月禾&quot;, &quot;石棉&quot;, &quot;极境&quot;, &quot;巫恋&quot;, &quot;慑砂&quot;,
+        &quot;惊蛰&quot;, &quot;吽&quot;, &quot;灰喉&quot;, &quot;布洛卡&quot;, &quot;苇草&quot;, &quot;槐琥&quot;,
+        &quot;送葬人&quot;, &quot;星极&quot;, &quot;格劳克斯&quot;, &quot;诗怀雅&quot;,
+        &quot;夜魔&quot;, &quot;食铁兽&quot;, &quot;狮蝎&quot;, &quot;空&quot;, &quot;真理&quot;, &quot;初雪&quot;,
+        &quot;崖心&quot;, &quot;守林人&quot;, &quot;普罗旺斯&quot;, &quot;可颂&quot;, &quot;雷蛇&quot;, &quot;红&quot;,
+        &quot;临光&quot;, &quot;华法琳&quot;, &quot;赫默&quot;, &quot;梅尔&quot;, &quot;天火&quot;, &quot;陨星&quot;, &quot;白金&quot;,
+        &quot;蓝毒&quot;, &quot;幽灵鲨&quot;, &quot;拉普兰德&quot;, &quot;芙兰卡&quot;, &quot;德克萨斯&quot;,
+        &quot;凛冬&quot;, &quot;白面鸮&quot;, &quot;燧石&quot;, &quot;四月&quot;, &quot;奥斯塔&quot;, &quot;絮雨&quot;, &quot;卡夫卡&quot;,
+        &quot;孑&quot;,&quot;卡达&quot;,&quot;波登可&quot;,&quot;刻刀&quot;,&quot;宴&quot;,&quot;安比尔&quot;,
+        &quot;梅&quot;,&quot;红云&quot;,&quot;桃金娘&quot;,&quot;苏苏洛&quot;,&quot;格雷伊&quot;,&quot;猎蜂&quot;,
+        &quot;阿消&quot;,&quot;地灵&quot;,&quot;深海色&quot;,&quot;古米&quot;,&quot;蛇屠箱&quot;,&quot;角峰&quot;,&quot;调香师&quot;,&quot;嘉维尔&quot;,
+        &quot;末药&quot;,&quot;暗索&quot;,&quot;砾&quot;,&quot;慕斯&quot;,&quot;霜叶&quot;,&quot;缠丸&quot;,&quot;杜宾&quot;,&quot;红豆&quot;,
+        &quot;清道夫&quot;,&quot;讯使&quot;,&quot;白雪&quot;,&quot;流星&quot;,&quot;杰西卡&quot;,&quot;远山&quot;,&quot;夜烟&quot;,&quot;酸糖&quot;,
+        &quot;芳汀&quot;,&quot;泡泡&quot;,&quot;杰克&quot;,&quot;松果&quot;,
+        &quot;斑点&quot;,&quot;泡普卡&quot;,&quot;月见夜&quot;,&quot;空爆&quot;,&quot;梓兰&quot;,&quot;史都华德&quot;,
+         &quot;安塞尔&quot;,&quot;芙蓉&quot;,&quot;炎熔&quot;,&quot;安德切尔&quot;,
+         &quot;克洛斯&quot;,&quot;米格鲁&quot;,&quot;卡缇&quot;,&quot;梅兰莎&quot;,&quot;翎羽&quot;,&quot;香草&quot;,&quot;芬&quot;]
+for index in range(len(names)): #len(names)为names列表的长度，我们从列表里逐一读取干员名称
+    ganyuan_name &#x3D; names[index] #ganyuan_name即为读取到的干员名称
+    print(urllib.parse.quote(ganyuan_name)) #这里将干员名称统一转为URL码形式
+string &#x3D; &quot;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;*&#x2F;**&#x2F;&quot; + urllib.parse.quote(ganyuan_name) #这里的string为链接的开头部分
+pass #后来舍弃了这种思路，所以就没有往下编写<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="思路的改变"><a href="#思路的改变" class="headerlink" title="思路的改变"></a>思路的改变</h2><p>昨天晚上<a target="_blank" rel="noopener" href="https://noionion.top/">noionion</a>自己做了一个<a target="_blank" rel="noopener" href="https://noionion.top/53760.html">明日方舟立绘的爬虫</a>（<del>他文章开头提到的那个朋友就是我</del>），看完他的代码，我意识到即使不知道干员的名称也可以制作爬虫，又正好遇上元旦放假有时间，便开始了自己的爬虫程序制作。<br>但是他的代码依然有一定的问题：一是爬取的图片有一定的重复度（比方说有时会有“立绘_干员名_skin2.png”和“立绘_干员名_skin2b.png”两个相同的图片出现），二是用此代码爬取的皮肤图片（即链接里有”skin”字样的图片）文件名内是不包含皮肤名的，只有skin1/2/3字样。<br><del>作为一名高玩，不能坐视不管</del><br>于是我准备在他代码的基础上做一定的修改。</p>
+<h2 id="开始编写！"><a href="#开始编写！" class="headerlink" title="开始编写！"></a>开始编写！</h2><p>根据他博客里的提示，我点击了PRTS里相应的按钮，进入了<a target="_blank" rel="noopener" href="http://prts.wiki/index.php?title=%E7%89%B9%E6%AE%8A:%E6%90%9C%E7%B4%A2&limit=500&offset=0&profile=images&search=%E7%AB%8B%E7%BB%98">立绘检索界面</a><br>但是由于以前只是学习过相应的慕课，几乎没有实战经验，所以这次遇到了大量问题，也查阅了很多资料<br>我先研究了noionion的代码<br><del>看不懂</del><br>所以我先复制过来跑了一遍代码，了解了基本的流程<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/noionion%E6%BA%90%E4%BB%A3%E7%A0%81.png" alt="noionion源码（大佬的代码果然强）"><br>之后查阅相关资料，给代码上了详尽的注释<br>（<del>晚上校园网不大好，手机流量费惊人</del>）<br>（代码中的“注”我会用图片解释说明）</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入程序需要的相应包（类似C语言中的# include&lt;stdio.h&gt; 、include&lt;math.h&gt;等）
+import os
+from bs4 import BeautifulSoup
+import time
+import requests
+
+# 设置爬取图片的网址
+url &#x3D; &quot;http:&#x2F;&#x2F;prts.wiki&#x2F;index.php?title&#x3D;%E7%89%B9%E6%AE%8A:%E6%90%9C%E7%B4%A2&amp;limit&#x3D;500&amp;offset&#x3D;0&amp;profile&#x3D;images&amp;search&#x3D;%E7%AB%8B%E7%BB%98&quot;
+
+
+# 重定义请求头，防止被网页发现是爬虫，从而进行反爬操作
+headers &#x3D; &#123;
+    &quot;Cookie&quot;: &quot;arccount62298&#x3D;c; arccount62019&#x3D;c&quot;,
+    &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36 Edg&#x2F;87.0.664.66&quot;
+&#125;
+
+
+# 爬取模块
+html &#x3D; requests.get(url, headers&#x3D;headers) ##  这里是使用requests函数用之前重定义的请求头读取网页信息
+### 测试代码
+### print(html.text)
+html.encoding &#x3D; html.apparent_encoding ## encoding是从http中的header中的charset字段中提取的编码方式，若header中没有charset字段则默认为ISO-8859-1编码模式，无法解析中文，这是乱码的原因,apparent_encoding会从网页的内容中分析网页编码的方式，所以apparent_encoding比encoding更加准确，当网页出现乱码时可以把apparent_encoding的编码格式赋值给encoding。
+soup &#x3D; BeautifulSoup(html.text, &quot;html.parser&quot;) ## &quot;html.parser&quot;是为了让解析速度快，容错率高，具体讲解网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;yangjiajia123456&#x2F;article&#x2F;details&#x2F;80959896
+list &#x3D; soup.find_all(class_ &#x3D; &quot;searchResultImage&quot;) ## 注一：对爬取页面进行“检查”操作后发现，所有的图片都包含在一个&lt;table class&#x3D;&quot;searchResultImage&quot;&gt;的class中，所以这行代码的作用是查找html代码中标签为class且值为searchRusultImgge的所有代码块
+### 测试代码
+### print(list)
+### 可以看到，相比于html.text，list里没有大量的网页配置信息，只有以图片名称为核心的列表
+
+
+# 检查项目文件夹下是否有“Arknights”这个文件夹，没有的话新建一个，有的话就不新建了
+try:
+    os.mkdir(&quot;.&#x2F;Arknights&quot;)  ##  注二：创建文件夹（这个文件夹创建在现在的项目文件夹里，比方说我这里用的是“明日方舟干员立绘项目”项目文件夹，爬取到的图片就存在“明日方舟干员立绘项目”项目文件夹下的“Arknights”文件夹里，该函数具体介绍网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_20412595&#x2F;article&#x2F;details&#x2F;82423764）
+except:
+    pass
+# 将当前工作路径切换为“Arknights”这个文件夹
+os.chdir(&quot;.&#x2F;Arknights&quot;) ##  切换当前工作路径（本函数的具体介绍在https:&#x2F;&#x2F;www.runoob.com&#x2F;python3&#x2F;python3-os-chdir.html）
+
+# 将最初读取的图片设置为第一张图片
+num&#x3D;0
+
+# 图片的爬取与本地存储
+for s in list:
+    string &#x3D; str(s) ## 将list中的单个元素化为字符串，再针对该字符串进行处理
+
+    namebegin &#x3D; string.find(&#39;title&#x3D;&quot;文件&#39;) ##  注三：显然，所有立绘的文件名开头都有“文件”二字，找到“文件”二字就相当于找到了立绘 注四：为了读取图片里包含的干员名，我们发现能够通过title入手，向后搜索名称，这里找到了&quot;title&quot;中&quot;t”的位置
+    nameend &#x3D; string[namebegin:].find(&#39;png&#39;) ## 找到图片文件名末尾的&quot;png&quot;字样对应的位置
+
+    # 我加入的测试代码
+    # print(namebegin)
+    # print(nameend)
+
+    name &#x3D; string[namebegin+10:namebegin+nameend+3] ## 取从”文件“到”png“之间的字段作为name参数（这里的namebegin+nameend就很灵性，其实根据上面的测试代码，nameend更有name长度的意义，所以结束位置才用的namebegin+nameend+3）
+    name &#x3D; name.replace(&quot; &quot;,&quot;_&quot;) ## 将图片文件名里的空格转为”_“
+
+    urlbegin &#x3D; string.find(&#39;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&#39;) ## 与上面找干员名称同理，找到链接对应的开头&quot;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&quot;，进而搜索链接名称
+    urlend &#x3D; string[urlbegin:].find(&#39;png&#39;) ## 与上面找干员名称同理，找到链接末尾的&#39;png&#39;，进而确定链接名称
+
+    imgurl &#x3D; &#39;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&#39; + string[urlbegin+24:urlbegin+urlend+3] ## 注五：图片链接都以&quot;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&quot;开头，这里是为了记录图片对应的链接
+
+    img &#x3D; requests.get(imgurl, headers&#x3D;headers).content
+    with open(name, &#39;wb&#39;) as f:
+        f.write(img) ## 将爬取到的图片写入“Arknights”这个文件夹里
+        num+&#x3D;1 ## num&#x3D;num+1，使得下面print函数里的”已爬取&#123;&#125;张“中的&#123;&#125;对应数值加1
+        print(&quot;已爬取&#123;&#125;张,图片名称为：&#123;&#125;，链接为：&#123;&#125;&quot;.format(num,name,imgurl)) ## 这里&#123;&#125;的意义与C语言中的&quot;%d&quot;&#x2F;&quot;%f&quot;十分相近，是从format()函数里读取对应位置的参数
+    # &quot;r&quot;--以读方式打开,只能读文件,如果文件不存在,会发生异常
+    # &quot;w&quot;--以写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件
+    # &quot;rb&quot;--以二进制读方式打开,只能读文件,如果文件不存在,会发生异常
+    # &quot;wb&quot;--以二进制写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件（所以这个程序就算运行多次，文件夹里也不会出现重复的立绘）
+    time.sleep(1) ## 休息一秒后爬取下一张图片，这个函数在链接https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45949073&#x2F;article&#x2F;details&#x2F;104989562里讲得很清楚<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/class.png" alt="代码中注一"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/Arknights%E6%96%87%E4%BB%B6%E5%A4%B9%E4%BD%8D%E7%BD%AE.png" alt="代码中注二"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%AB%8B%E7%BB%98%E6%96%87%E4%BB%B6%E5%90%8D%E5%BC%80%E5%A4%B4.png" alt="代码中注三"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/title.png" alt="代码中注四"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E5%9B%BE%E7%89%87%E5%AF%B9%E5%BA%94%E9%93%BE%E6%8E%A5.png" alt="代码中注五"></p>
+<h2 id="一些优化与改进"><a href="#一些优化与改进" class="headerlink" title="一些优化与改进"></a>一些优化与改进</h2><p>程序已经能爬取全部的干员立绘了（包括我之前遗漏的游戏二测凯尔希与肉鸽模式的四位干员），但是我还希望能够更进一步进行优化：<br>优化目标：<br>1.对于网站里的部分重复立绘，希望程序能够自动选择，不读取重复立绘<br>2.能够只爬取某一类型的立绘（比如只爬取干员皮肤、只爬取干员精二立绘等等）<br>3.对于干员皮肤立绘，希望程序不是输出skin1/2/3，而是输出对应的皮肤名<br>4.对于对应职业的干员，希望程序能够对其自动分组，相同职业的干员能够分入同一文件夹<br>这些优化目标的难度是逐级上升的，所以我们逐步进行：</p>
+<h3 id="目标一"><a href="#目标一" class="headerlink" title="目标一"></a>目标一</h3><p>我们首先浏览了原代码爬取到的图片，发现了以下立绘重复现象（这里抽取五处作为例子）：<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%AB%8B%E7%BB%98%E9%87%8D%E5%A4%8D1.png" alt="立绘重复1"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%AB%8B%E7%BB%98%E9%87%8D%E5%A4%8D2.png" alt="立绘重复2"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%AB%8B%E7%BB%98%E9%87%8D%E5%A4%8D3.png" alt="立绘重复3"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%AB%8B%E7%BB%98%E9%87%8D%E5%A4%8D4.png" alt="立绘重复4"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%AB%8B%E7%BB%98%E9%87%8D%E5%A4%8D5.png" alt="立绘重复5"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%AB%8B%E7%BB%98%E9%87%8D%E5%A4%8D6.png" alt="立绘重复6"><br>这样就找到了对应的规律：大部分立绘重复图片都是在文件名为“正常立绘文件名+部分字样”的图片里，这里的部分字样可能是”_V1”、’_V2”（干员华法琳独有）和”b”这三种，所以我们只需要截取部分文字即可。我们需要对<code>namebegin+10</code>位置的字符进行处理，<br>如果该字符是”1”或”2”，就说明该立绘为干员的默认皮肤，只需要读到本位即可；<br>如果该字符是”s”，就说明该立绘为干员其他皮肤，需要向后再读4位；<br>P：后来我发现还有一张名称为“精二立绘A”的能天使立绘<del>漏网之鱼</del><br>所以修改代码如下：</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入程序需要的相应包（类似C语言中的# include&lt;stdio.h&gt; 、include&lt;math.h&gt;等）
+import os
+from bs4 import BeautifulSoup
+import time
+import requests
+
+# 设置爬取图片的网址
+url &#x3D; &quot;http:&#x2F;&#x2F;prts.wiki&#x2F;index.php?title&#x3D;%E7%89%B9%E6%AE%8A:%E6%90%9C%E7%B4%A2&amp;limit&#x3D;500&amp;offset&#x3D;0&amp;profile&#x3D;images&amp;search&#x3D;%E7%AB%8B%E7%BB%98&quot;
+
+
+# 重定义请求头，防止被网页发现是爬虫，从而进行反爬操作
+headers &#x3D; &#123;
+    &quot;Cookie&quot;: &quot;arccount62298&#x3D;c; arccount62019&#x3D;c&quot;,
+    &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36 Edg&#x2F;87.0.664.66&quot;
+&#125;
+
+
+# 爬取模块
+html &#x3D; requests.get(url, headers&#x3D;headers) ##  这里是使用requests函数用之前重定义的请求头读取网页信息
+### 测试代码
+### print(html.text)
+html.encoding &#x3D; html.apparent_encoding ## encoding是从http中的header中的charset字段中提取的编码方式，若header中没有charset字段则默认为ISO-8859-1编码模式，无法解析中文，这是乱码的原因,apparent_encoding会从网页的内容中分析网页编码的方式，所以apparent_encoding比encoding更加准确，当网页出现乱码时可以把apparent_encoding的编码格式赋值给encoding。
+soup &#x3D; BeautifulSoup(html.text, &quot;html.parser&quot;) ## &quot;html.parser&quot;是为了让解析速度快，容错率高，具体讲解网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;yangjiajia123456&#x2F;article&#x2F;details&#x2F;80959896
+list &#x3D; soup.find_all(class_ &#x3D; &quot;searchResultImage&quot;) ## 注一：对爬取页面进行“检查”操作后发现，所有的图片都包含在一个&lt;table class&#x3D;&quot;searchResultImage&quot;&gt;的class中，所以这行代码的作用是查找html代码中标签为class且值为searchRusultImgge的所有代码块
+### 测试代码
+### print(list)
+### 可以看到，相比于html.text，list里没有大量的网页配置信息，只有以图片名称为核心的列表
+
+
+# 检查项目文件夹下是否有“Arknights”这个文件夹，没有的话新建一个，有的话就不新建了
+try:
+    os.mkdir(&quot;.&#x2F;Arknights&quot;)  ##  注二：创建文件夹（这个文件夹创建在现在的项目文件夹里，比方说我这里用的是“明日方舟干员立绘项目”项目文件夹，爬取到的图片就存在“明日方舟干员立绘项目”项目文件夹下的“Arknights”文件夹里，该函数具体介绍网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_20412595&#x2F;article&#x2F;details&#x2F;82423764）
+except:
+    pass
+# 将当前工作路径切换为“Arknights”这个文件夹
+os.chdir(&quot;.&#x2F;Arknights&quot;) ##  切换当前工作路径（本函数的具体介绍在https:&#x2F;&#x2F;www.runoob.com&#x2F;python3&#x2F;python3-os-chdir.html）
+
+# 将最初读取的图片设置为第一张图片
+num&#x3D;0
+
+# 测试用参数
+# num1 &#x3D; 0
+# num2 &#x3D; 0
+
+# 图片的爬取与本地存储
+for s in list:
+    string &#x3D; str(s) ## 将list中的单个元素化为字符串，再针对该字符串进行处理
+
+    namebegin &#x3D; string.find(&#39;title&#x3D;&quot;文件&#39;) ##  注三：显然，所有立绘的文件名开头都有“文件”二字，找到“文件”二字就相当于找到了立绘 注四：为了读取图片里包含的干员名，我们发现能够通过title入手，向后搜索名称，这里找到了&quot;title&quot;中&quot;t”的位置
+    # name_point_1 &#x3D; namebegin+12 ## 为了读取干员名称，我们这里找到第一个空格的位置name_point_1（这里空格刚好在namebegin后的第二格）
+    # name_point_2 &#x3D; string.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;) ## 这里找到第二个空格的位置name_point_2（本方法返回值远小于namebegin的数值，是错误的）
+    nameend &#x3D; string[namebegin:].find(&#39;png&#39;) ## 找到图片文件名末尾的&quot;png&quot;字样对应的位置
+
+    ## 测试代码
+    # print(namebegin)
+    # print(name_point_1)
+    # print(name_point_2)
+    # print(nameend)
+
+    ## 这里如果使用name_point_2 &#x3D; string.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;)，会显示位置为54，远小于namebegin的位置值，是错误的，所以用这种方法难以找到第二个空格的位置，所以我们将&quot;干员名 1&#x2F;2&#x2F;skin(b&#x2F;_V).png&quot;整体令为name1，再在name1里寻找空格位置
+    name1 &#x3D; string[namebegin+13:namebegin+nameend-1]
+    name1begin &#x3D; name1.find(&#39;&quot;干员名&quot;&#39;)
+    name1_point_1 &#x3D; name1begin
+    name1_point_2 &#x3D; name1.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;) ## 根据测试代码我们有，输出结果为-1，即name1[name1begin]对应于name1的最后一个字符
+
+    # 测试代码
+    print(name1) # 输出结果格式&quot;暗索 skin1 V1&quot;
+    # print(name1begin)
+    # print(name1[name1begin])
+    # print(name1_point_1)
+    # print(name1_point_2)
+
+    print(string[(namebegin+nameend-3):(namebegin+nameend-1)]) ## 本代码用来查看后两位并进行检验
+
+    if(string[namebegin+nameend-3:namebegin+nameend-1]&#x3D;&#x3D;&#39;V1&#39;): ## 若后两位为V1
+        # num1+&#x3D;1
+        # print(&#39;num1&#x3D;&#123;&#125;&#39;.format(num1))
+        name1 &#x3D; name1[:-3] ## 除去后三位&quot;空格+V1&quot;
+        name1 &#x3D; name1 + &#39;.png&#39; ## 取name1为文件名，再将&#39;png&#39;加在文件名后
+    elif(string[namebegin+nameend-2:namebegin+nameend-1]&#x3D;&#x3D;&#39;b&#39;): ## 若最后一位为b
+        # num2+&#x3D;1
+        # print(&#39;num2&#x3D;&#123;&#125;&#39;.format(num2))
+        name1 &#x3D; name1[:-1]  ## 除去最后一位&quot;b&quot;
+        name1 &#x3D; name1 + &#39;.png&#39; ## 取name1为文件名，再将&#39;png&#39;加在文件名后
+    else:
+        name1 &#x3D; name1 + &#39;.png&#39;
+
+    # 测试代码
+    # print(name1)
+
+    # 修改文件名称
+    name1 &#x3D; name1.replace(&quot; &quot;,&quot;_&quot;) ## 将图片文件名里的空格转为”_“
+
+    # 设置显示的链接名
+    urlbegin &#x3D; string.find(&#39;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&#39;) ## 与上面找干员名称同理，找到链接对应的开头&quot;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&quot;，进而搜索链接名称
+    urlend &#x3D; string[urlbegin:].find(&#39;png&#39;) ## 与上面找干员名称同理，找到链接末尾的&#39;png&#39;，进而确定链接名称
+    imgurl &#x3D; &#39;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&#39; + string[urlbegin+24:urlbegin+urlend+3] ## 注五：图片链接都以&quot;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&quot;开头，这里是为了记录图片对应的链接
+
+    # 爬取图片
+    img &#x3D; requests.get(imgurl, headers&#x3D;headers).content
+
+    # 图片写入本地文件夹
+    if((name1)!&#x3D;&quot;精二立绘A.png&quot;):# 为了不读取那一张”精二立绘A“图片，专门做了一个循环（其实直接寻找删除也可以）
+        with open(name1, &#39;wb&#39;) as f:
+            f.write(img) ## 将爬取到的图片写入“Arknights”这个文件夹里
+            num+&#x3D;1 ## num&#x3D;num+1，使得下面print函数里的”已爬取&#123;&#125;张“中的&#123;&#125;对应数值加1
+            print(&quot;已爬取&#123;&#125;张,图片名称为：&#123;&#125;，链接为：&#123;&#125;&quot;.format(num,name1,imgurl)) ## 这里&#123;&#125;的意义与C语言中的&quot;%d&quot;&#x2F;&quot;%f&quot;十分相近，是从format()函数里读取对应位置的参数
+        # &quot;r&quot;--以读方式打开,只能读文件,如果文件不存在,会发生异常
+        # &quot;w&quot;--以写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件
+        # &quot;rb&quot;--以二进制读方式打开,只能读文件,如果文件不存在,会发生异常
+        # &quot;wb&quot;--以二进制写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件（所以这个程序就算运行多次，文件夹里也不会出现重复的立绘）
+        time.sleep(1) ## 休息一秒后爬取下一张图片，这个函数在链接https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45949073&#x2F;article&#x2F;details&#x2F;104989562里讲得很清楚<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>运行代码，爬虫运行成功，且爬取到的图片没有重复！（注：只有四星以上的干员才有精英阶段二，可以解锁”_2”立绘，三星及以下干员无”_2”立绘）<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%9B%AE%E6%A0%87%E4%B8%80%E7%88%AC%E5%8F%96%E7%BB%93%E6%9E%9C.png" alt="爬取结果"><br><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/bv1Sf4y1C7AN">爬取中</a></p>
+<!-- vlog模块 --> 
+<div style="position: relative; padding: 30% 45%;"> 
+    <iframe style=" 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    left: 0; 
+    top: 0;" 
+    src="//player.bilibili.com/player.html?aid=80181162&bvid=BV1Sf4y1C7AN" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"> 
+    </iframe> 
+</div>
+
+<p>这里的视频插入参考了<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/hexo-vlog-page.html">itsNekoDeng的博客</a><br><del>斑点_1和斑点_skin1之间有些许不同，你能找出来吗？</del><br>经过一一核对，99%干员立绘均无重复，唯有极少数特殊干员（如阿米娅仅能在精二阶段后切换近卫形态，Pith、Sharp、Stormeye、Touch这四位是肉鸽模式干员，这五位干员的立绘1与立绘2重复），对这类极少数特殊情况我们手动处理即可，目标达成！</p>
+<p>后来经过与noionion的交谈，我发现代码可以更加更加简化，话不多说，下面放简化后的代码：<br>（最后在图片本地写入模块把前面讲到的五位特殊干员的重复图片给处理了）</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入程序需要的相应包（类似C语言中的# include&lt;stdio.h&gt; 、include&lt;math.h&gt;等）
+import os
+from bs4 import BeautifulSoup
+import time
+import requests
+
+# 设置爬取图片的网址
+url &#x3D; &quot;http:&#x2F;&#x2F;prts.wiki&#x2F;index.php?title&#x3D;%E7%89%B9%E6%AE%8A:%E6%90%9C%E7%B4%A2&amp;limit&#x3D;500&amp;offset&#x3D;0&amp;profile&#x3D;images&amp;search&#x3D;%E7%AB%8B%E7%BB%98&quot;
+
+
+# 重定义请求头，防止被网页发现是爬虫，从而进行反爬操作
+headers &#x3D; &#123;
+    &quot;Cookie&quot;: &quot;arccount62298&#x3D;c; arccount62019&#x3D;c&quot;,
+    &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36 Edg&#x2F;87.0.664.66&quot;
+&#125;
+
+
+# 爬取模块
+html &#x3D; requests.get(url, headers&#x3D;headers) ##  这里是使用requests函数用之前重定义的请求头读取网页信息
+### 测试代码
+### print(html.text)
+html.encoding &#x3D; html.apparent_encoding ## encoding是从http中的header中的charset字段中提取的编码方式，若header中没有charset字段则默认为ISO-8859-1编码模式，无法解析中文，这是乱码的原因,apparent_encoding会从网页的内容中分析网页编码的方式，所以apparent_encoding比encoding更加准确，当网页出现乱码时可以把apparent_encoding的编码格式赋值给encoding。
+soup &#x3D; BeautifulSoup(html.text, &quot;html.parser&quot;) ## &quot;html.parser&quot;是为了让解析速度快，容错率高，具体讲解网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;yangjiajia123456&#x2F;article&#x2F;details&#x2F;80959896
+list &#x3D; soup.find_all(class_ &#x3D; &quot;searchResultImage&quot;) ## 注一：对爬取页面进行“检查”操作后发现，所有的图片都包含在一个&lt;table class&#x3D;&quot;searchResultImage&quot;&gt;的class中，所以这行代码的作用是查找html代码中标签为class且值为searchRusultImgge的所有代码块
+### 测试代码
+### print(list)
+### 可以看到，相比于html.text，list里没有大量的网页配置信息，只有以图片名称为核心的列表
+
+
+# 检查项目文件夹下是否有“Arknights”这个文件夹，没有的话新建一个，有的话就不新建了
+try:
+    os.mkdir(&quot;.&#x2F;Arknights&quot;)  ##  注二：创建文件夹（这个文件夹创建在现在的项目文件夹里，比方说我这里用的是“明日方舟干员立绘项目”项目文件夹，爬取到的图片就存在“明日方舟干员立绘项目”项目文件夹下的“Arknights”文件夹里，该函数具体介绍网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_20412595&#x2F;article&#x2F;details&#x2F;82423764）
+except:
+    pass
+# 将当前工作路径切换为“Arknights”这个文件夹
+os.chdir(&quot;.&#x2F;Arknights&quot;) ##  切换当前工作路径（本函数的具体介绍在https:&#x2F;&#x2F;www.runoob.com&#x2F;python3&#x2F;python3-os-chdir.html）
+
+# 将最初读取的图片设置为第一张图片
+num&#x3D;0
+
+# 测试用参数
+# num1 &#x3D; 0
+# num2 &#x3D; 0
+
+# 图片的爬取与本地存储
+for s in list:
+    string &#x3D; str(s) ## 将list中的单个元素化为字符串，再针对该字符串进行处理
+
+    namebegin &#x3D; string.find(&#39;title&#x3D;&quot;文件&#39;) ##  注三：显然，所有立绘的文件名开头都有“文件”二字，找到“文件”二字就相当于找到了立绘 注四：为了读取图片里包含的干员名，我们发现能够通过title入手，向后搜索名称，这里找到了&quot;title&quot;中&quot;t”的位置
+    # name_point_1 &#x3D; namebegin+12 ## 为了读取干员名称，我们这里找到第一个空格的位置name_point_1（这里空格刚好在namebegin后的第二格）
+    # name_point_2 &#x3D; string.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;) ## 这里找到第二个空格的位置name_point_2（本方法返回值远小于namebegin的数值，是错误的）
+    nameend &#x3D; string[namebegin:].find(&#39;png&#39;) ## 找到图片文件名末尾的&quot;png&quot;字样对应的位置
+
+    ## 测试代码
+    # print(namebegin)
+    # print(name_point_1)
+    # print(name_point_2)
+    # print(nameend)
+
+    ## 这里如果使用name_point_2 &#x3D; string.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;)，会显示位置为54，远小于namebegin的位置值，是错误的，所以用这种方法难以找到第二个空格的位置，所以我们将&quot;干员名 1&#x2F;2&#x2F;skin(b&#x2F;_V).png&quot;整体令为name1，再在name1里寻找空格位置
+    name1 &#x3D; string[namebegin+13:namebegin+nameend-1]
+    name1begin &#x3D; name1.find(&#39;&quot;干员名&quot;&#39;)
+    name1_point_1 &#x3D; name1begin
+    name1_point_2 &#x3D; name1.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;) ## 根据测试代码我们有，输出结果为-1，即name1[name1begin]对应于name1的最后一个字符
+
+    # 测试代码
+    # print(name1) # 输出结果格式&quot;暗索 skin1 V1&quot;
+    # print(name1begin)
+    # print(name1[name1begin])
+    # print(name1_point_1)
+    # print(name1_point_2)
+
+    # print(string[(namebegin+nameend-3):(namebegin+nameend-1)]) ## 本代码用来查看后两位并进行检验
+
+    if(string[namebegin+nameend-3:namebegin+nameend-1]&#x3D;&#x3D;&#39;V1&#39;): ## 若后两位为V1
+        # num1+&#x3D;1
+        # print(&#39;num1&#x3D;&#123;&#125;&#39;.format(num1))
+        continue
+    elif(string[namebegin+nameend-2:namebegin+nameend-1]&#x3D;&#x3D;&#39;b&#39;): ## 若最后一位为b
+        # num2+&#x3D;1
+        # print(&#39;num2&#x3D;&#123;&#125;&#39;.format(num2))
+        continue
+    else:
+        name1 &#x3D; name1 + &#39;.png&#39;
+
+    # 测试代码
+    # print(name1)
+
+    # 修改文件名称
+    name1 &#x3D; name1.replace(&quot; &quot;,&quot;_&quot;) ## 将图片文件名里的空格转为”_“
+
+    # 设置显示的链接名
+    urlbegin &#x3D; string.find(&#39;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&#39;) ## 与上面找干员名称同理，找到链接对应的开头&quot;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&quot;，进而搜索链接名称
+    urlend &#x3D; string[urlbegin:].find(&#39;png&#39;) ## 与上面找干员名称同理，找到链接末尾的&#39;png&#39;，进而确定链接名称
+    imgurl &#x3D; &#39;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&#39; + string[urlbegin+24:urlbegin+urlend+3] ## 注五：图片链接都以&quot;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&quot;开头，这里是为了记录图片对应的链接
+
+    # 爬取图片
+    img &#x3D; requests.get(imgurl, headers&#x3D;headers).content
+
+    # 测试代码
+    # print(name1)
+
+    # 图片写入本地文件夹
+    if(name1!&#x3D;&#39;精二立绘A.png&#39; and name1!&#x3D;&#39;Pith_2.png&#39; and name1!&#x3D;&#39;Sharp_2.png&#39; and name1!&#x3D;&#39;Stormeye_2.png&#39; and name1!&#x3D;&#39;Touch_2.png&#39; and name1!&#x3D;&#39;阿米娅(近卫)_2.png&#39;):# 为了不读取”精二立绘A“与五位特殊干员（前面博文有说到）的图片，专门做了一个循环（其实爬取后再直接寻找删除也可以）
+        with open(name1, &#39;wb&#39;) as f:
+            f.write(img) ## 将爬取到的图片写入“Arknights”这个文件夹里
+            num+&#x3D;1 ## num&#x3D;num+1，使得下面print函数里的”已爬取&#123;&#125;张“中的&#123;&#125;对应数值加1
+            print(&quot;已爬取&#123;&#125;张,图片名称为：&#123;&#125;，链接为：&#123;&#125;&quot;.format(num,name1,imgurl)) ## 这里&#123;&#125;的意义与C语言中的&quot;%d&quot;&#x2F;&quot;%f&quot;十分相近，是从format()函数里读取对应位置的参数
+        # &quot;r&quot;--以读方式打开,只能读文件,如果文件不存在,会发生异常
+        # &quot;w&quot;--以写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件
+        # &quot;rb&quot;--以二进制读方式打开,只能读文件,如果文件不存在,会发生异常
+        # &quot;wb&quot;--以二进制写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件（所以这个程序就算运行多次，文件夹里也不会出现重复的立绘）
+        time.sleep(1) ## 休息一秒后爬取下一张图片，这个函数在链接https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45949073&#x2F;article&#x2F;details&#x2F;104989562里讲得很清楚<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这里简化了对”name1”变量的复杂处理，让代码清晰了很多。<br>上面的程序已经很好地满足我们的要求了，但后来我们又进行了一次优化，去除了上面的逻辑运算符，改用对列表进行硬处理：<br><del>原因是noionion大佬建议我对列表进行硬操作，而不是用!=这种逻辑运算符（说可能会炸，我慌的一批，所以就改了）</del></p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入程序需要的相应包（类似C语言中的# include&lt;stdio.h&gt; 、include&lt;math.h&gt;等）
+import os
+from bs4 import BeautifulSoup
+import time
+import requests
+
+# 设置爬取图片的网址
+url &#x3D; &quot;http:&#x2F;&#x2F;prts.wiki&#x2F;index.php?title&#x3D;%E7%89%B9%E6%AE%8A:%E6%90%9C%E7%B4%A2&amp;limit&#x3D;500&amp;offset&#x3D;0&amp;profile&#x3D;images&amp;search&#x3D;%E7%AB%8B%E7%BB%98&quot;
+
+
+# 重定义请求头，防止被网页发现是爬虫，从而进行反爬操作
+headers &#x3D; &#123;
+    &quot;Cookie&quot;: &quot;arccount62298&#x3D;c; arccount62019&#x3D;c&quot;,
+    &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36 Edg&#x2F;87.0.664.66&quot;
+&#125;
+
+
+# 爬取模块
+html &#x3D; requests.get(url, headers&#x3D;headers) ##  这里是使用requests函数用之前重定义的请求头读取网页信息
+### 测试代码
+### print(html.text)
+html.encoding &#x3D; html.apparent_encoding ## encoding是从http中的header中的charset字段中提取的编码方式，若header中没有charset字段则默认为ISO-8859-1编码模式，无法解析中文，这是乱码的原因,apparent_encoding会从网页的内容中分析网页编码的方式，所以apparent_encoding比encoding更加准确，当网页出现乱码时可以把apparent_encoding的编码格式赋值给encoding。
+soup &#x3D; BeautifulSoup(html.text, &quot;html.parser&quot;) ## &quot;html.parser&quot;是为了让解析速度快，容错率高，具体讲解网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;yangjiajia123456&#x2F;article&#x2F;details&#x2F;80959896
+list &#x3D; soup.find_all(class_ &#x3D; &quot;searchResultImage&quot;) ## 注一：对爬取页面进行“检查”操作后发现，所有的图片都包含在一个&lt;table class&#x3D;&quot;searchResultImage&quot;&gt;的class中，所以这行代码的作用是查找html代码中标签为class且值为searchRusultImgge的所有代码块
+### 测试代码
+### print(list)
+### 可以看到，相比于html.text，list里没有大量的网页配置信息，只有以图片名称为核心的列表
+
+
+# 检查项目文件夹下是否有“Arknights”这个文件夹，没有的话新建一个，有的话就不新建了
+try:
+    os.mkdir(&quot;.&#x2F;Arknights&quot;)  ##  注二：创建文件夹（这个文件夹创建在现在的项目文件夹里，比方说我这里用的是“明日方舟干员立绘项目”项目文件夹，爬取到的图片就存在“明日方舟干员立绘项目”项目文件夹下的“Arknights”文件夹里，该函数具体介绍网址为https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_20412595&#x2F;article&#x2F;details&#x2F;82423764）
+    ## 项目文件夹默认在代码存放的地方，如果你放在桌面，那后面生成的Arknights文件夹就在桌面
+except:
+    pass
+
+# 将当前工作路径切换为“Arknights”这个文件夹
+os.chdir(&quot;.&#x2F;Arknights&quot;) ##  切换当前工作路径（本函数的具体介绍在https:&#x2F;&#x2F;www.runoob.com&#x2F;python3&#x2F;python3-os-chdir.html）
+
+# 将最初读取的图片设置为第一张图片
+num&#x3D;0
+
+# 测试用参数
+# num1 &#x3D; 0
+# num2 &#x3D; 0
+
+# 图片的爬取与本地存储
+for s in list:
+    string &#x3D; str(s) ## 将list中的单个元素化为字符串，再针对该字符串进行处理
+
+    namebegin &#x3D; string.find(&#39;title&#x3D;&quot;文件&#39;) ##  注三：显然，所有立绘的文件名开头都有“文件”二字，找到“文件”二字就相当于找到了立绘 注四：为了读取图片里包含的干员名，我们发现能够通过title入手，向后搜索名称，这里找到了&quot;title&quot;中&quot;t”的位置
+    # name_point_1 &#x3D; namebegin+12 ## 为了读取干员名称，我们这里找到第一个空格的位置name_point_1（这里空格刚好在namebegin后的第二格）
+    # name_point_2 &#x3D; string.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;) ## 这里找到第二个空格的位置name_point_2（本方法返回值远小于namebegin的数值，是错误的）
+    nameend &#x3D; string[namebegin:].find(&#39;png&#39;) ## 找到图片文件名末尾的&quot;png&quot;字样对应的位置
+
+    ## 测试代码
+    # print(namebegin)
+    # print(name_point_1)
+    # print(name_point_2)
+    # print(nameend)
+
+    ## 这里如果使用name_point_2 &#x3D; string.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;)，会显示位置为54，远小于namebegin的位置值，是错误的，所以用这种方法难以找到第二个空格的位置，所以我们将&quot;干员名 1&#x2F;2&#x2F;skin(b&#x2F;_V).png&quot;整体令为name1，再在name1里寻找空格位置
+    name1 &#x3D; string[namebegin+13:namebegin+nameend-1]
+    name1begin &#x3D; name1.find(&#39;&quot;干员名&quot;&#39;)
+    name1_point_1 &#x3D; name1begin
+    name1_point_2 &#x3D; name1.find(&#39; 1&#39;or&#39; 2&#39;or&#39; skin&#39;) ## 根据测试代码我们有，输出结果为-1，即name1[name1begin]对应于name1的最后一个字符
+
+    # 测试代码
+    # print(name1) # 输出结果格式&quot;暗索 skin1 V1&quot;
+    # print(name1begin)
+    # print(name1[name1begin])
+    # print(name1_point_1)
+    # print(name1_point_2)
+
+    # print(string[(namebegin+nameend-3):(namebegin+nameend-1)]) ## 本代码用来查看后两位并进行检验
+
+    if(string[namebegin+nameend-3:namebegin+nameend-1] in [&#39;V1&#39;,&#39;V2&#39;]): ## 若后两位为V1或V2
+        # num1+&#x3D;1
+        # print(&#39;num1&#x3D;&#123;&#125;&#39;.format(num1))
+        continue
+    elif(string[namebegin+nameend-2:namebegin+nameend-1]&#x3D;&#x3D;&#39;b&#39;): ## 若最后一位为b
+        # num2+&#x3D;1
+        # print(&#39;num2&#x3D;&#123;&#125;&#39;.format(num2))
+        continue
+    else:
+        name1 &#x3D; name1 + &#39;.png&#39;
+
+    # 测试代码
+    # print(name1)
+
+    # 修改文件名称
+    name1 &#x3D; name1.replace(&quot; &quot;,&quot;_&quot;) ## 将图片文件名里的空格转为”_“
+
+    # 设置显示的链接名
+    urlbegin &#x3D; string.find(&#39;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&#39;) ## 与上面找干员名称同理，找到链接对应的开头&quot;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&quot;，进而搜索链接名称
+    urlend &#x3D; string[urlbegin:].find(&#39;png&#39;) ## 与上面找干员名称同理，找到链接末尾的&#39;png&#39;，进而确定链接名称
+    imgurl &#x3D; &#39;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&#39; + string[urlbegin+24:urlbegin+urlend+3] ## 注五：图片链接都以&quot;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&quot;开头，这里是为了记录图片对应的链接
+
+    # 爬取图片
+    img &#x3D; requests.get(imgurl, headers&#x3D;headers).content
+
+    # 测试代码
+    # print(name1)
+
+    # 图片写入本地文件夹
+    if(name1 not in [&#39;精二立绘A.png&#39;,&#39;Pith_2.png&#39;,&#39;Sharp_2.png&#39;,&#39;Stormeye_2.png&#39;,&#39;Touch_2.png&#39;,&#39;阿米娅(近卫)_2.png&#39;]): ## 为了不读取”精二立绘A“与五位特殊干员（前面博文有说到）的图片，专门做了一个循环（其实爬取后再直接寻找删除也可以）
+    ## 经过noionion大佬的提示，or的优先级不高，所以不能用if(name1 !&#x3D; &#39;精二立绘A.png&#39; or &#39;Pith_2.png&#39; or &#39;Sharp_2.png&#39; or &#39;Stormeye_2.png&#39; or &#39;Touch_2.png&#39; or &#39;阿米娅(近卫)_2.png&#39;):写法
+    ## 他还建议我对列表进行硬操作，而不是用!&#x3D;这种逻辑运算符（说可能会炸，我慌的一批）
+    ## 所以我去除了if(name1 !&#x3D; (&#39;精二立绘A.png&#39; or &#39;Pith_2.png&#39; or &#39;Sharp_2.png&#39; or &#39;Stormeye_2.png&#39; or &#39;Touch_2.png&#39; or &#39;阿米娅(近卫)_2.png&#39;))，改用全新的判断语法
+        with open(name1, &#39;wb&#39;) as f:
+            f.write(img) ## 将爬取到的图片写入“Arknights”这个文件夹里
+            num+&#x3D;1 ## num&#x3D;num+1，使得下面print函数里的”已爬取&#123;&#125;张“中的&#123;&#125;对应数值加1
+            print(&quot;已爬取&#123;&#125;张,图片名称为：&#123;&#125;，链接为：&#123;&#125;&quot;.format(num,name1,imgurl)) ## 这里&#123;&#125;的意义与C语言中的&quot;%d&quot;&#x2F;&quot;%f&quot;十分相近，是从format()函数里读取对应位置的参数
+        # &quot;r&quot;--以读方式打开,只能读文件,如果文件不存在,会发生异常
+        # &quot;w&quot;--以写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件
+        # &quot;rb&quot;--以二进制读方式打开,只能读文件,如果文件不存在,会发生异常
+        # &quot;wb&quot;--以二进制写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件（所以这个程序就算运行多次，文件夹里也不会出现重复的立绘）
+        time.sleep(1) ## 休息一秒后爬取下一张图片，这个函数在链接https:&#x2F;&#x2F;blog.csdn.net&#x2F;weixin_45949073&#x2F;article&#x2F;details&#x2F;104989562里讲得很清楚<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h3 id="目标二"><a href="#目标二" class="headerlink" title="目标二"></a>目标二</h3><p>对于刚刚我们获得的不重复的图片，其类型分为三种：<br>在文件名“立绘_干员名_”后：<br>1/2/skin1/skin2/skin3（1为干员精英化0/1阶的默认皮肤，2为干员精英化2阶的默认皮肤，skin1/skin2/skin3为干员的其他皮肤）<br>经过两天时间的不断修改与优化，最终代码如下：<br>注：本代码的机理为处理本地文件夹’Arknights’里的所有图片，所以需要先运行目标一的代码才能运行此代码。</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import os
+import random
+from PIL import Image
+
+# 这次编码中我尝试使用函数来进行编程，三个&#39;def&#39;对应于三个函数
+def file_name(file_dir): ## 定义一个以文件夹名称为自变量的函数，之后可以直接调用，该函数的作用是扫描出.&#x2F;Arknights文件夹里的所有立绘文件名
+    L &#x3D; []
+    for root, dirs, files in os.walk(file_dir):
+        ## os.walk()函数
+        ## top 是你所要遍历的目录的地址, 返回的是一个三元组(root,dirs,files)。
+        ## root 所指的是当前正在遍历的这个文件夹的本身的地址
+        ## dirs 是一个 list ，内容是该文件夹中所有的目录的名字(不包括子目录)
+        ## files 同样是 list , 内容是该文件夹中所有的文件(不包括子目录)
+        for file in files:
+            # 测试代码
+            # print(os.path.splitext(file)[0])
+            # print(os.path.splitext(file)[1])
+            if os.path.splitext(file)[1] &#x3D;&#x3D; &#39;.png&#39;:
+                L.append(os.path.join(root, file))
+    n &#x3D; len(L) ## 读取L列表的长度
+    # 测试代码
+    # print(type(file_name(file_dir)))
+    ## 这里若是用return L,n，返回的是一个元组（tuple），其中的两个元素分别为列表L和数值n，若是用return L，返回的是一个列表
+    return L ## 注意这里返回的是一个列表，不能采用return L,n + for i in file_name(file_dir).n:方式，会报错
+
+
+def search(file_dir): ## 该函数能够在文件夹中搜索对应的精英0&#x2F;1阶段，精英二阶段以及皮肤各自对应的立绘及其对应位置的i值
+    ## 匹配文件名列表
+    L_1 &#x3D; [] ## 精英0&#x2F;1阶段（五位特殊干员：阿米娅、Pith、Sharp、Stormeye、Touch除外）立绘文件名列表
+    L_2 &#x3D; [] ## 精英二阶段立绘文件名列表
+    L_skin &#x3D; [] ## 皮肤立绘文件名列表
+    L_error &#x3D; [] ## 读取错误的立绘名列表
+
+    ## 匹配文件对应位置列表
+    L_1_i &#x3D; [] ## 记录匹配图片对应i值的列表
+    L_2_i &#x3D; []
+    L_skin_i &#x3D; []
+    L_error_i &#x3D; []
+
+    ## 匹配文件数目列表
+    n_1 &#x3D; 0 ## 精英阶段一立绘数
+    n_2 &#x3D; 0 ## 精英阶段二立绘数
+    n_skin &#x3D; 0 ## 皮肤立绘数
+    n_error &#x3D; 0 ## 读取错误的立绘数
+    for i in range(len(file_name(file_dir))): ## 这里不能用for i in int(file_name(file_dir)[1])，详见链接https:&#x2F;&#x2F;blog.csdn.net&#x2F;qq_41888799&#x2F;article&#x2F;details&#x2F;82223362
+        if(&#39;skin&#39; in file_name(file_dir)[i]): ## 先检索皮肤立绘，否则如果先检索精英阶段立绘，skin1&#x2F;2中也包含1&#x2F;2，使得检索结果不准确
+            n_skin +&#x3D; 1
+            settlementskin_1 &#x3D; L_skin.append(file_name(file_dir)[i]) ## 向“皮肤立绘文件名列表”中加入该文件名
+            settlementskin_2 &#x3D; L_skin_i.append(i) ## 向“匹配文件对应位置列表”中加入文件名在所有文件名中的位置
+        elif(&#39;1&#39; in file_name(file_dir)[i]): ## 再检索精英0&#x2F;1阶立绘
+            n_1 +&#x3D; 1
+            settlement1_1 &#x3D; L_1.append(file_name(file_dir)[i]) ## 向“精英0&#x2F;1阶段（五位特殊干员：阿米娅、Pith、Sharp、Stormeye、Touch除外）立绘文件名列表”中加入该文件名
+            settlement1_2 &#x3D; L_1_i.append(i)
+        elif(&#39;2&#39; in file_name(file_dir)[i]): ## 再检索精英2阶立绘
+            n_2 +&#x3D; 1
+            settlement2_1 &#x3D; L_2.append(file_name(file_dir)[i]) ## 向“精英二阶段立绘文件名列表”中加入该文件名
+            settlement2_2 &#x3D; L_2_i.append(i)
+        else: ## 这里其实可以去除，目的是为了检查是否有读取错误的图片：
+            n_error +&#x3D; 1
+            settlementerror_1 &#x3D; L_error.append(file_name(file_dir)[i]) ## 向“读取错误的立绘名列表”中加入该文件名
+            settlementerror_2 &#x3D; L_error_i.append(i)
+        i +&#x3D; 1 ## 这里不能使用C语言中的i++&#x2F;++i，因为Python中的数字类型是不可变数据，当变量值发生改变时，会新申请一块内存赋值为新值，然后将变量指向新的内存地址。而在C语言中，i指向的内存地址并不会发生改变，而是改变内存的内容。详见链接https:&#x2F;&#x2F;blog.csdn.net&#x2F;elvirangel&#x2F;article&#x2F;details&#x2F;102743249
+    # 测试代码
+    # print(L_1)
+    # print(L_2)
+    # print(L_skin)
+    # print(L_error)
+    # print(n_1) # 184（这里及以下三个数字为截至2020年1月2日我们按照目标一的代码爬取到的图片分组后各组内图片的数目，后期由于游戏会更新，立绘数目也会更新，再运行该代码下列数字也会更新，所以请不要以此为准检验自己的代码是否正确
+    # print(n_2) # 149
+    # print(n_skin) # 94
+    # print(n_error) # 0
+    return L_1_i,L_2_i,L_skin_i,L_1,L_2,L_skin
+
+
+def createdocument(path): ## 该函数能够创建文件夹，让其包含各自对应分类的图片
+    # 去除首位空格
+    path &#x3D; path.strip()
+    # 去除尾部 \ 符号
+    path &#x3D; path.rstrip(&quot;\\&quot;)
+
+    # 判断路径是否存在
+    # 存在     True
+    # 不存在   False
+    isExists &#x3D; os.path.exists(path)
+
+    # 判断结果
+    if not isExists:
+        # 如果不存在该目录则创建目录
+        # 创建目录操作函数
+        os.makedirs(path)
+        # print(path + &#39; 创建成功&#39;)
+        return True
+    else:
+        # 如果目录存在则不创建，并提示目录已存在
+        # print(path + &#39; 目录已存在&#39;)
+        return False
+
+
+def transferPictures(file_dir, nowpath, newpath): ## 将文件夹下的不同类别的文件夹中的部分图片转移到另一个文件夹下的相同类别的文件夹下，并删除原文件夹中的相应图片（类似于剪切）
+    a &#x3D; search(file_dir)[3] ## 用新列表a来保存search返回的列表L_1，使之后的程序运行效率增加
+    b &#x3D; search(file_dir)[4] ## 用新列表b来保存search返回的列表L_2，使之后的程序运行效率增加
+    c &#x3D; search(file_dir)[5] ## 用新列表c来保存search返回的列表L_skin，使之后的程序运行效率增加
+    # print(a)
+    # print(newpath)
+    num_1 &#x3D; 0
+    num_2 &#x3D; 0
+    num_skin &#x3D; 0
+
+    for i in range(len(a)): ## 遍历a中所有的元素（精英化一阶情况）
+        imgname &#x3D; a[i]  ## 我们发现如果使用n &#x3D; search(&#39;.&#x2F;Arknights&#39;)[1][i]，代码速度会很慢，这是由于若使用该函数，程序就会再执行一次search函数，很影响程序效率，使用我们使用新列表a来保存search返回的列表L_1
+        ## 我们发现imgname1为“.&#x2F;Arknights\W_2.png”格式，所以需要进行一些处理
+        imgname &#x3D; imgname.strip(file_dir) + &#39;ng&#39; ## 不能使用imgname &#x3D; imgname.strip(&#39;.&#x2F;Arknights&#39;)代码，因为.strip()函数对字符串的操作是：只要头尾包含有指定字符序列中的字符就删除，而&#39;.&#x2F;Arknights&#39;中含有字符&#39;n&#39;、&#39;g&#39;会导致imgname变为&#39;\W_2.p&#39;格式
+        imgname &#x3D; imgname.replace(&#39;\\&#39;,&#39;&#x2F;&#39;) ## 把&#39;\&#39;改为&#39;&#x2F;&#39;（文件路径最好不要既带&#39;&#x2F;&#39;又带&#39;\&#39;）
+        # print(&#39;imgname为&#123;&#125;&#39;.format(imgname))
+        imgpath &#x3D; nowpath + imgname ## 原位置
+        newimgpath &#x3D; newpath[0] + imgname ## 准备放入的位置
+        # print(&#39;imgpath为&#123;&#125;&#39;.format(imgpath))
+        # print(&#39;newimgpath为&#123;&#125;&#39;.format(newimgpath))
+        if not os.path.exists(newimgpath):  ## 如果该根目录newimgpath不存在,建立一个这样的根目录，否则会出现FileNotFoundError: [Errno 2] No such file or directory: &#39;.&#x2F;精英化二阶立绘\\W_2.png&#39;报错
+            img &#x3D; Image.new(&#39;RGB&#39;, (800, 1280), (255, 255, 255))
+            img.save(&#39;newimgpath&#39;, &#39;PNG&#39;) ## 创建一个新的png文件，用于写入原图片
+        im &#x3D; Image.open(imgpath)  ## 打开该文件路径进行写入
+        im.save(newimgpath) ## 写入图片
+        os.remove(imgpath) ## 转移完后删除原图片
+        ## 使用close()函数无法关闭，原因是Image没有close()函数
+        fp &#x3D; open(&#39;newimgpath&#39;, &#39;rb&#39;)
+        img &#x3D; Image.open(fp)
+        fp.close()
+        num_1 +&#x3D; 1  ## num&#x3D;num+1，使得下面print函数里的”精英化一阶立绘已移动&#123;&#125;张“中的&#123;&#125;对应数值加1
+        print(&#39;精英化一阶立绘已移动&#123;&#125;张，图片名称为：&#123;&#125;&#39;.format(num_1,imgname.strip(&#39;&#x2F;&#39;)))
+
+    for i in range(len(b)): ## 遍历a中所有的元素（精英化一阶情况）
+        imgname &#x3D; b[i]  ## 我们发现如果使用n &#x3D; search(&#39;.&#x2F;Arknights&#39;)[1][i]，代码速度会很慢，这是由于若使用该函数，程序就会再执行一次search函数，很影响程序效率，使用我们使用新列表a来保存search返回的列表L_2
+        ## 我们发现imgname1为“.&#x2F;Arknights\W_2.png”格式，所以需要进行一些处理
+        imgname &#x3D; imgname.strip(file_dir) + &#39;ng&#39; ## 不能使用imgname &#x3D; imgname.strip(&#39;.&#x2F;Arknights&#39;)代码，因为.strip()函数对字符串的操作是：只要头尾包含有指定字符序列中的字符就删除，而&#39;.&#x2F;Arknights&#39;中含有字符&#39;n&#39;、&#39;g&#39;会导致imgname变为&#39;\W_2.p&#39;格式
+        imgname &#x3D; imgname.replace(&#39;\\&#39;,&#39;&#x2F;&#39;)
+        # print(&#39;imgname为&#123;&#125;&#39;.format(imgname))
+        imgpath &#x3D; nowpath + imgname ## 原位置
+        newimgpath &#x3D; newpath[1] + imgname ## 准备放入的位置
+        # print(&#39;imgpath为&#123;&#125;&#39;.format(imgpath))
+        # print(&#39;newimgpath为&#123;&#125;&#39;.format(newimgpath))
+        if not os.path.exists(newimgpath):  ## 如果该根目录newimgpath不存在,建立一个这样的根目录，否则会出现FileNotFoundError: [Errno 2] No such file or directory: &#39;.&#x2F;精英化二阶立绘\\W_2.png&#39;报错
+            img &#x3D; Image.new(&#39;RGB&#39;, (800, 1280), (255, 255, 255))
+            img.save(&#39;newimgpath&#39;, &#39;PNG&#39;) ## 创建一个新的png文件，用于写入原图片
+        im &#x3D; Image.open(imgpath)  ## 打开该文件路径进行写入
+        im.save(newimgpath) ## 写入图片
+        os.remove(imgpath) ## 转移完后删除原图片
+        ## 使用close()函数无法关闭，原因是Image没有close()函数
+        fp &#x3D; open(&#39;newimgpath&#39;, &#39;rb&#39;)
+        img &#x3D; Image.open(fp)
+        fp.close()
+        num_2 +&#x3D; 1  ## num&#x3D;num+1，使得下面print函数里的”精英化二阶立绘已移动&#123;&#125;张“中的&#123;&#125;对应数值加1
+        print(&#39;精英化二阶立绘已移动&#123;&#125;张，图片名称为：&#123;&#125;&#39;.format(num_2,imgname.strip(&#39;&#x2F;&#39;)))
+
+    for i in range(len(c)): ## 遍历a中所有的元素（精英化一阶情况）
+        imgname &#x3D; c[i]  ## 我们发现如果使用n &#x3D; search(&#39;.&#x2F;Arknights&#39;)[1][i]，代码速度会很慢，这是由于若使用该函数，程序就会再执行一次search函数，很影响程序效率，使用我们使用新列表a来保存search返回的列表L_1
+        ## 我们发现imgname1为“.&#x2F;Arknights\W_2.png”格式，所以需要进行一些处理
+        imgname &#x3D; imgname.strip(file_dir) + &#39;ng&#39; ## 不能使用imgname &#x3D; imgname.strip(&#39;.&#x2F;Arknights&#39;)代码，因为.strip()函数对字符串的操作是：只要头尾包含有指定字符序列中的字符就删除，而&#39;.&#x2F;Arknights&#39;中含有字符&#39;n&#39;、&#39;g&#39;会导致imgname变为&#39;\W_2.p&#39;格式
+        imgname &#x3D; imgname.replace(&#39;\\&#39;,&#39;&#x2F;&#39;)
+        # print(&#39;imgname为&#123;&#125;&#39;.format(imgname))
+        imgpath &#x3D; nowpath + imgname ## 原位置
+        newimgpath &#x3D; newpath[2] + imgname ## 准备放入的位置
+        # print(&#39;imgpath为&#123;&#125;&#39;.format(imgpath))
+        # print(&#39;newimgpath为&#123;&#125;&#39;.format(newimgpath))
+        if not os.path.exists(newimgpath):  ## 如果该根目录newimgpath不存在,建立一个这样的根目录，否则会出现FileNotFoundError: [Errno 2] No such file or directory: &#39;.&#x2F;精英化二阶立绘\\W_2.png&#39;报错
+            img &#x3D; Image.new(&#39;RGB&#39;, (800, 1280), (255, 255, 255))
+            img.save(&#39;newimgpath&#39;, &#39;PNG&#39;) ## 创建一个新的png文件，用于写入原图片
+        im &#x3D; Image.open(imgpath)  ## 打开该文件路径进行写入
+        im.save(newimgpath) ## 写入图片
+        os.remove(imgpath) ## 转移完后删除原图片
+        ## 使用close()函数无法关闭，原因是Image没有close()函数
+        fp &#x3D; open(&#39;newimgpath&#39;, &#39;rb&#39;)
+        img &#x3D; Image.open(fp)
+        fp.close()
+        num_skin +&#x3D; 1  ## num&#x3D;num+1，使得下面print函数里的”皮肤立绘已移动&#123;&#125;张“中的&#123;&#125;对应数值加1
+        print(&#39;皮肤立绘已移动&#123;&#125;张，图片名称为：&#123;&#125;&#39;.format(num_skin,imgname.strip(&#39;&#x2F;&#39;)))
+
+# 测试代码
+# print(file_name(&#39;.&#x2F;Arknights&#39;))
+# print(search(&#39;.&#x2F;Arknights&#39;))
+# print(search(&#39;.&#x2F;Arknights&#39;)[4]) ## 爬取到的精二阶段立绘在全立绘列表中所在的位置号列表
+
+# 定义要创建的目录
+newpath &#x3D; [&#39;.&#x2F;精英化一阶立绘&#39;, &#39;.&#x2F;精英化二阶立绘&#39;, &#39;.&#x2F;皮肤立绘&#39;]
+# 调用函数createdocument(path)创建目录
+for i in range(len(newpath)): ## 按照上述列表中元素的顺序创建三个文件夹
+    createdocument(newpath[i])
+
+# 转移图片位置
+settlement &#x3D; transferPictures(&#39;.&#x2F;Arknights&#39;,&#39;.&#x2F;Arknights&#39;,[&#39;.&#x2F;精英化一阶立绘&#39;,&#39;.&#x2F;精英化二阶立绘&#39;,&#39;.&#x2F;皮肤立绘&#39;]) ## 这里的newpath有三种可能，我们以列表形式将其输入函数<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/bv1zt4y167Fx">移动中</a></p>
+<!-- vlog模块 --> 
+<div style="position: relative; padding: 30% 45%;"> 
+    <iframe style=" 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    left: 0; 
+    top: 0;" 
+    src="//player.bilibili.com/player.html?aid=80181162&bvid=bv1zt4y167Fx" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"> 
+    </iframe> 
+</div>
+
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%B2%BE%E8%8B%B1%E5%8C%96%E4%B8%80%E9%98%B6.png" alt="精英化一阶"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%B2%BE%E8%8B%B1%E5%8C%96%E4%BA%8C%E9%98%B6.png" alt="精英化二阶"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%9A%AE%E8%82%A4.png" alt="皮肤"><br>noionion也写了一段代码，仅用77行代码就完成了我上面198行代码所能完成的事（其中还包含很多空行），只不过他是在线处理（爬取下图片时就进行分类），而我是离线处理（对图片文件夹进行处理）<br><del>因为我做过爬虫了，就想做个文件处理的代码了解一下新领域</del><br>下面是代码的实际效果：<br>下面贴上他的代码：（经过他本人允许）</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import os
+from bs4 import BeautifulSoup
+import time
+import requests
+
+url &#x3D; &quot;http:&#x2F;&#x2F;prts.wiki&#x2F;index.php?title&#x3D;%E7%89%B9%E6%AE%8A:%E6%90%9C%E7%B4%A2&amp;limit&#x3D;500&amp;offset&#x3D;0&amp;profile&#x3D;images&amp;search&#x3D;%E7%AB%8B%E7%BB%98&quot;
+
+headers &#x3D; &#123;
+    &quot;Cookie&quot;: &quot;arccount62298&#x3D;c; arccount62019&#x3D;c&quot;,
+    &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (Windows NT 10.0; Win64; x64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;87.0.4280.88 Safari&#x2F;537.36 Edg&#x2F;87.0.664.66&quot;
+&#125;
+
+html &#x3D; requests.get(url, headers&#x3D;headers)
+html.encoding &#x3D; html.apparent_encoding
+soup &#x3D; BeautifulSoup(html.text, &quot;html.parser&quot;)
+
+list &#x3D; soup.find_all(class_ &#x3D; &quot;searchResultImage&quot;)
+
+try:
+    os.mkdir(&quot;.&#x2F;Arknights&quot;)  ##  创建文件夹
+except:
+    pass
+
+os.chdir(&quot;.&#x2F;Arknights&quot;)
+
+try:
+    os.mkdir(&quot;.&#x2F;skin&quot;)
+except:
+    pass
+
+try:
+    os.mkdir(&quot;.&#x2F;1&quot;)
+except:
+    pass
+
+try:
+    os.mkdir(&quot;.&#x2F;2&quot;)
+except:
+    pass
+
+num&#x3D;0
+
+for s in list:
+    string &#x3D; str(s)
+
+    namebegin &#x3D; string.find(&#39;title&#x3D;&quot;文件&#39;)
+    nameend &#x3D; string[namebegin:].find(&#39;png&#39;)
+
+    # print(string[namebegin+7:namebegin+nameend+3])
+
+    name &#x3D; string[namebegin+10:namebegin+nameend+3]
+    name &#x3D; name.replace(&quot; &quot;,&quot;_&quot;)
+
+    if name.find(&quot;b&quot;) !&#x3D; -1 or name.find(&quot;V&quot;) !&#x3D;-1 or name.find(&#39;立绘A&#39;) !&#x3D; -1: continue
+
+    urlbegin &#x3D; string.find(&#39;data-src&#x3D;&quot;&#x2F;images&#x2F;thumb&#x2F;&#39;)
+    urlend &#x3D; string[urlbegin:].find(&#39;png&#39;)
+
+    # print(string[urlbegin+24:urlbegin+urlend+3])
+
+    imgurl &#x3D; &#39;http:&#x2F;&#x2F;prts.wiki&#x2F;images&#x2F;&#39; + string[urlbegin+24:urlbegin+urlend+3]
+
+    # print(name, imgurl)
+
+    if name.find(&quot;_skin&quot;) !&#x3D; -1: os.chdir(&#39;.&#x2F;skin&#39;)
+    elif name.find(&quot;_1&quot;) !&#x3D; -1: os.chdir(&#39;.&#x2F;1&#39;)
+    elif name.find(&quot;_2&quot;) !&#x3D; -1: os.chdir(&#39;.&#x2F;2&#39;)
+
+    img &#x3D; requests.get(imgurl, headers&#x3D;headers).content
+    with open(name, &#39;wb&#39;) as f:
+        f.write(img)
+        num+&#x3D;1
+        print(&quot;已爬取&#123;&#125;张,图片名称为：&#123;&#125;，链接为：&#123;&#125;&quot;.format(num,name,imgurl))
+
+    os.chdir(&quot;..&quot;)
+
+    time.sleep(1)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以看到，他非常精妙地用三行简短的判断语句</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">if name.find(&quot;_skin&quot;) !&#x3D; -1: os.chdir(&#39;.&#x2F;skin&#39;)
+elif name.find(&quot;_1&quot;) !&#x3D; -1: os.chdir(&#39;.&#x2F;1&#39;)
+elif name.find(&quot;_2&quot;) !&#x3D; -1: os.chdir(&#39;.&#x2F;2&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>替换了之前复杂的三大段判断</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">for i in range(len(a)): ## 遍历a中所有的元素（精英化一阶情况）
+    imgname &#x3D; a[i]  ## 我们发现如果使用n &#x3D; search(&#39;.&#x2F;Arknights&#39;)[1][i]，代码速度会很慢，这是由于若使用该函数，程序就会再执行一次search函数，很影响程序效率，使用我们使用新列表a来保存search返回的列表L_1
+    ## 我们发现imgname1为“.&#x2F;Arknights\W_2.png”格式，所以需要进行一些处理
+    imgname &#x3D; imgname.strip(file_dir) + &#39;ng&#39; ## 不能使用imgname &#x3D; imgname.strip(&#39;.&#x2F;Arknights&#39;)代码，因为.strip()函数对字符串的操作是：只要头尾包含有指定字符序列中的字符就删除，而&#39;.&#x2F;Arknights&#39;中含有字符&#39;n&#39;、&#39;g&#39;会导致imgname变为&#39;\W_2.p&#39;格式
+    imgname &#x3D; imgname.replace(&#39;\\&#39;,&#39;&#x2F;&#39;) ## 把&#39;\&#39;改为&#39;&#x2F;&#39;（文件路径最好不要既带&#39;&#x2F;&#39;又带&#39;\&#39;）
+    # print(&#39;imgname为&#123;&#125;&#39;.format(imgname))
+    imgpath &#x3D; nowpath + imgname ## 原位置
+    newimgpath &#x3D; newpath[0] + imgname ## 准备放入的位置
+    # print(&#39;imgpath为&#123;&#125;&#39;.format(imgpath))
+    # print(&#39;newimgpath为&#123;&#125;&#39;.format(newimgpath))
+    if not os.path.exists(newimgpath):  ## 如果该根目录newimgpath不存在,建立一个这样的根目录，否则会出现FileNotFoundError: [Errno 2] No such file or directory: &#39;.&#x2F;精英化二阶立绘\\W_2.png&#39;报错
+        img &#x3D; Image.new(&#39;RGB&#39;, (800, 1280), (255, 255, 255))
+        img.save(&#39;newimgpath&#39;, &#39;PNG&#39;) ## 创建一个新的png文件，用于写入原图片
+    im &#x3D; Image.open(imgpath)  ## 打开该文件路径进行写入
+    im.save(newimgpath) ## 写入图片
+    os.remove(imgpath) ## 转移完后删除原图片
+    ## 使用close()函数无法关闭，原因是Image没有close()函数
+    fp &#x3D; open(&#39;newimgpath&#39;, &#39;rb&#39;)
+    img &#x3D; Image.open(fp)
+    fp.close()
+    num_1 +&#x3D; 1  ## num&#x3D;num+1，使得下面print函数里的”精英化一阶立绘已移动&#123;&#125;张“中的&#123;&#125;对应数值加1
+    print(&#39;精英化一阶立绘已移动&#123;&#125;张，图片名称为：&#123;&#125;&#39;.format(num_1,imgname.strip(&#39;&#x2F;&#39;)))
+for i in range(len(b)): ## 遍历a中所有的元素（精英化一阶情况）
+    imgname &#x3D; b[i]  ## 我们发现如果使用n &#x3D; search(&#39;.&#x2F;Arknights&#39;)[1][i]，代码速度会很慢，这是由于若使用该函数，程序就会再执行一次search函数，很影响程序效率，使用我们使用新列表a来保存search返回的列表L_2
+    ## 我们发现imgname1为“.&#x2F;Arknights\W_2.png”格式，所以需要进行一些处理
+    imgname &#x3D; imgname.strip(file_dir) + &#39;ng&#39; ## 不能使用imgname &#x3D; imgname.strip(&#39;.&#x2F;Arknights&#39;)代码，因为.strip()函数对字符串的操作是：只要头尾包含有指定字符序列中的字符就删除，而&#39;.&#x2F;Arknights&#39;中含有字符&#39;n&#39;、&#39;g&#39;会导致imgname变为&#39;\W_2.p&#39;格式
+    imgname &#x3D; imgname.replace(&#39;\\&#39;,&#39;&#x2F;&#39;)
+    # print(&#39;imgname为&#123;&#125;&#39;.format(imgname))
+    imgpath &#x3D; nowpath + imgname ## 原位置
+    newimgpath &#x3D; newpath[1] + imgname ## 准备放入的位置
+    # print(&#39;imgpath为&#123;&#125;&#39;.format(imgpath))
+    # print(&#39;newimgpath为&#123;&#125;&#39;.format(newimgpath))
+    if not os.path.exists(newimgpath):  ## 如果该根目录newimgpath不存在,建立一个这样的根目录，否则会出现FileNotFoundError: [Errno 2] No such file or directory: &#39;.&#x2F;精英化二阶立绘\\W_2.png&#39;报错
+        img &#x3D; Image.new(&#39;RGB&#39;, (800, 1280), (255, 255, 255))
+        img.save(&#39;newimgpath&#39;, &#39;PNG&#39;) ## 创建一个新的png文件，用于写入原图片
+    im &#x3D; Image.open(imgpath)  ## 打开该文件路径进行写入
+    im.save(newimgpath) ## 写入图片
+    os.remove(imgpath) ## 转移完后删除原图片
+    ## 使用close()函数无法关闭，原因是Image没有close()函数
+    fp &#x3D; open(&#39;newimgpath&#39;, &#39;rb&#39;)
+    img &#x3D; Image.open(fp)
+    fp.close()
+    num_2 +&#x3D; 1  ## num&#x3D;num+1，使得下面print函数里的”精英化二阶立绘已移动&#123;&#125;张“中的&#123;&#125;对应数值加1
+    print(&#39;精英化二阶立绘已移动&#123;&#125;张，图片名称为：&#123;&#125;&#39;.format(num_2,imgname.strip(&#39;&#x2F;&#39;)))
+for i in range(len(c)): ## 遍历a中所有的元素（精英化一阶情况）
+    imgname &#x3D; c[i]  ## 我们发现如果使用n &#x3D; search(&#39;.&#x2F;Arknights&#39;)[1][i]，代码速度会很慢，这是由于若使用该函数，程序就会再执行一次search函数，很影响程序效率，使用我们使用新列表a来保存search返回的列表L_1
+    ## 我们发现imgname1为“.&#x2F;Arknights\W_2.png”格式，所以需要进行一些处理
+    imgname &#x3D; imgname.strip(file_dir) + &#39;ng&#39; ## 不能使用imgname &#x3D; imgname.strip(&#39;.&#x2F;Arknights&#39;)代码，因为.strip()函数对字符串的操作是：只要头尾包含有指定字符序列中的字符就删除，而&#39;.&#x2F;Arknights&#39;中含有字符&#39;n&#39;、&#39;g&#39;会导致imgname变为&#39;\W_2.p&#39;格式
+    imgname &#x3D; imgname.replace(&#39;\\&#39;,&#39;&#x2F;&#39;)
+    # print(&#39;imgname为&#123;&#125;&#39;.format(imgname))
+    imgpath &#x3D; nowpath + imgname ## 原位置
+    newimgpath &#x3D; newpath[2] + imgname ## 准备放入的位置
+    # print(&#39;imgpath为&#123;&#125;&#39;.format(imgpath))
+    # print(&#39;newimgpath为&#123;&#125;&#39;.format(newimgpath))
+    if not os.path.exists(newimgpath):  ## 如果该根目录newimgpath不存在,建立一个这样的根目录，否则会出现FileNotFoundError: [Errno 2] No such file or directory: &#39;.&#x2F;精英化二阶立绘\\W_2.png&#39;报错
+        img &#x3D; Image.new(&#39;RGB&#39;, (800, 1280), (255, 255, 255))
+        img.save(&#39;newimgpath&#39;, &#39;PNG&#39;) ## 创建一个新的png文件，用于写入原图片
+    im &#x3D; Image.open(imgpath)  ## 打开该文件路径进行写入
+    im.save(newimgpath) ## 写入图片
+    os.remove(imgpath) ## 转移完后删除原图片
+    ## 使用close()函数无法关闭，原因是Image没有close()函数
+    fp &#x3D; open(&#39;newimgpath&#39;, &#39;rb&#39;)
+    img &#x3D; Image.open(fp)
+    fp.close()
+    num_skin +&#x3D; 1  ## num&#x3D;num+1，使得下面print函数里的”皮肤立绘已移动&#123;&#125;张“中的&#123;&#125;对应数值加1
+    print(&#39;皮肤立绘已移动&#123;&#125;张，图片名称为：&#123;&#125;&#39;.format(num_skin,imgname.strip(&#39;&#x2F;&#39;)))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这让我意识到代码简洁度的重要性，好的代码不仅要功能强大，还要短小精悍，过长的代码不仅容易因为疏漏出现各种BUG，还会使代码变得晦涩难懂，让其他人难以下手。<br>以后我的代码会尽量优化，减少不必要的语句。</p>
+<h3 id="目标三"><a href="#目标三" class="headerlink" title="目标三"></a>目标三</h3><p>博主要准备期末考试啦！目标三和四留到期末考完吧！</p>
+<h2 id="参考网站"><a href="#参考网站" class="headerlink" title="参考网站"></a>参考网站</h2><p>爬虫区：<br><a target="_blank" rel="noopener" href="https://noionion.top/53760.html">新年前爬个明日方舟的立绘_noionion</a><br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/ecb4d54ad8cf">Requests库基本使用_简书</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/m0_37623485/article/details/88324296">BeautifulSoup4的介绍与使用_CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_40742223/article/details/105480901">爬虫(5)一文搞懂cookie原理和使用_CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ziyuzhao123/article/details/8811384">python中os.mkdir()函数_CSDN</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/masako/p/5868367.html">Python爬虫常用之HtmlParser_博客园</a></p>
+<p>文件处理区：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/niruoanhaoshiqintian/article/details/103194770">python 将文件夹中的部分图片转移到另一文件夹_CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_40679492/article/details/109538662">Python_day7_列表、遍历列表、循环函数、range_CSDN</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/monsteryang/p/6574550.html">Python创建目录文件夹_博客园</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_42183497/article/details/102517770">python批量创建文件夹和文件_CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/helloworld_Fly/article/details/85232222">Python os.walk 和python glob.glob使用_CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/AFishhhhhh/article/details/81018697">python5 : .strip() / os.path…() /reload(sys)_CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_34765864/article/details/91960706">python 字符串所有操作_CSDN</a><br>PS：在CSDN搜索时发现了一个11岁的大佬，<a target="_blank" rel="noopener" href="https://blog.csdn.net/Zhaosw2009">他的CSDN链接</a></p>
+<h2 id="新年祝愿"><a href="#新年祝愿" class="headerlink" title="新年祝愿"></a>新年祝愿</h2><p>最后，祝所有看到这篇文章的小伙伴们新年快乐！！！</p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Heart-of-engine</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://Heart-of-engine.github.io/posts/fccf.html">https://Heart-of-engine.github.io/posts/fccf.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Heart-of-engine</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            
+                                <a href="/tags/%E7%88%AC%E8%99%AB/">
+                                    <span class="chip bg-color">爬虫</span>
+                                </a>
+                            
+                                <a href="/tags/%E6%96%87%E4%BB%B6%E5%A4%84%E7%90%86/">
+                                    <span class="chip bg-color">文件处理</span>
+                                </a>
+                            
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+        line-height: 38px;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
+            <div class="card">
+                <a href="/posts/b39e.html">
+                    <div class="card-image">
+                        
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/7.jpg" class="responsive-img" alt="xlrd包处理.xlsx文件报错处理小Tip">
+                        
+                        <span class="card-title">xlrd包处理.xlsx文件报错处理小Tip</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-01-04
+                        </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E5%B0%8F%E8%B4%B4%E5%A3%AB/">
+                        <span class="chip bg-color">小贴士</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/5509.html">
+                    <div class="card-image">
+                        
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/18.jpg" class="responsive-img" alt="2020年自己敲的一些丢人代码">
+                        
+                        <span class="card-title">2020年自己敲的一些丢人代码</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2020-12-29
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-bookmark fa-fw icon-category"></i>
+                            
+                            <a href="/categories/Python/" class="post-category">
+                                    Python
+                                </a>
+                            
+                            
+                        </span>
+                    </div>
+                </div>
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%95%B0%E6%8D%AE%E5%A4%84%E7%90%86/">
+                        <span class="chip bg-color">数据处理</span>
+                    </a>
+                    
+                    <a href="/tags/%E5%9B%BE%E5%83%8F%E5%A4%84%E7%90%86/">
+                        <span class="chip bg-color">图像处理</span>
+                    </a>
+                    
+                    <a href="/tags/%E7%88%AC%E8%99%AB/">
+                        <span class="chip bg-color">爬虫</span>
+                    </a>
+                    
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Heart-of-engine</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">25.8k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "23";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Heart-of-engine" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub:Heart-of-engine" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1055302133@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我:1055302133@qq.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1055302133" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1055302133" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://blog.csdn.net/weixin_50000392" class="tooltipped" target="_blank" data-tooltip="关注我的CSDN: https://blog.csdn.net/weixin_50000392" data-position="top" data-delay="50">
+        <i class="fab fa-csdn">C</i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <!--动态线条背景-->
+    <script type="text/javascript"
+    color="122 103 238" opacity='1.0' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>
