@@ -561,14 +561,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    4.3k
+                    4.8k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    20 分
+                    23 分
                 </div>
                 
 
@@ -837,7 +837,48 @@ for k in range(0,30,1):
             table3.write(k+1,4,label &#x3D; &#39;已打卡&#39;)#写入打卡情况
 
 table2.save(r&quot;C:\Users\Administrator\Desktop\每日班级打卡统计\自习打卡EXCEL文件\群内打卡信息-&quot;+today_Year+&quot;年&quot;+today_month+&quot;月&quot;+today_day+&quot;日&quot;+&quot;.xlsx&quot;)# 保存文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="自动读取年级挂科情况"><a href="#自动读取年级挂科情况" class="headerlink" title="自动读取年级挂科情况"></a>自动读取年级挂科情况</h3><p>原代码天机不可泄漏<del>其实是我找不到了OVO</del></p>
+<h3 id="自动读取年级挂科情况"><a href="#自动读取年级挂科情况" class="headerlink" title="自动读取年级挂科情况"></a>自动读取年级挂科情况</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入处理文件需要的包
+import xlrd
+import re # 正则表达式
+
+# 打开文件
+data &#x3D; xlrd.open_workbook(r&quot;C:\Users\李\Desktop\智育成绩读取\19级大一学年智育成绩排名（最终公示版）-程序读取版.xlsx&quot;) # 打开文件
+table1 &#x3D; data.sheets()[0] # 打开EXCEL文件的第一个工作表
+
+# 读取EXCEL表的行数列数(选中下述三行按&quot;CTRL+&#x2F;&quot;即可取消注释(Pycharm中))
+# nrows &#x3D; table1.nrows # 读取行数
+# ncols &#x3D; table1.ncols # 读取列数
+# print(&quot;行数:%d\n列数:%d&quot;%(nrows,ncols))
+
+# 读取课程名对应的列的数值
+# for i in range(0, 32):
+#     #print(table1.cell_value(1, i)) # 读取EXCEL中所有的列头
+#     if len(table1.cell_value(1, i)) &gt; 3: # 读取课程名对应的列的数值(注意最大的那个i&#x3D;31为&quot;智育成绩&quot;对应的列的数值)
+#         print(table1.cell_value(1, i))
+#         print(i)
+
+# 读取挂科的人数
+gua1, gua2, gua3, gua4 &#x3D; 0, 0, 0, 0 # 设置挂科读取初始人数为0
+pattern1 &#x3D; re.compile(r&#39;2019100401\d\d&#39;)
+pattern2 &#x3D; re.compile(r&#39;2019100402\d\d&#39;)
+pattern3 &#x3D; re.compile(r&#39;2019100403\d\d&#39;)
+pattern4 &#x3D; re.compile(r&#39;2019100404\d\d&#39;)
+for row in range(2, 114): # 初始行令为2
+    if int(table1.cell_value(row, 2)) &lt; 60 or int(table1.cell_value(row, 4)) &lt; 60 or int(table1.cell_value(row, 6)) &lt; 60 or int(table1.cell_value(row, 8)) &lt; 60 or int(table1.cell_value(row, 9)) &lt; 60 or int(table1.cell_value(row, 10)) &lt; 60 or int(table1.cell_value(row, 11)) &lt; 60 or int(table1.cell_value(row, 13)) &lt;60 or int(table1.cell_value(row, 15)) &lt; 60 or int(table1.cell_value(row, 17)) &lt; 60 or int(table1.cell_value(row, 19)) &lt; 60 or int(table1.cell_value(row, 21)) &lt; 60 or int(table1.cell_value(row, 23)) &lt; 60 or int(table1.cell_value(row, 25)) &lt; 60 or int(table1.cell_value(row, 27)) &lt; 60 or int(table1.cell_value(row, 29)) &lt; 60:
+        # print(table1.cell_value(row, 1)) # 打印全年级挂科学生的学号
+        if pattern1.match(table1.cell_value(row, 1)):
+            print(table1.cell_value(row, 1)) #打印一班挂科学生的学号
+        if pattern1.match(table1.cell_value(row, 1)):
+            gua1 &#x3D; gua1 + 1
+        elif re.match(pattern2, table1.cell_value(row, 1)):
+            gua2 &#x3D; gua2 + 1
+        elif re.match(pattern3, table1.cell_value(row, 1)):
+            gua3 &#x3D; gua3 + 1
+        elif re.match(pattern4, table1.cell_value(row, 1)):
+            gua4 &#x3D; gua4 + 1
+
+# 打印各班挂科的人数
+print(&quot;一班挂科人数为%d人 二班挂科人数为%d人 三班挂科人数为%d人 四班挂科人数为%d人&quot;%(gua1,gua2,gua3,gua4))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="代码五-与Designer-exe的初接触"><a href="#代码五-与Designer-exe的初接触" class="headerlink" title="代码五 与Designer.exe的初接触"></a>代码五 与Designer.exe的初接触</h2><p>这篇代码是我们的“Python概论与应用”小组作业，目的是使用给出的x与y的npy文件画出连接后的平滑曲线，我负责了大量的<del>抄写老师代码</del>工作，这是初始代码（因为初始代码很多是我<del>抄来</del>敲的，最终版大量优化是@<a target="_blank" rel="noopener" href="https://noionion.top/">noionion</a>做的，所以我在这里只放初始版的代码)<br><del>别问我为什么不参与最终版的制作，因为那节课我在重装系统</del></p>
 <h3 id="main-py文件"><a href="#main-py文件" class="headerlink" title="main.py文件"></a>main.py文件</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import sys
 from PyQt5.QtCore import *
@@ -1561,7 +1602,7 @@ class Ui_MainWindow(object):
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">25.8k</span>&nbsp;字
+                class="white-color">26.4k</span>&nbsp;字
             
             
             
@@ -1835,11 +1876,11 @@ $(function () {
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
     <script type="text/javascript" src="/js/fireworks.js"></script>
     
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
