@@ -240,9 +240,9 @@ mark {
     margin-bottom: 0;
 }
 
-.bg-color {
-    /*! background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%);
-}
+/**.bg-color {
+     background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); 
+} **/
 
 .text-color {
     color: #0f9d58 !important;
@@ -556,7 +556,7 @@ header .go-back i {
 }
 
 .bg-cover:before,
-.bg-cover:after {
+/**.bg-cover:after {
     position: absolute;
     z-index: 1;
     width: 100%;
@@ -565,7 +565,7 @@ header .go-back i {
     left: 0;
     top: 0;
     content: "";
-}
+}**/
 
 .bg-cover .container {
     position: relative;
