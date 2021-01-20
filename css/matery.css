@@ -241,8 +241,8 @@ mark {
 }
 
 /**.bg-color {
-     background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); 
-} **/
+        background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); 
+}**/
 
 .text-color {
     color: #0f9d58 !important;
@@ -557,14 +557,14 @@ header .go-back i {
 
 .bg-cover:before,
 /**.bg-cover:after {
-    position: absolute;
-    z-index: 1;
-    width: 100%;
-    height: 100%;
-    display: block;
-    left: 0;
-    top: 0;
-    content: "";
+        position: absolute;
+        z-index: 1;
+        width: 100%;
+        height: 100%;
+        display: block;
+        left: 0;
+        top: 0;
+        content: "";
 }**/
 
 .bg-cover .container {
