@@ -546,14 +546,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-20
+                    2021-01-21
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    540
+                    609
                 </div>
                 
 
@@ -592,7 +592,8 @@
 <h4 id="解决方案-2"><a href="#解决方案-2" class="headerlink" title="解决方案"></a>解决方案</h4><p>这里需要考虑抓取对象是否有防盗链，可以参考下面的链接<br><a target="_blank" rel="noopener" href="https://www.jianshu.com/p/0a1338db6cab">防盗链</a></p>
 <h3 id="图片上传图床后没有更新"><a href="#图片上传图床后没有更新" class="headerlink" title="图片上传图床后没有更新"></a>图片上传图床后没有更新</h3><h4 id="解决方案-3"><a href="#解决方案-3" class="headerlink" title="解决方案"></a>解决方案</h4><p>需要检查两张图片是否重名，如果重名需要在阿里云OSS处删除原有图像，再上传新图像</p>
 <h3 id="本博客明日方舟模块图片无法正常显示"><a href="#本博客明日方舟模块图片无法正常显示" class="headerlink" title="本博客明日方舟模块图片无法正常显示"></a>本博客明日方舟模块图片无法正常显示</h3><h4 id="报错信息-3"><a href="#报错信息-3" class="headerlink" title="报错信息"></a>报错信息</h4><p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%98%8E%E6%97%A5%E6%96%B9%E8%88%9F%E6%A8%A1%E5%9D%97%E6%97%A0%E6%B3%95%E6%98%BE%E7%A4%BA%E5%9B%BE%E7%89%871.png" alt="立绘无法正常显示，只能显示出懒加载图片"></p>
-<h4 id="解决方案-4"><a href="#解决方案-4" class="headerlink" title="解决方案"></a>解决方案</h4><p>目前我们已知的出现此问题的浏览器只有谷歌，这是因为谷歌浏览器为了安全考虑，将所有请求全部改为<code>https</code>开头，而<code>PRTS</code>由于经费有限，并没有采用较为昂贵的<code>https</code>连接方式，而是采用了<code>http</code>连接方式。<br>以能天使的精二立绘图片为例：<br>我们打开博客时，博客发出从<code>http://prts.wiki/images/1/19/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_2.png</code>抓取图片的请求，然而被谷歌浏览器强行转化为从<code>https://prts.wiki/images/1/19/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_2.png</code>抓取图片，导致图片无法正常显示，只有懒加载gif（小女孩）在不断跳动<br>注：最近大量人不再使用谷歌浏览器，就是因为谷歌做了很多强制性的改动，影响了很多用户的体验<br>但为什么我们在<code>PRTS</code>里直接浏览就能看到图片呢？这还有待我们探寻</p>
+<h4 id="解决方案-4"><a href="#解决方案-4" class="headerlink" title="解决方案"></a>解决方案</h4><p>目前我们已知的出现此问题的浏览器只有谷歌，这是因为谷歌浏览器为了安全考虑，将<code>https（Hyper Text Transfer Protocol over SecureSocket Layer 的缩写）</code>链接发出的所有请求全部改为<code>https</code>开头，而<code>PRTS</code>由于经费有限，并没有采用较为昂贵的<code>https</code>连接方式，而是采用了<code>http（超文本传输协议 HyperText Transfer Protocol 的缩写）</code>连接方式。<br>以能天使的精二立绘图片为例：<br>我们打开博客时，博客发出从<code>http://prts.wiki/images/1/19/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_2.png</code>抓取图片的请求，然而被谷歌浏览器强行转化为从<code>https://prts.wiki/images/1/19/%E7%AB%8B%E7%BB%98_%E8%83%BD%E5%A4%A9%E4%BD%BF_2.png</code>抓取图片，导致图片无法正常显示，只有懒加载gif（小女孩）在不断跳动<br>注：最近大量人不再使用谷歌浏览器，就是因为谷歌做了很多强制性的改动，影响了很多用户的体验<br>但为什么我们在<code>PRTS</code>里直接浏览就能看到图片呢？这还有待我们探寻</p>
+<p>注：1月21日更新<br>在1月20日绑定域名后，本问题解决，是由于我的域名为<code>http</code>链接，会按照<code>http</code>开头读取图片</p>
 
                 
             </div>
@@ -1119,7 +1120,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">27.7k</span>&nbsp;字
+                class="white-color">27.8k</span>&nbsp;字
             
             
             
@@ -1393,11 +1394,11 @@ $(function () {
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
     <script type="text/javascript" src="/js/fireworks.js"></script>
     
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 
 </html>
