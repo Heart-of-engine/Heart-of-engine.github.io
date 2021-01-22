@@ -546,14 +546,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-20
+                    2021-01-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.1k
+                    2.2k
                 </div>
                 
 
@@ -591,11 +591,11 @@
 <pre class="line-numbers language-git" data-language="git"><code class="language-git">npm install hexo-abbrlink --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>再在自己的站点配置文件中添加如下配置<br>注：<br>首先需要明白什么是站点配置文件，什么是主题配置文件，站点配置文件就是根目录下的配置文件，比如我的博客文件在<code>F:\blog\blog2\LZCblog1</code>下，那么站点配置文件就是<code>F:\blog\blog2\LZCblog1\_config.yml</code>，主题配置文件就在<code>F:\blog\blog2\LZCblog1\themes\hexo-theme-matery\_config.yml</code>里。</p>
 <p>另外注意，配置文件中的标点符号不要出现中文格式的标点符号，不然运行会出错。</p>
-<pre class="line-numbers language-none"><code class="language-none">abbrlink:
+<pre class="line-numbers language-md" data-language="md"><code class="language-md">abbrlink:
     alg: crc16   #算法： crc16(default) and crc32
     rep: hex     #进制： dec(default) and hex: dec #输出进制：十进制和十六进制，默认为10进制。丨dec为十进制，hex为十六进制<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>再将站点配置文件的<code>permalink</code>的值修改为：</p>
-<pre class="line-numbers language-none"><code class="language-none">permalink: posts&#x2F;:abbrlink.html  # 此处可以自己设置，也可以直接使用 :&#x2F;abbrlink<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<pre class="line-numbers language-md" data-language="md"><code class="language-md">permalink: posts&#x2F;:abbrlink.html  # 此处可以自己设置，也可以直接使用 :&#x2F;abbrlink<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>生成文章的链接格式就会是如下样例</p>
 <pre class="line-numbers language-none"><code class="language-none">crc16 &amp; hex
 https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;66c8.html
@@ -612,7 +612,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
 <h2 id="不蒜子统计问题"><a href="#不蒜子统计问题" class="headerlink" title="不蒜子统计问题"></a>不蒜子统计问题</h2><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/issues/592">chrome浏览器85版本之后关于不蒜子统计错误的问题</a></p>
 <h2 id="博文中插入视频"><a href="#博文中插入视频" class="headerlink" title="博文中插入视频"></a>博文中插入视频</h2><h3 id="目的-2"><a href="#目的-2" class="headerlink" title="目的"></a>目的</h3><p>之前想要在博客里展示视频全部需要设置一个超链接，访客点击后需要转入其他网站查看，非常不方便，在博文中直接插入视频可以大大节省访客们的时间，也符合我们对博客设计的要求</p>
 <h3 id="设置方式-2"><a href="#设置方式-2" class="headerlink" title="设置方式"></a>设置方式</h3><p>在博文<code>.md</code>文件内，插入以下代码(本代码指向我自己写的自动读取班级打卡情况表格，实际使用时仅需更改<code>src</code>行即可）：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;!-- vlog模块 --&gt; 
+<pre class="line-numbers language-md" data-language="md"><code class="language-md">&lt;!-- vlog模块 --&gt; 
 &lt;div style&#x3D;&quot;position: relative; padding: 30% 45%;&quot;&gt; 
     &lt;iframe style&#x3D;&quot; 
     position: absolute; 
@@ -629,7 +629,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
     &lt;&#x2F;iframe&gt; 
 &lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="视频清晰度问题"><a href="#视频清晰度问题" class="headerlink" title="视频清晰度问题"></a>视频清晰度问题</h3><p>在1月12日为明日方舟模块引入三大底部视频后，发现效果并不是很理想，究其原因是视频的清晰度太低导致视频模糊，于是我联系了本方法的创作者<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">itsNekoDeng</a>，他提出若想调整视频默认清晰度，可以在<code>src</code>引入路径最后加上<code>&amp;high_quality=1</code>（最高画质）或<code>&amp;high_quality=0</code>（最低画质）<br>那么上例的代码更改如下：</p>
-<pre class="line-numbers language-none"><code class="language-none">&lt;!-- vlog模块 --&gt; 
+<pre class="line-numbers language-md" data-language="md"><code class="language-md">&lt;!-- vlog模块 --&gt; 
 &lt;div style&#x3D;&quot;position: relative; padding: 30% 45%;&quot;&gt; 
     &lt;iframe style&#x3D;&quot; 
     position: absolute; 
@@ -653,11 +653,11 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
 <h3 id="设置方式-3"><a href="#设置方式-3" class="headerlink" title="设置方式"></a>设置方式</h3><p>参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/guixinchn/article/details/108185530">Hexo-matery主题性能优化</a>，文章里写得很清楚，这里就不再赘述。</p>
 <h2 id="封面图片前置颜色去除"><a href="#封面图片前置颜色去除" class="headerlink" title="封面图片前置颜色去除"></a>封面图片前置颜色去除</h2><h3 id="目的-5"><a href="#目的-5" class="headerlink" title="目的"></a>目的</h3><p>之前由于matery模板自带封面图片前置颜色，不仅十分绕眼，还占用加载资源，加载速度较慢。去除封面颜色后不仅能够清晰显示封面大图，还能加快博客加载速度，一举两得。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B22.jpg" alt="修改前"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B24.jpg" alt="修改后"></p>
 <h3 id="设置方式-4"><a href="#设置方式-4" class="headerlink" title="设置方式"></a>设置方式</h3><p>找到主题文件夹下的<code>source\css</code>文件夹，并找到里面的<code>matery.css</code>文件（我这里的文件路径是<code>F:\blog\blog2\LZCblog1\themes\hexo-theme-matery\source\css</code>），在两处进行修改：<br>第一处：<br>修改<code>bg-color</code>栏为</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;**.bg-color &#123;
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/**.bg-color &#123;
         background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); 
-&#125;**&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+&#125;**/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>第二处：<br>修改<code>bg-cover:after</code>栏为</p>
-<pre class="line-numbers language-none"><code class="language-none">&#x2F;**.bg-cover:after &#123;
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/**.bg-cover:after &#123;
         position: absolute;
         z-index: 1;
         width: 100%;
@@ -665,11 +665,13 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
         display: block;
         left: 0;
         top: 0;
-        content: &quot;&quot;;
-&#125;**&#x2F;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+        content: "";
+&#125;**/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>就可以显示高清封面大图啦！OVO<br>这里要特别感谢“随性”大佬给我的指引！（不然我还不会改）</p>
 <h2 id="博客标题屏幕自适应"><a href="#博客标题屏幕自适应" class="headerlink" title="博客标题屏幕自适应"></a>博客标题屏幕自适应</h2><h3 id="目的-6"><a href="#目的-6" class="headerlink" title="目的"></a>目的</h3><p>之前由于没有设置标题自适应，由于标题过长，出现了换行的现象，十分影响美观，需要进行修改。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E6%A0%87%E9%A2%981.jpg" alt="标题自适应屏幕前"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E6%A0%87%E9%A2%982.jpg" alt="标题自适应屏幕后"></p>
 <h3 id="设置方式-5"><a href="#设置方式-5" class="headerlink" title="设置方式"></a>设置方式</h3><p>这里参考了<a target="_blank" rel="noopener" href="https://chen-shang.github.io/2019/08/15/ji-zhu-zong-jie/hexo/hexo-theme-matery-zhu-ti-you-hua/">hexo-theme-matery主题优化</a>。</p>
+<h2 id="背景图片加载速度优化"><a href="#背景图片加载速度优化" class="headerlink" title="背景图片加载速度优化"></a>背景图片加载速度优化</h2><h3 id="目的-7"><a href="#目的-7" class="headerlink" title="目的"></a>目的</h3><p>之前一直使用的是<code>Matery</code>原作者提供的图片地址<code>https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg</code>然而该地址指向的图片大小为535.4KB，大大减慢了网页的加载速度。</p>
+<h3 id="设置方式-6"><a href="#设置方式-6" class="headerlink" title="设置方式"></a>设置方式</h3><p>在<a target="_blank" rel="noopener" href="https://tinypng.com/">TinyPNG（一个非常好用的图片压缩网站）</a>对图片进行压缩，减小了13%的图片体积，并将图片转换为webq格式，放在了自己的图床里，大大加快了网页的加载速度。</p>
 
                 
             </div>
@@ -1194,7 +1196,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28k</span>&nbsp;字
+                class="white-color">28.3k</span>&nbsp;字
             
             
             
