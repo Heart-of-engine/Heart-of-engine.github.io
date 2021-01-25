@@ -553,14 +553,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    365
+                    718
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    3 分
                 </div>
                 
 
@@ -584,7 +584,59 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>noionion大佬的自动打卡教程思路<a target="_blank" rel="noopener" href="https://noionion.top/7431.html">在这里</a>，我的思路是用爬虫模拟浏览器的点击，在登录界面写入学号、密码并通过<code>pytesseract</code>或<code>百度OCR</code>识别出验证码，再进入打卡界面进行打卡。</p>
-<h3 id="验证码识别"><a href="#验证码识别" class="headerlink" title="验证码识别"></a>验证码识别</h3><h4 id="思路一：使用Python自带的pytesseract库进行验证码识别"><a href="#思路一：使用Python自带的pytesseract库进行验证码识别" class="headerlink" title="思路一：使用Python自带的pytesseract库进行验证码识别"></a>思路一：使用<code>Python</code>自带的<code>pytesseract</code>库进行验证码识别</h4><p>对于验证码的识别，<code>Python</code>自带一个比较强大的库<code>pytesseract</code>，然而在使用该库前，<a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html"><strong>一定要先安装tesserocr软件</strong></a>（血的教训OVO）<br>在进行爬虫爬取时，发现系统报错<code>requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;fangkong.hnu.edu.cn&#39;, port=443): Max retries exceeded with url: /api/v1/account/getimgvcode (Caused by SSLError(&quot;Can&#39;t connect to HTTPS URL because the SSL module is not available.&quot;))</code>，经过一番查询后发现<strong>需要下载对应自己系统的OpenSSL的EXE安装包</strong>，在安装该安装包后问题解决。</p>
+<h3 id="验证码识别"><a href="#验证码识别" class="headerlink" title="验证码识别"></a>验证码识别</h3><h4 id="思路一：使用Python自带的pytesseract库进行验证码识别"><a href="#思路一：使用Python自带的pytesseract库进行验证码识别" class="headerlink" title="思路一：使用Python自带的pytesseract库进行验证码识别"></a>思路一：使用<code>Python</code>自带的<code>pytesseract</code>库进行验证码识别</h4><p>对于验证码的识别，<code>Python</code>自带一个比较强大的库<code>pytesseract</code>，然而在使用该库前，<a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html"><strong>一定要先安装tesserocr软件</strong></a>（血的教训OVO）<br>在进行爬虫爬取时，发现系统报错<code>requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;fangkong.hnu.edu.cn&#39;, port=443): Max retries exceeded with url: /api/v1/account/getimgvcode (Caused by SSLError(&quot;Can&#39;t connect to HTTPS URL because the SSL module is not available.&quot;))</code>，经过一番查询后发现<strong>需要下载对应自己系统的OpenSSL的EXE安装包</strong>，在安装该安装包后问题解决。<br>首先咱从打卡系统抓一千张验证码图片下来测试一下正确率：</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入程序需要的相应包（类似C语言中的# include&lt;stdio.h&gt; 、include&lt;math.h&gt;等）
+import os
+from bs4 import BeautifulSoup
+import time
+import requests
+
+
+# 登录界面
+def download(n):
+    ## 设置爬取token的网址
+    url &#x3D; &quot;https:&#x2F;&#x2F;fangkong.hnu.edu.cn&#x2F;api&#x2F;v1&#x2F;account&#x2F;getimgvcode&quot;
+
+    ## 重定义请求头，防止被网页发现是爬虫，从而进行反爬操作
+    headers &#x3D; &#123;
+        &quot;Cookie&quot;: &quot;arccount62298&#x3D;c; arccount62019&#x3D;c&quot;,
+        &quot;User-Agent&quot;: &quot;Mozilla&#x2F;5.0 (Windows NT 6.1; WOW64) AppleWebKit&#x2F;537.36 (KHTML, like Gecko) Chrome&#x2F;27.0.1453.93 Safari&#x2F;537.36&quot;
+    &#125;
+
+    ## 图片名称初始化
+    num &#x3D; 0
+
+    ## 创建文件夹
+    try:
+        os.mkdir(&#39;.&#x2F;Verification Code&#39;)
+    except:
+        pass
+
+    ## 转换工作路径
+    os.chdir(&#39;.&#x2F;Verification Code&#39;)
+
+    for i in range(n):
+        ## 爬取token模块
+        html &#x3D; requests.get(url, headers&#x3D;headers)# 这里是使用requests函数用之前重定义的请求头读取网页信息
+        ### 测试代码
+        print(html.text)# &lt;class &#39;str&#39;&gt;
+        token&#x3D;html.text[27:59]
+        #print(token)
+
+        ## 得到验证码的链接
+        urltoken &#x3D; &quot;https:&#x2F;&#x2F;fangkong.hnu.edu.cn&#x2F;imagevcode?token&#x3D;&quot;+token
+        #print(url)
+
+        ## 下载图片
+        img &#x3D; requests.get(urltoken, headers&#x3D;headers).content
+        name &#x3D; str(num) + &#39;.jpg&#39;
+        with open(name, &#39;wb&#39;) as f:
+            f.write(img)
+            num +&#x3D; 1
+            print(&quot;第&#123;&#125;张验证码，链接为&#123;&#125;&quot;.format(num,urltoken))
+        time.sleep(2)
+
+download(1000)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="意外收获"><a href="#意外收获" class="headerlink" title="意外收获"></a>意外收获</h2><p>在使用爬虫进行爬取时，发现了一个构建随机请求头的Python库<a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/"><code>fake-useragent</code></a></p>
 <h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://noionion.top/7431.html">如何实现校园疫情防控自动打卡（更新中）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/no_overtime_apes/article/details/85124451">F12查看headers的含义-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/abc_12366/article/details/79824660">学习Python爬虫（四）：模拟浏览器向服务器提交请求-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ouening/article/details/89182078">conda SSL错误 SSLError(“Can&#39;t connect to HTTPS URL because the SSL module is not available.解决办法-CSDN</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/35684470">GitHub 上有哪些比较好的验证码识别库？-知乎</a><br><a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html">[Python3 网络爬虫开发实战] 1.3.4-tesserocr 的安装</a><br><a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/">Python爬虫构建随机请求头headers</a></p>
 
@@ -1115,7 +1167,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">28.7k</span>&nbsp;字
+                class="white-color">29.1k</span>&nbsp;字
             
             
             
