@@ -553,14 +553,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    718
+                    940
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    3 分
+                    4 分
                 </div>
                 
 
@@ -637,8 +637,49 @@ def download(n):
         time.sleep(2)
 
 download(1000)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>接下来就是使用<code>pytesseract</code>库进行验证码识别</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">from PIL import Image
+import pytesseract
+import os
+
+path &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code&quot;
+for root,dirs,filename in os.walk(path):
+    print(&quot;根目录：&quot;,root)
+    print(&quot;文件夹：&quot;,dirs)
+    print(&quot;文件名：&quot;,filename)
+
+for path1 in filename:
+    print(path1)
+    path2 &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code&#x2F;&quot; + path1
+    text &#x3D; pytesseract.image_to_string(Image.open(path2))
+    print(text)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>然而，<code>pytesseract</code>库的识别正确率有点令人堪忧，这是识别出的一些结果，可以看到有很高的错误率</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">1.jpg
+1861
+10.jpg
+a3io（识别错误）
+100.jpg
+未识别出
+101.jpg
+未识别出
+102.jpg
+4328
+103.jpg
+未识别出
+104.jpg
+277 F-（识别错误）
+105.jpg
+未识别出
+106.jpg
+2392.—（识别错误）
+107.jpg
+2660. —（识别错误）
+108.jpg
+096 1-—（识别错误）
+109.jpg
+6615<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h2 id="意外收获"><a href="#意外收获" class="headerlink" title="意外收获"></a>意外收获</h2><p>在使用爬虫进行爬取时，发现了一个构建随机请求头的Python库<a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/"><code>fake-useragent</code></a></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://noionion.top/7431.html">如何实现校园疫情防控自动打卡（更新中）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/no_overtime_apes/article/details/85124451">F12查看headers的含义-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/abc_12366/article/details/79824660">学习Python爬虫（四）：模拟浏览器向服务器提交请求-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ouening/article/details/89182078">conda SSL错误 SSLError(“Can&#39;t connect to HTTPS URL because the SSL module is not available.解决办法-CSDN</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/35684470">GitHub 上有哪些比较好的验证码识别库？-知乎</a><br><a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html">[Python3 网络爬虫开发实战] 1.3.4-tesserocr 的安装</a><br><a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/">Python爬虫构建随机请求头headers</a></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://noionion.top/7431.html">如何实现校园疫情防控自动打卡（更新中）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/no_overtime_apes/article/details/85124451">F12查看headers的含义-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/abc_12366/article/details/79824660">学习Python爬虫（四）：模拟浏览器向服务器提交请求-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ouening/article/details/89182078">conda SSL错误 SSLError(“Can&#39;t connect to HTTPS URL because the SSL module is not available.解决办法-CSDN</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/35684470">GitHub 上有哪些比较好的验证码识别库？-知乎</a><br><a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html">[Python3 网络爬虫开发实战] 1.3.4-tesserocr 的安装</a><br><a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/">Python爬虫构建随机请求头headers</a><br><a target="_blank" rel="noopener" href="http://www.inimei.cn/archives/770.html">Python实例：利用pytesseract库进行图片文字识别（二）</a></p>
 
                 
             </div>
@@ -1167,7 +1208,7 @@ download(1000)<span aria-hidden="true" class="line-numbers-rows"><span></span><s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">29.1k</span>&nbsp;字
+                class="white-color">29.3k</span>&nbsp;字
             
             
             
