@@ -553,7 +553,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    952
+                    941
                 </div>
                 
 
@@ -584,7 +584,7 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>noionion大佬的自动打卡教程思路<a target="_blank" rel="noopener" href="https://noionion.top/7431.html">在这里</a>，我的思路是用爬虫模拟浏览器的点击，在登录界面写入学号、密码并通过<code>pytesseract</code>或<code>百度OCR</code>识别出验证码，再进入打卡界面进行打卡。</p>
-<h3 id="验证码识别"><a href="#验证码识别" class="headerlink" title="验证码识别"></a>验证码识别</h3><h4 id="思路一：使用Python自带的pytesseract库进行验证码识别"><a href="#思路一：使用Python自带的pytesseract库进行验证码识别" class="headerlink" title="思路一：使用Python自带的pytesseract库进行验证码识别"></a>思路一：使用<code>Python</code>自带的<code>pytesseract</code>库进行验证码识别</h4><p>对于验证码的识别，<code>Python</code>自带一个比较强大的库<code>pytesseract</code>，然而在使用该库前，<a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html"><strong>一定要先安装tesserocr软件</strong></a>（血的教训OVO）<br>在进行爬虫爬取时，发现系统报错<code>requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;fangkong.hnu.edu.cn&#39;, port=443): Max retries exceeded with url: /api/v1/account/getimgvcode (Caused by SSLError(&quot;Can&#39;t connect to HTTPS URL because the SSL module is not available.&quot;))</code>，经过一番查询后发现<strong>需要下载对应自己系统的OpenSSL的EXE安装包</strong>，在安装该安装包后问题解决。<br>首先咱从打卡系统抓一千张验证码图片下来测试一下正确率：</p>
+<h3 id="验证码识别"><a href="#验证码识别" class="headerlink" title="验证码识别"></a>验证码识别</h3><h4 id="思路一：使用Python的pytesseract库进行验证码识别"><a href="#思路一：使用Python的pytesseract库进行验证码识别" class="headerlink" title="思路一：使用Python的pytesseract库进行验证码识别"></a>思路一：使用<code>Python</code>的<code>pytesseract</code>库进行验证码识别</h4><p>对于验证码的识别，<code>Python</code>库<code>pytesseract</code>，然而在使用该库前，<a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html"><strong>一定要先安装tesserocr软件</strong></a>（血的教训OVO）<br>在进行爬虫爬取时，发现系统报错<code>requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;fangkong.hnu.edu.cn&#39;, port=443): Max retries exceeded with url: /api/v1/account/getimgvcode (Caused by SSLError(&quot;Can&#39;t connect to HTTPS URL because the SSL module is not available.&quot;))</code>，经过一番查询后发现<strong>需要下载对应自己系统的OpenSSL的EXE安装包</strong>，在安装该安装包后问题解决。<br>首先咱从打卡系统抓一千张验证码图片下来测试一下正确率：</p>
 <pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入程序需要的相应包（类似C语言中的# include&lt;stdio.h&gt; 、include&lt;math.h&gt;等）
 import os
 from bs4 import BeautifulSoup
