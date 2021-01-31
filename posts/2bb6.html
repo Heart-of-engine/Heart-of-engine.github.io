@@ -526,21 +526,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-27
+                    2021-01-31
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    941
+                    2.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    4 分
+                    9 分
                 </div>
                 
 
@@ -563,8 +563,9 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>noionion大佬的自动打卡教程思路<a target="_blank" rel="noopener" href="https://noionion.top/7431.html">在这里</a>，我的思路是用爬虫模拟浏览器的点击，在登录界面写入学号、密码并通过<code>pytesseract</code>或<code>百度OCR</code>识别出验证码，再进入打卡界面进行打卡。</p>
-<h3 id="验证码识别"><a href="#验证码识别" class="headerlink" title="验证码识别"></a>验证码识别</h3><h4 id="思路一：使用Python的pytesseract库进行验证码识别"><a href="#思路一：使用Python的pytesseract库进行验证码识别" class="headerlink" title="思路一：使用Python的pytesseract库进行验证码识别"></a>思路一：使用<code>Python</code>的<code>pytesseract</code>库进行验证码识别</h4><p>对于验证码的识别，<code>Python</code>库<code>pytesseract</code>，然而在使用该库前，<a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html"><strong>一定要先安装tesserocr软件</strong></a>（血的教训OVO）<br>在进行爬虫爬取时，发现系统报错<code>requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;fangkong.hnu.edu.cn&#39;, port=443): Max retries exceeded with url: /api/v1/account/getimgvcode (Caused by SSLError(&quot;Can&#39;t connect to HTTPS URL because the SSL module is not available.&quot;))</code>，经过一番查询后发现<strong>需要下载对应自己系统的OpenSSL的EXE安装包</strong>，在安装该安装包后问题解决。<br>首先咱从打卡系统抓一千张验证码图片下来测试一下正确率：</p>
+                <h2 id="思路"><a href="#思路" class="headerlink" title="思路"></a>思路</h2><p>我的思路是用爬虫模拟浏览器的点击，在登录界面写入学号、密码并通过<code>pytesseract</code>或<code>百度OCR</code>识别出验证码，再进入打卡界面进行打卡。但鉴于自动打卡原代码流传开来其实是对疫情防控不负责任的行为，这里我就不提供原代码，只记录自己在开发代码时的心得与感悟。<br>noionion大佬的自动打卡教程<a target="_blank" rel="noopener" href="https://noionion.top/7431.html">在这里</a>，想要自行制作自己的打卡脚本的同学可以参考他的教程（注：当发生发烧等异常现象时一定要如实填报！）</p>
+<h2 id="发送请求"><a href="#发送请求" class="headerlink" title="发送请求"></a>发送请求</h2><p>noionion</p>
+<h2 id="验证码识别"><a href="#验证码识别" class="headerlink" title="验证码识别"></a>验证码识别</h2><h3 id="思路一：使用Python的pytesseract库进行验证码识别"><a href="#思路一：使用Python的pytesseract库进行验证码识别" class="headerlink" title="思路一：使用Python的pytesseract库进行验证码识别"></a>思路一：使用<code>Python</code>的<code>pytesseract</code>库进行验证码识别</h3><p>对于验证码的识别，<code>Python</code>库<code>pytesseract</code>，然而在使用该库前，<a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html"><strong>一定要先安装tesserocr软件</strong></a>（血的教训OVO）<br>在进行爬虫爬取时，发现系统报错<code>requests.exceptions.SSLError: HTTPSConnectionPool(host=&#39;fangkong.hnu.edu.cn&#39;, port=443): Max retries exceeded with url: /api/v1/account/getimgvcode (Caused by SSLError(&quot;Can&#39;t connect to HTTPS URL because the SSL module is not available.&quot;))</code>，经过一番查询后发现<strong>需要下载对应自己系统的OpenSSL的EXE安装包</strong>，在安装该安装包后问题解决。<br>首先咱从打卡系统抓一千张验证码图片下来测试一下正确率：</p>
 <pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入程序需要的相应包（类似C语言中的# include&lt;stdio.h&gt; 、include&lt;math.h&gt;等）
 import os
 from bs4 import BeautifulSoup
@@ -634,7 +635,7 @@ for path1 in filename:
     text &#x3D; pytesseract.image_to_string(Image.open(path2))
     print(text)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>然而，<code>pytesseract</code>库的识别正确率有点令人堪忧，这是识别出的一些结果，可以看到有很高的错误率</p>
-<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">1.jpg
+<pre class="line-numbers language-none"><code class="language-none">1.jpg
 1861
 10.jpg
 a3io（识别错误）
@@ -658,9 +659,156 @@ a3io（识别错误）
 096 1-—（识别错误）
 109.jpg
 6615<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>后续还会补充，未完待续！</p>
+<p>后续还会补充，未完待续！<br>--------------------------------------------------------------------------------------------------------------------<br>1月31日更新：<br>为了提高验证码的识别率，我们使用将彩色图片转换为灰度图的方法<br>灰度图：<br>&amp;&amp;&amp;</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">from PIL import Image
+
+def main():
+    image &#x3D; Image.open(&#39;0.jpg&#39;)
+    imgry &#x3D; image.convert(&#39;L&#39;)
+    imgry.save(&#39;0_gray.png&#39;)
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    main()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="<img src="" alt="灰度图"><br>我们先将图片转移到新文件夹内进行识别</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">from PIL import Image
+import pytesseract
+import os
+
+## 定义原图像来源
+path &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code&quot;
+
+## 转换工作路径
+os.chdir(&#39;.&#x2F;Verification Code_Gray&#39;)
+
+## 转灰度图
+def main():
+    for data in os.walk(path):
+        for path1 in data[2]:# data[2]即为filename列表，详见https:&#x2F;&#x2F;www.cnblogs.com&#x2F;poloyy&#x2F;p&#x2F;12349230.html
+            num &#x3D; path1.replace(&quot;.jpg&quot;, &quot;&quot;)# 图片的序号，replace方法详见https:&#x2F;&#x2F;www.runoob.com&#x2F;python&#x2F;att-string-replace.html
+            path2 &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code&#x2F;&quot; + path1
+            image &#x3D; Image.open(path2)
+            imgry &#x3D; image.convert(&#39;L&#39;)# 转为灰度图
+            imgry.save(&#39;&#123;&#125;_gray.jpg&#39;.format(num))
+            path3 &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code_Gray&#x2F;&quot; + num + &quot;_gray.jpg&quot;# 灰度图的绝对路径
+            text &#x3D; pytesseract.image_to_string(Image.open(path3))
+            print(path1)
+            print(text)
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    main()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>识别效果</p>
+<pre class="line-numbers language-none"><code class="language-none">1.jpg
+1861
+10.jpg
+232（识别错误）
+100.jpg
+未识别出
+101.jpg
+9627
+102.jpg
+4328
+103.jpg
+1124
+104.jpg
+ELT E（识别错误）
+105.jpg
+f3 77（识别错误）
+106.jpg
+2322
+107.jpg
+2660
+108.jpg
+0961
+109.jpg
+6615<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>可以看到，相较直接上手识别，这次的识别率大幅上升，不过我们还不满意，希望能达到更高的识别成功率</p>
+<p>那么，我们将灰度图二值化<br>二值化：<br>&amp;&amp;&amp;</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">from PIL import Image
+
+def main():
+    image &#x3D; Image.open(&#39;0.jpg&#39;)
+    imgry &#x3D; image.convert(&#39;L&#39;)
+    table &#x3D; get_bin_table()
+    binary &#x3D; imgry.point(table, &#39;1&#39;)
+    binary.save(&#39;0_binary.png&#39;)
+
+def get_bin_table(threshold&#x3D;115):
+    table &#x3D; []
+    for i in range(256):
+        if i &lt; threshold:
+            table.append(0)
+        else:
+            table.append(1)
+    return table
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    main()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我们先将图片转移到新文件夹进行识别：</p>
+<pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">from PIL import Image
+import pytesseract
+import os
+
+## 定义原图像来源
+path &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code&quot;
+
+## 转换工作路径
+os.chdir(&#39;.&#x2F;Verification Code_Binary&#39;)
+
+## 转灰度图
+def main():
+    for data in os.walk(path):
+        for path1 in data[2]:# data[2]即为filename列表，详见https:&#x2F;&#x2F;www.cnblogs.com&#x2F;poloyy&#x2F;p&#x2F;12349230.html
+            num &#x3D; path1.replace(&quot;.jpg&quot;, &quot;&quot;)# 图片的序号，replace方法详见https:&#x2F;&#x2F;www.runoob.com&#x2F;python&#x2F;att-string-replace.html，需要注意replace不会改变原字符串的内容
+            path2 &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code&#x2F;&quot; + path1
+            image &#x3D; Image.open(path2)
+            imgry &#x3D; image.convert(&#39;L&#39;)# 转为灰度图
+            table &#x3D; get_bin_table()
+            binary &#x3D; imgry.point(table, &#39;1&#39;)# 转为黑白图
+            binary.save(&#39;&#123;&#125;_binary.jpg&#39;.format(num))
+            path4 &#x3D; &quot;E:&#x2F;Pythonworks&#x2F;自动打卡&#x2F;Verification Code_Binary&#x2F;&quot; + num + &quot;_binary.jpg&quot;
+            text &#x3D; pytesseract.image_to_string(Image.open(path4))
+            print(path1)
+            print(text)
+
+def get_bin_table(threshold&#x3D;115):
+    table &#x3D; []
+    for i in range(256):
+        if i &lt; threshold:
+            table.append(0)
+        else:
+            table.append(1)
+    return table
+
+if __name__ &#x3D;&#x3D; &#39;__main__&#39;:
+    main()<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>代码运行后却发生了诡异的一幕：<br>图片&amp;&amp;<br>识别结果：</p>
+<pre class="line-numbers language-none"><code class="language-none">1.jpg
+未识别出
+10.jpg
+3:（识别错误）
+100.jpg
+未识别出
+101.jpg
+96 7（识别错误）
+102.jpg
+4323
+103.jpg
+1124
+104.jpg
+未识别出
+105.jpg
+未识别出
+106.jpg
+未识别出
+107.jpg
+未识别出
+108.jpg
+未识别出
+109.jpg
+未识别出<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>这是由于我们将图片二值化的思路就是设立一个阈值<code>threshold</code>，将大于阈值的像素变为白色，小于阈值的像素变为黑色，以此把图片的像素（灰度值）划分为两部分：0和1，例如0代表黑色，1代表白色，然后我们就可以用一串0和1组成的数字来表示一张图片。<br>然而，我们的阈值设置得太低了，由于大量的像素高于阈值，导致图片中的很多位置变成了白色，我们适当降低阈值</p>
 <h2 id="意外收获"><a href="#意外收获" class="headerlink" title="意外收获"></a>意外收获</h2><p>在使用爬虫进行爬取时，发现了一个构建随机请求头的Python库<a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/"><code>fake-useragent</code></a></p>
-<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://noionion.top/7431.html">如何实现校园疫情防控自动打卡（更新中）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/no_overtime_apes/article/details/85124451">F12查看headers的含义-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/abc_12366/article/details/79824660">学习Python爬虫（四）：模拟浏览器向服务器提交请求-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ouening/article/details/89182078">conda SSL错误 SSLError(“Can&#39;t connect to HTTPS URL because the SSL module is not available.解决办法-CSDN</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/35684470">GitHub 上有哪些比较好的验证码识别库？-知乎</a><br><a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html">[Python3 网络爬虫开发实战] 1.3.4-tesserocr 的安装</a><br><a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/">Python爬虫构建随机请求头headers</a><br><a target="_blank" rel="noopener" href="http://www.inimei.cn/archives/770.html">Python实例：利用pytesseract库进行图片文字识别（二）</a></p>
+<h2 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h2><p><a target="_blank" rel="noopener" href="https://noionion.top/7431.html">如何实现校园疫情防控自动打卡（更新中）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/no_overtime_apes/article/details/85124451">F12查看headers的含义-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/abc_12366/article/details/79824660">学习Python爬虫（四）：模拟浏览器向服务器提交请求-CSDN</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/ouening/article/details/89182078">conda SSL错误 SSLError(“Can&#39;t connect to HTTPS URL because the SSL module is not available.解决办法-CSDN</a><br><a target="_blank" rel="noopener" href="https://www.zhihu.com/question/35684470">GitHub 上有哪些比较好的验证码识别库？-知乎</a><br><a target="_blank" rel="noopener" href="https://cuiqingcai.com/5189.html">[Python3 网络爬虫开发实战] 1.3.4-tesserocr 的安装</a><br><a target="_blank" rel="noopener" href="https://finthon.com/python-spider-headers/">Python爬虫构建随机请求头headers</a><br><a target="_blank" rel="noopener" href="http://www.inimei.cn/archives/770.html">Python实例：利用pytesseract库进行图片文字识别（二）</a><br><a target="_blank" rel="noopener" href="https://blog.csdn.net/u012067766/article/details/80013611">使用python PIL库实现简单验证码的去噪</a><br><a target="_blank" rel="noopener" href="https://www.cnblogs.com/beer/p/5672678.html">字符型图片验证码识别完整过程及Python实现</a></p>
 
                 
             </div>
@@ -1187,7 +1335,7 @@ a3io（识别错误）
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">31.4k</span>&nbsp;字
+                class="white-color">32.6k</span>&nbsp;字
             
             
             
