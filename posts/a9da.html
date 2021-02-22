@@ -539,7 +539,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-02-22
+                    2021-02-23
                 </div>
                 
 
@@ -553,7 +553,7 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    11 分
+                    12 分
                 </div>
                 
 
@@ -677,6 +677,7 @@ prism_plugin:
   theme: &#39;tomorrow&#39;
   line_number: false    # default false
   custom_css:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>注：可登录<a target="_blank" rel="noopener" href="https://prismjs.com/">prismjs官网</a>预览效果</p>
 <h2 id="打赏按钮调节"><a href="#打赏按钮调节" class="headerlink" title="打赏按钮调节"></a>打赏按钮调节</h2><h3 id="目的-9"><a href="#目的-9" class="headerlink" title="目的"></a>目的</h3><h3 id="设置方式-8"><a href="#设置方式-8" class="headerlink" title="设置方式"></a>设置方式</h3><p>进入<code>themes/matery/layout/_partial/reward.ejs</code>目录，在line 94:118位置，有如下代码：</p>
 <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">&lt;div id&#x3D;&quot;reward&quot;&gt;
     &lt;a href&#x3D;&quot;#rewardModal&quot; class&#x3D;&quot;reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red&quot;&gt;赏&lt;&#x2F;a&gt;
@@ -706,7 +707,13 @@ prism_plugin:
 <p>删除第九行的<code>line-height: 38px</code>，并修改第95行代码为:</p>
 <pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">&lt; a href&#x3D;&quot; &quot; class&#x3D;&quot;reward-link modal-trigger btn-floating btn-large waves-effect waves-light blue&quot;&gt;你想要在打赏位置显示的文字&lt;&#x2F; a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>（注意这里的btn-medium要改成btn-large，否则只会显示第一个字）<br>更多的按钮设置可以参考<a target="_blank" rel="noopener" href="https://materializecss.com/buttons.html">本网站</a></p>
-
+<h2 id="显示底部总浏览量和访问人数"><a href="#显示底部总浏览量和访问人数" class="headerlink" title="显示底部总浏览量和访问人数"></a>显示底部总浏览量和访问人数</h2><h3 id="目的-10"><a href="#目的-10" class="headerlink" title="目的"></a>目的</h3><p>有时候请求不蒜子的数据比较慢，浏览量和访问人数就会隐藏，可能是默认的。</p>
+<h3 id="设置方式-9"><a href="#设置方式-9" class="headerlink" title="设置方式"></a>设置方式</h3><p>在matery.css中增加以下代码可以让它一直显示</p>
+<pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token selector">#busuanzi_container_site_pv,
+#busuanzi_value_site_pv,
+#busuanzi_container_site_uv</span><span class="token punctuation">&#123;</span>
+   <span class="token property">display</span><span class="token punctuation">:</span> inline <span class="token important">!important</span><span class="token punctuation">;</span>
+<span class="token punctuation">&#125;</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
                 
             </div>
             <hr/>
@@ -1229,7 +1236,7 @@ prism_plugin:
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">39.3k</span>&nbsp;字
+                class="white-color">39.4k</span>&nbsp;字
             
             
             
