@@ -3,7 +3,7 @@
 
 
 <head>
-    <meta charset="utf-8">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
     <meta name="keywords" content="Matery模板部分优化, Python,HTML">
     <meta name="description" content="专注于数学与编程的完美结合,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -31,7 +31,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"></head>
+<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -48,7 +48,7 @@
 
 <body>
     
-    <header class="navbar-fixed">
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
     <nav id="headNav" class="bg-color nav-transparent">
         <div id="navContainer" class="nav-wrapper container">
             <div class="brand-logo">
@@ -539,21 +539,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-31
+                    2021-02-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    2.3k
+                    2.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    8 分
+                    11 分
                 </div>
                 
 
@@ -642,7 +642,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
 <h2 id="Twikoo评论系统"><a href="#Twikoo评论系统" class="headerlink" title="Twikoo评论系统"></a>Twikoo评论系统</h2><h2 id="Live2d"><a href="#Live2d" class="headerlink" title="Live2d"></a>Live2d</h2><h3 id="目的-3"><a href="#目的-3" class="headerlink" title="目的"></a>目的</h3><p>以前看明日方舟主播玩游戏的时候就经常看到他们的Live2d头像，很是羡慕，最近发现<code>Matery</code>模板也可以加<code>Live2d</code>，可以使自己的<code>Live2d</code>头像出现在博客中。</p>
 <h3 id="插件冲突问题"><a href="#插件冲突问题" class="headerlink" title="插件冲突问题"></a>插件冲突问题</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46399753/article/details/104768713">hexo中matery主题的个性化定制</a>中提到：安装了live2d之后再运行时报了个错，totalcount is not defined，然后整个页面都不显示了。最后发现只要安装了live2d模块，之前所安装配置的search、wordcount等插件都没有了，就连hexo-deployer-git也没了都要重新下，具体为什么我也不清楚。总之遇到这种情况了比着readme文件重新下一遍就好了。<br>所以我就先没有安装Live2d模块</p>
 <p>这里参考了<a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d">EYHN/hexo-helper-live2d</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46399753/article/details/104768713">hexo中matery主题的个性化定制</a></p>
-<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><h3 id="目的-4"><a href="#目的-4" class="headerlink" title="目的"></a>目的</h3><p>在用手机查看我的博客时，我发现自己的“明日方舟”模块一直在加载无法打开，原来是要一次性完成的图片读取工作过多，要很长时间才能完成，所以我引入了图片懒加载，让访客们获得更舒适的浏览体验。（懒加载对服务器前端有一定的缓解压力作用）<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" alt="懒加载使用的图片"></p>
+<h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><h3 id="目的-4"><a href="#目的-4" class="headerlink" title="目的"></a>目的</h3><p>在用手机查看我的博客时，我发现自己的“明日方舟”模块一直在加载无法打开，原来是要一次性完成的图片读取工作过多，要很长时间才能完成，所以我引入了图片懒加载，让访客们获得更舒适的浏览体验。（懒加载对服务器前端有一定的缓解压力作用）<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" alt="懒加载使用的动图（这就是加载用动图呀，不会加载出其他什么的OVO）"></p>
 <h3 id="设置方式-3"><a href="#设置方式-3" class="headerlink" title="设置方式"></a>设置方式</h3><p>参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/guixinchn/article/details/108185530">Hexo-matery主题性能优化</a>，文章里写得很清楚，这里就不再赘述。</p>
 <h2 id="封面图片前置颜色去除"><a href="#封面图片前置颜色去除" class="headerlink" title="封面图片前置颜色去除"></a>封面图片前置颜色去除</h2><h3 id="目的-5"><a href="#目的-5" class="headerlink" title="目的"></a>目的</h3><p>之前由于matery模板自带封面图片前置颜色，不仅十分绕眼，还占用加载资源，加载速度较慢。去除封面颜色后不仅能够清晰显示封面大图，还能加快博客加载速度，一举两得。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B22.jpg" alt="修改前"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B24.jpg" alt="修改后"></p>
 <h3 id="设置方式-4"><a href="#设置方式-4" class="headerlink" title="设置方式"></a>设置方式</h3><p>找到主题文件夹下的<code>source\css</code>文件夹，并找到里面的<code>matery.css</code>文件（我这里的文件路径是<code>F:\blog\blog2\LZCblog1\themes\hexo-theme-matery\source\css</code>），在两处进行修改：<br>第一处：<br>修改<code>bg-color</code>栏为</p>
@@ -660,11 +660,52 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
         top: 0;
         content: "";
 &#125;**/</span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>就可以显示高清封面大图啦！OVO<br>这里要特别感谢“随性”大佬给我的指引！（不然我还不会改）</p>
+<p>就可以清晰显示高清封面大图啦OVO，这里要特别感谢“随性”大佬提供的帮助！<br>注：在设置该代码后出现了导航栏变红、博文标签栏变为无色等一系列现象，在删除live2d后得到解决</p>
 <h2 id="博客标题屏幕自适应"><a href="#博客标题屏幕自适应" class="headerlink" title="博客标题屏幕自适应"></a>博客标题屏幕自适应</h2><h3 id="目的-6"><a href="#目的-6" class="headerlink" title="目的"></a>目的</h3><p>之前由于没有设置标题自适应，由于标题过长，出现了换行的现象，十分影响美观，需要进行修改。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E6%A0%87%E9%A2%981.jpg" alt="标题自适应屏幕前"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E6%A0%87%E9%A2%982.jpg" alt="标题自适应屏幕后"></p>
 <h3 id="设置方式-5"><a href="#设置方式-5" class="headerlink" title="设置方式"></a>设置方式</h3><p>这里参考了<a target="_blank" rel="noopener" href="https://chen-shang.github.io/2019/08/15/ji-zhu-zong-jie/hexo/hexo-theme-matery-zhu-ti-you-hua/">hexo-theme-matery主题优化</a>。</p>
 <h2 id="背景图片加载速度优化"><a href="#背景图片加载速度优化" class="headerlink" title="背景图片加载速度优化"></a>背景图片加载速度优化</h2><h3 id="目的-7"><a href="#目的-7" class="headerlink" title="目的"></a>目的</h3><p>之前一直使用的是<code>Matery</code>原作者提供的图片地址<code>https://cdn.jsdelivr.net/gh/Tokisaki-Galaxy/res/site/medias/background.jpg</code>然而该地址指向的图片大小为535.4KB，大大减慢了网页的加载速度。</p>
 <h3 id="设置方式-6"><a href="#设置方式-6" class="headerlink" title="设置方式"></a>设置方式</h3><p>在<a target="_blank" rel="noopener" href="https://tinypng.com/">TinyPNG（一个非常好用的图片压缩网站）</a>对图片进行压缩，减小了13%的图片体积，并将图片转换为webq格式，放在了自己的图床里，大大加快了网页的加载速度。</p>
+<h2 id="代码块高亮"><a href="#代码块高亮" class="headerlink" title="代码块高亮"></a>代码块高亮</h2><h3 id="目的-8"><a href="#目的-8" class="headerlink" title="目的"></a>目的</h3><p>[修改前]<br>[修改后]</p>
+<h3 id="设置方式-7"><a href="#设置方式-7" class="headerlink" title="设置方式"></a>设置方式</h3><p>由于 Hexo 自带的代码高亮主题显示不好看，所以主题中使用到了<code>hexo-prism-plugin</code>的Hexo插件来做代码高亮，安装命令如下：</p>
+<pre class="line-numbers language-git" data-language="git"><code class="language-git">npm i -S hexo-prism-plugin<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>然后，修改 Hexo 根目录下_config.yml文件中highlight.enable的值为false，并新增<code>prism</code>插件相关的配置，主要配置如下：</p>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">highlight:
+  enable: false
+
+prism_plugin:
+  mode: &#39;preprocess&#39;    # realtime&#x2F;preprocess
+  theme: &#39;tomorrow&#39;
+  line_number: false    # default false
+  custom_css:<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="打赏按钮调节"><a href="#打赏按钮调节" class="headerlink" title="打赏按钮调节"></a>打赏按钮调节</h2><h3 id="目的-9"><a href="#目的-9" class="headerlink" title="目的"></a>目的</h3><h3 id="设置方式-8"><a href="#设置方式-8" class="headerlink" title="设置方式"></a>设置方式</h3><p>进入<code>themes/matery/layout/_partial/reward.ejs</code>目录，在line 94:118位置，有如下代码：</p>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">&lt;div id&#x3D;&quot;reward&quot;&gt;
+    &lt;a href&#x3D;&quot;#rewardModal&quot; class&#x3D;&quot;reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red&quot;&gt;赏&lt;&#x2F;a&gt;
+
+    &lt;!-- Modal Structure --&gt;
+    &lt;div id&#x3D;&quot;rewardModal&quot; class&#x3D;&quot;modal&quot;&gt;
+        &lt;div class&#x3D;&quot;modal-content&quot;&gt;
+            &lt;a class&#x3D;&quot;close modal-close&quot;&gt;&lt;i class&#x3D;&quot;fas fa-times&quot;&gt;&lt;&#x2F;i&gt;&lt;&#x2F;a&gt;
+            &lt;h4 class&#x3D;&quot;reward-title&quot;&gt;&lt;%&#x3D; theme.reward.title %&gt;&lt;&#x2F;h4&gt;
+            &lt;div class&#x3D;&quot;reward-content&quot;&gt;
+                &lt;div class&#x3D;&quot;reward-tabs&quot;&gt;
+                    &lt;ul class&#x3D;&quot;tabs row&quot;&gt;
+                        &lt;li class&#x3D;&quot;tab col s6 alipay-tab waves-effect waves-light&quot;&gt;&lt;a href&#x3D;&quot;#alipay&quot;&gt;支付宝&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+                        &lt;li class&#x3D;&quot;tab col s6 wechat-tab waves-effect waves-light&quot;&gt;&lt;a href&#x3D;&quot;#wechat&quot;&gt;微 信&lt;&#x2F;a&gt;&lt;&#x2F;li&gt;
+                    &lt;&#x2F;ul&gt;
+                    &lt;div id&#x3D;&quot;alipay&quot;&gt;
+                        &lt;img src&#x3D;&quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.reward.alipay) %&gt;&quot; class&#x3D;&quot;reward-img&quot; alt&#x3D;&quot;支付宝打赏二维码&quot;&gt;
+                    &lt;&#x2F;div&gt;
+                    &lt;div id&#x3D;&quot;wechat&quot;&gt;
+                        &lt;img src&#x3D;&quot;&lt;%- theme.jsDelivr.url %&gt;&lt;%- url_for(theme.reward.wechat) %&gt;&quot; class&#x3D;&quot;reward-img&quot; alt&#x3D;&quot;微信打赏二维码&quot;&gt;
+                    &lt;&#x2F;div&gt;
+                &lt;&#x2F;div&gt;
+            &lt;&#x2F;div&gt;
+        &lt;&#x2F;div&gt;
+    &lt;&#x2F;div&gt;
+&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>删除第九行的<code>line-height: 38px</code>，并修改第95行代码为:</p>
+<pre class="line-numbers language-yml" data-language="yml"><code class="language-yml">&lt; a href&#x3D;&quot; &quot; class&#x3D;&quot;reward-link modal-trigger btn-floating btn-large waves-effect waves-light blue&quot;&gt;你想要在打赏位置显示的文字&lt;&#x2F; a&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>（注意这里的btn-medium要改成btn-large，否则只会显示第一个字）<br>更多的按钮设置可以参考<a target="_blank" rel="noopener" href="https://materializecss.com/buttons.html">本网站</a></p>
 
                 
             </div>
@@ -760,7 +801,6 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
 
     #reward .reward-link {
         font-size: 1.4rem;
-        line-height: 38px;
     }
 
     #reward .btn-floating:hover {
@@ -846,7 +886,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
 </style>
 
 <div id="reward">
-    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-medium waves-effect waves-light red">赏</a>
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light blue">打赏</a>
 
     <!-- Modal Structure -->
     <div id="rewardModal" class="modal">
@@ -1189,7 +1229,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">38.7k</span>&nbsp;字
+                class="white-color">39.3k</span>&nbsp;字
             
             
             
@@ -1463,11 +1503,11 @@ $(function () {
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
     <script type="text/javascript" src="/js/fireworks.js"></script>
     
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
