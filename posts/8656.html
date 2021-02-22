@@ -743,7 +743,7 @@ print(array_j, array_j.dtype)<span aria-hidden="true" class="line-numbers-rows">
  [1 1 1]] int32
 [[0 0 0]
  [0 0 0]] int32<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><code>ones(shape[, dtype, order])</code>: 生成全为1的ndarray。shape为必传参数，表示生成的数组的形状。dtype表示数组中存储的数据类型，默认为float64，可以指定数据类型。order表示数组的秩序，表示存储的数据是以行为主还是以列为主(两种风格)，通常不关注此参数。<br><code>zeros(shape[, dtype, order])</code>: 生成全为0的ndarray。参数同ones()。<br>ones_like(a[, dtype, order, subok]): 生成全为1的ndarray，形状与已知数组相同。a为必传参数，传入一个形似array的数据(array_like，通常是嵌套列表或数组)。dtype表示数组中存储的数据类型，默认与传入的数组相同。另外两个参数通常不关注。<br><code>zeros_like(a[, dtype, order, subok])</code>: 生成全为0的ndarray，形状与已知数组相同。参数同ones_like()。</p>
+<p><code>ones(shape[, dtype, order])</code>: 生成全为1的ndarray。shape为必传参数，表示生成的数组的形状。dtype表示数组中存储的数据类型，默认为float64，可以指定数据类型。order表示数组的秩序，表示存储的数据是以行为主还是以列为主(两种风格)，通常不关注此参数。<br><code>zeros(shape[, dtype, order])</code>: 生成全为0的ndarray。参数同ones()。<br><code>ones_like(a[, dtype, order, subok])</code>: 生成全为1的ndarray，形状与已知数组相同。a为必传参数，传入一个形似array的数据(array_like，通常是嵌套列表或数组)。dtype表示数组中存储的数据类型，默认与传入的数组相同。另外两个参数通常不关注。<br><code>zeros_like(a[, dtype, order, subok])</code>: 生成全为0的ndarray，形状与已知数组相同。参数同ones_like()。</p>
 <h4 id="2-生成全为指定值或全为空的ndarray"><a href="#2-生成全为指定值或全为空的ndarray" class="headerlink" title="2. 生成全为指定值或全为空的ndarray"></a>2. 生成全为指定值或全为空的ndarray</h4><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">array_k &#x3D; np.full((2, 3), 2)
 print(array_k, array_k.dtype)
 array_l &#x3D; np.full_like([[1, 2, 3], [4, 5, 6]], 3)
