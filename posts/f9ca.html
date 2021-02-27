@@ -515,14 +515,14 @@
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    1.2k
+                    1.6k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    5 分
+                    7 分
                 </div>
                 
 
@@ -590,6 +590,43 @@
 • 哦耶 
 	• 第二层 
 		• 第三层<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<h2 id="混合列表"><a href="#混合列表" class="headerlink" title="混合列表"></a>混合列表</h2><p>输入： </p>
+<pre class="line-numbers language-none"><code class="language-none">#祖父(星 可以这样用)
+#*父
+#*母
+##兄
+##*弟
+##*妹
+### 这是谁?
+##*下面的别乱搞啊
+#*#(请按照层级) 
+#祖母(注意标记，第一层的都同样是&quot;#&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>得到：</p>
+<pre class="line-numbers language-none"><code class="language-none">1. 祖父(还可以这样用) 
+• 父 
+• 母 
+1.兄
+	• 弟 
+	• 妹 
+	1. 这是谁? 
+	• 下面的别乱搞啊
+	1. (请按照层级) 
+2. 祖母(注意标记，第一层的都同样是&quot;#&quot;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h1 id="缩进与列表"><a href="#缩进与列表" class="headerlink" title="缩进与列表"></a>缩进与列表</h1><p>mediawiki中的缩进不能使用半角空格调整。有以下几种方式控制缩进格式缩进：<br>行首使用半角<code>:</code>号：允许多个半角冒号连用，以控制不同文本缩进深度。<br>行首使用半角<code>*</code>号：行首星号是列表控制符，产生列表的同时伴有不同的文本缩进。允许多个星号连用。<br>行首使用半角<code>#</code>号：数字序号的列表控制符，与星号类似。注意，多个#号行中夹有非<code>#</code>号起始的文本行时，<br>数字序号会中断。<br>使用<code>;</code>与<code>:</code>号配合：分号与冒号称为“定义列表”控制符，冒号之后的部分换行缩进显示。<br>行首使用全角空格：一种非正规手段，注意不要滥用。<br>例如输入时在行首加一空格：</p>
+<pre class="line-numbers language-none"><code class="language-none">空格的作用 （请注意行首有一半角空格）<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>就得到： </p>
+<pre class="line-numbers language-none"><code class="language-none">空格的作用<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>例如行首输入冒号，就得到两个文字的缩进：</p>
+<pre class="line-numbers language-none"><code class="language-none">:冒号表示缩进<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>得到：</p>
+<pre class="line-numbers language-none"><code class="language-none">冒号表示缩进<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>使用<code>;</code>与<code>:</code>配合，例如输入：</p>
+<pre class="line-numbers language-none"><code class="language-none">;标题:定义<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>得到：</p>
+<pre class="line-numbers language-none"><code class="language-none">标题
+	定义<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
+<h1 id="注释"><a href="#注释" class="headerlink" title="注释"></a>注释</h1><p>mediawiki的注释和html一样，加了注释就不会在wiki页面上出现。 </p>
+<pre class="line-numbers language-none"><code class="language-none">&lt;!-- 我要将妳藏起来 --&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <h1 id="特殊字符"><a href="#特殊字符" class="headerlink" title="特殊字符"></a>特殊字符</h1><h2 id="变音及重音符号"><a href="#变音及重音符号" class="headerlink" title="变音及重音符号"></a>变音及重音符号</h2><pre class="line-numbers language-none"><code class="language-none">À Á Â Ã Ä Å 
 Æ Ç È É Ê Ë 
 Ì Í Î Ï Ñ Ò 
@@ -1190,7 +1227,7 @@ C² &#x2F; J m.<span aria-hidden="true" class="line-numbers-rows"><span></span><
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">40.9k</span>&nbsp;字
+                class="white-color">41.3k</span>&nbsp;字
             
             
             
