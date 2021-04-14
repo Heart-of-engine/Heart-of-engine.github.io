@@ -31,7 +31,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -517,7 +517,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-03-19
+                    2021-04-10
                 </div>
                 
 
@@ -583,7 +583,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
 <h2 id="不蒜子统计问题"><a href="#不蒜子统计问题" class="headerlink" title="不蒜子统计问题"></a>不蒜子统计问题</h2><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/issues/592">chrome浏览器85版本之后关于不蒜子统计错误的问题</a></p>
 <h2 id="博文中插入视频"><a href="#博文中插入视频" class="headerlink" title="博文中插入视频"></a>博文中插入视频</h2><h3 id="目的-2"><a href="#目的-2" class="headerlink" title="目的"></a>目的</h3><p>之前想要在博客里展示视频全部需要设置一个超链接，访客点击后需要转入其他网站查看，非常不方便，在博文中直接插入视频可以大大节省访客们的时间，也符合我们对博客设计的要求</p>
 <h3 id="设置方式-2"><a href="#设置方式-2" class="headerlink" title="设置方式"></a>设置方式</h3><p>在博文<code>.md</code>文件内，插入以下代码(本代码指向我自己写的自动读取班级打卡情况表格，实际使用时仅需更改<code>src</code>行即可）：</p>
-<pre class="line-numbers language-md" data-language="md"><code class="language-md">&lt;!-- vlog模块 --&gt; 
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&lt;!-- vlog模块 --&gt; 
 &lt;div style&#x3D;&quot;position: relative; padding: 30% 45%;&quot;&gt; 
     &lt;iframe style&#x3D;&quot; 
     position: absolute; 
@@ -600,7 +600,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
     &lt;&#x2F;iframe&gt; 
 &lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="视频清晰度问题"><a href="#视频清晰度问题" class="headerlink" title="视频清晰度问题"></a>视频清晰度问题</h3><p>在1月12日为明日方舟模块引入三大底部视频后，发现效果并不是很理想，究其原因是视频的清晰度太低导致视频模糊，于是我联系了本方法的创作者<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">itsNekoDeng</a>，他提出若想调整视频默认清晰度，可以在<code>src</code>引入路径最后加上<code>&amp;high_quality=1</code>（最高画质）或<code>&amp;high_quality=0</code>（最低画质）<br>那么上例的代码更改如下：</p>
-<pre class="line-numbers language-md" data-language="md"><code class="language-md">&lt;!-- vlog模块 --&gt; 
+<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&lt;!-- vlog模块 --&gt; 
 &lt;div style&#x3D;&quot;position: relative; padding: 30% 45%;&quot;&gt; 
     &lt;iframe style&#x3D;&quot; 
     position: absolute; 
@@ -1496,6 +1496,6 @@ $(function () {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
