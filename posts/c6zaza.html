@@ -4,7 +4,7 @@
 
 <head>
     <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
-    <meta name="keywords" content="Python,HTML">
+    <meta name="keywords" content="Git学习记录, Python,HTML">
     <meta name="description" content="专注于数学与编程的完美结合,分享生活,分享知识">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -16,7 +16,7 @@
     <!-- Global site tag (gtag.js) - Google Analytics -->
 
 
-    <title>李拙诚的个人博客</title>
+    <title>Git学习记录 | 李拙诚的个人博客</title>
     <link rel="icon" type="image/png" href="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/favicon.png">
 
     <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
@@ -364,12 +364,12 @@
 
 
 
-<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/0.jpg')">
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/23.jpg')">
     <div class="container" style="right: 0px;left: 0px;">
         <div class="row">
             <div class="col s12 m12 l12">
                 <div class="brand">
-                    <h1 class="description center-align post-title"></h1>
+                    <h1 class="description center-align post-title">Git学习记录</h1>
                 </div>
             </div>
         </div>
@@ -483,9 +483,13 @@
             <div class="row tag-cate">
                 <div class="col s7">
                     
-                          <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
-                          </div>
+                    <div class="article-tag">
+                        
+                            <a href="/tags/HNU-oj-team/">
+                                <span class="chip bg-color">HNU_oj_team</span>
+                            </a>
+                        
+                    </div>
                     
                 </div>
                 <div class="col s5 right-align">
@@ -497,28 +501,28 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
-                    2021-01-02
+                    2021-06-06
                 </div>
                 
 
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-02
+                    2021-06-06
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    13
+                    1.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    1 分
+                    4 分
                 </div>
                 
 
@@ -541,9 +545,114 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <hr>
-<p>title: 视频<br>date: 2021-1-2 17:37:00<br>type: “video”<br>layout: “video” </p>
-<hr>
+                <h4 id="Git知识点"><a href="#Git知识点" class="headerlink" title="Git知识点"></a>Git知识点</h4><h5 id="Git-的三个不同的程序"><a href="#Git-的三个不同的程序" class="headerlink" title="Git 的三个不同的程序"></a>Git 的三个不同的程序</h5><p>Git Bash： Unix 与 Linux 风格的命令行，使用最多，推荐最多</p>
+<p>Git CMD： Windows 风格的命令行</p>
+<p>Git GUI： 图形界面的 Git ，不建议初学者使用，尽量先熟悉命令</p>
+<h5 id="Git-Bash-内的-Linux-命令"><a href="#Git-Bash-内的-Linux-命令" class="headerlink" title="Git Bash 内的 Linux 命令"></a>Git Bash 内的 Linux 命令</h5><ol>
+<li><p><code>cd</code> 改变目录</p>
+</li>
+<li><p><code>cd ..</code> 回退到上一个目录，直接 cd 进入默认目录</p>
+</li>
+<li><p><code>pwd</code> 显示当前所在的目录路径</p>
+</li>
+<li><p><code>ls</code>(ll) 都是列出当前目录中的所有文件，只不过ll（两个ll）列出的内容更为详细</p>
+</li>
+<li><p><code>touch</code> 新建一个文件，如 touch index.js 就会在当前目录下新建一个 index.js 文件</p>
+</li>
+<li><p><code>rm</code> 删除一个文件， 如 rm index.js 就会把 index.js 文件删除</p>
+</li>
+<li><p><code>mkdir</code> 新建一个目录，就是新建一个文件夹</p>
+</li>
+<li><p><code>rm -r</code> 删除一个文件夹，如 rm -r src 删除 src 目录</p>
+<p><code>rm -rf /</code> 删除 Linux 中的所有文件</p>
+</li>
+<li><p><code>mv</code> 移动文件，如 mv index.html src ，这里 index.html 是我们要移动的文件，src 是目标文件夹，需要这俩在同一目录下</p>
+</li>
+<li><p><code>reset</code> 重新初始化终端/清屏</p>
+</li>
+<li><p><code>clear</code> 清屏</p>
+</li>
+<li><p><code>history</code> 查看命令历史</p>
+</li>
+<li><p><code>help</code> 帮助</p>
+</li>
+<li><p><code>exit</code> 退出</p>
+</li>
+<li><p> <code>#</code>表示注释</p>
+</li>
+</ol>
+<h5 id="Git-的六大命令"><a href="#Git-的六大命令" class="headerlink" title="Git 的六大命令"></a>Git 的六大命令</h5><p>Git 常用的是以下 6 个命令：<strong>git clone</strong>、<strong>git push</strong>、<strong>git add</strong> 、<strong>git commit</strong>、<strong>git checkout</strong>、<strong>git pull</strong></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://www.runoob.com/wp-content/uploads/2015/02/git-command.jpg" alt="Git的常用命令"></p>
+<h5 id="Git的配置"><a href="#Git的配置" class="headerlink" title="Git的配置"></a>Git的配置</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># 全局配置  F:\Git\etc\gitconfig     
+git config --system --list
+
+# 用户配置  C:\Users\dell\.gitconfig
+git config --global --list<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="Git-查看文件状态"><a href="#Git-查看文件状态" class="headerlink" title="Git 查看文件状态"></a>Git 查看文件状态</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># 查看指定文件状态 
+git status [filename]
+
+# 查看所有文件状态
+git status
+
+# 添加所有文件到暂存区
+git add .
+
+# 提交暂存区中的内容到本地仓库 -m表示提交信息
+git commit -m<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h5 id="Git常用指令"><a href="#Git常用指令" class="headerlink" title="Git常用指令"></a>Git常用指令</h5><pre class="line-numbers language-bash" data-language="bash"><code class="language-bash"># 列出所有本地分支
+git branch
+
+# 列出所有远程分支
+git branch -r
+
+# 新建一个分支，但依然停留在当前分支
+git branch [branch-name]
+
+# 新建一个分支，并切换到该分支
+git checkout -b [branch]
+
+# 合并指定分支到当前分支
+$ git merge [branch]
+
+# 删除分支
+$ git branch -d [branch-name]
+
+# 删除远程分支
+$ git push origin --delete [branch-name]
+$ git branch -dr [remote&#x2F;branch]<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h4 id="实战"><a href="#实战" class="headerlink" title="实战"></a>实战</h4><p>基于Git的工作流程，我们需要先将 Github 仓库 hnu_oj_team 克隆至本地作为工作副本进行编辑</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://www.runoob.com/wp-content/uploads/2015/02/git-process.png" alt="Git工作流程"></p>
+<p>创建文件夹 E:\hnu_oj_team ，用于工作副本的搭建，由于之前搭建<a href="www.heart-of-engine.top">博客</a>时安装过 Git 并连接好了 ssh 密钥，我们直接在工作文件夹内右击选择 <code>Git Bash Here</code> （不知道 Git GUI Here 能不能克隆OVO），输入 <code>git clone git@github.com:lixiaobai09/hnu_oj_team.git</code> 就克隆了 Github 仓库的文件</p>
+<p><strong>Tip</strong>：可以通过输入 <code>git --help</code>来获取更多信息</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/Git_clone_1.jpg"></p>
+<p>我们可以看到在工作文件夹内有一隐藏文件夹 .git ，这个不算工作区，而是 Git 的版本库。</p>
+<p>在工作文件夹内新建文件 Lizhuocheng.md ，在文件内写下自己的笔记</p>
+<p>写完后我们先在 Git Bush 界面输入 <code>git add .</code>，将该路径下所有文件添加到暂存区</p>
+<p>再输入<code>git status</code>，查看文件的状态</p>
+<p>再输入<code>git commit -m &quot;My first push!&quot;</code>，提交暂存区中的内容到本地仓库，其中 -m 表示提交信息</p>
+<p>再输入<code>git status</code>，再次查看文件的状态</p>
+<p>最后输入 <code>git push</code>便可将暂存区内的内容发送至 Github 仓库内的主分支</p>
+<p>但这里由于学长开启了 main 分支保护，我们无法直接 push 到主分支，需要先 push 到自己的 Github 分支再发起 pull request，</p>
+<p>在 Git Bush 界面输入 <code>git branch</code>，便可以查看本地的分支，这里是<code>main</code>分支 </p>
+<p>所以我们输入 <code>git push origin main:Lizhuocheng-dev</code>，便可以将本地仓库内的内容 push 到自己的 Github 分支</p>
+<p>Git push 成功！</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/git%20push%20%E6%88%90%E5%8A%9F.jpg" alt="成功push到自己的Github分支"></p>
+<h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><p><a target="_blank" rel="noopener" href="https://www.runoob.com/git/git-tutorial.html">菜鸟编程 Git</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1FE411P7B3">【狂神说Java】Git最新教程通俗易懂</a></p>
+<p><a target="_blank" rel="noopener" href="https://gitee.com/all-about-git">Git大全</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/u014636245/article/details/83382907">git push代码到远程新分支</a></p>
+<p><a target="_blank" rel="noopener" href="https://xiongyiming.blog.csdn.net/article/details/106056200">GitHub协作开发项目</a></p>
+<h4 id="一些优秀的OJ"><a href="#一些优秀的OJ" class="headerlink" title="一些优秀的OJ"></a>一些优秀的OJ</h4><p>这些 OJ 的前端做得非常优秀，是我们学习的榜样</p>
+<p><a target="_blank" rel="noopener" href="https://zoj.pintia.cn/">ZOJ</a></p>
+<p><a target="_blank" rel="noopener" href="https://loj.ac/">Libre OJ</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/syzoj">SYZOJ Online Judge System 的Github仓库</a></p>
+<h4 id="在学习中发现的其他知识积累"><a href="#在学习中发现的其他知识积累" class="headerlink" title="在学习中发现的其他知识积累"></a>在学习中发现的其他知识积累</h4><p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12J41137hu?p=6">markdown语法详解</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV12T4y1g7se">markdown 文本编辑器 Typora 的使用方法及技巧</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_43884551/article/details/114309637">翻墙后 git push 命令失效如何刷新 DNS 缓存</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44493841/article/details/100099239">在 Markdown 中用 mermaid 画流程图和 ER 图</a></p>
+<p><a target="_blank" rel="noopener" href="https://oschina.gitee.io/learn-git-branching/">可视化的 Git 命令学习工具</a></p>
 
                 
             </div>
@@ -570,7 +679,7 @@
                     </i>
                 </span>
                 <span class="reprint-info">
-                    <a href="https://Heart-of-engine.github.io/videos/index.html">https://Heart-of-engine.github.io/videos/index.html</a>
+                    <a href="https://Heart-of-engine.github.io/posts/c6zaza.html">https://Heart-of-engine.github.io/posts/c6zaza.html</a>
                 </span>
             </div>
             <div class="reprint__notice">
@@ -607,7 +716,11 @@
                 <div class="post-meta__tag-list" style="display: inline-block;">
                     
                         <div class="article-tag">
-                            <span class="chip bg-color">无标签</span>
+                            
+                                <a href="/tags/HNU-oj-team/">
+                                    <span class="chip bg-color">HNU_oj_team</span>
+                                </a>
+                            
                         </div>
                     
                 </div>
@@ -774,18 +887,16 @@
 <article id="prenext-posts" class="prev-next articles">
     <div class="row article-row">
         
-        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+        <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge left-badge text-color">
-                <i class="far fa-dot-circle"></i>&nbsp;本篇
-            </div>
+                <i class="fas fa-chevron-left"></i>&nbsp;上一篇</div>
             <div class="card">
-                <a href="/videos/index.html">
+                <a href="/posts/cfd6.html">
                     <div class="card-image">
                         
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/17.jpg" class="responsive-img" alt="记录我的16岁">
                         
-                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="">
-                        
-                        <span class="card-title"></span>
+                        <span class="card-title">记录我的16岁</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -795,9 +906,9 @@
                         
                     </div>
                     <div class="publish-info">
-                            <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-02
-                            </span>
+                        <span class="publish-date">
+                            <i class="far fa-clock fa-fw icon-date"></i>2021-06-14
+                        </span>
                         <span class="publish-author">
                             
                             <i class="fas fa-user fa-fw"></i>
@@ -806,7 +917,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/%E6%80%BB%E7%BB%93/">
+                        <span class="chip bg-color">总结</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
@@ -814,16 +932,16 @@
         
         <div class="article col s12 m6" data-aos="fade-up">
             <div class="article-badge right-badge text-color">
-                本篇&nbsp;<i class="far fa-dot-circle"></i>
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
             </div>
             <div class="card">
-                <a href="/videos/index.html">
+                <a href="/posts/79ab.html">
                     <div class="card-image">
                         
                         
-                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/0.jpg" class="responsive-img" alt="">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/18.jpg" class="responsive-img" alt="从零开始搭建一个Python运行环境">
                         
-                        <span class="card-title"></span>
+                        <span class="card-title">从零开始搭建一个Python运行环境</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -834,7 +952,7 @@
                     </div>
                     <div class="publish-info">
                             <span class="publish-date">
-                                <i class="far fa-clock fa-fw icon-date"></i>2021-01-02
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-05-22
                             </span>
                         <span class="publish-author">
                             
@@ -844,7 +962,14 @@
                         </span>
                     </div>
                 </div>
-
+                
+                <div class="card-action article-tags">
+                    
+                    <a href="/tags/Python/">
+                        <span class="chip bg-color">Python</span>
+                    </a>
+                    
+                </div>
                 
             </div>
         </div>
