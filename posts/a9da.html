@@ -54,7 +54,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">李拙诚的个人博客</span>
                 </a>
@@ -167,7 +167,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">李拙诚的个人博客</div>
         <div class="logo-desc">
@@ -517,7 +517,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-20
+                    2021-06-18
                 </div>
                 
 
@@ -600,22 +600,22 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
     &lt;&#x2F;iframe&gt; 
 &lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <h3 id="视频清晰度问题"><a href="#视频清晰度问题" class="headerlink" title="视频清晰度问题"></a>视频清晰度问题</h3><p>在1月12日为明日方舟模块引入三大底部视频后，发现效果并不是很理想，究其原因是视频的清晰度太低导致视频模糊，于是我联系了本方法的创作者<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">itsNekoDeng</a>，他提出若想调整视频默认清晰度，可以在<code>src</code>引入路径最后加上<code>&amp;high_quality=1</code>（480P）或<code>&amp;high_quality=0</code>（360P）<br>那么上例的代码更改如下：</p>
-<pre class="line-numbers language-markdown" data-language="markdown"><code class="language-markdown">&lt;!-- vlog模块 --&gt; 
-&lt;div style&#x3D;&quot;position: relative; padding: 30% 45%;&quot;&gt; 
-    &lt;iframe style&#x3D;&quot; 
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    left: 0; 
-    top: 0;&quot; 
-    src&#x3D;&quot;&#x2F;&#x2F;player.bilibili.com&#x2F;player.html?aid&#x3D;80181162&amp;bvid&#x3D;BV1Tv411t7m7&amp;high_quality&#x3D;1&quot; 
-    scrolling&#x3D;&quot;no&quot; 
-    border&#x3D;&quot;0&quot; 
-    frameborder&#x3D;&quot;no&quot; 
-    framespacing&#x3D;&quot;0&quot; 
-    allowfullscreen&#x3D;&quot;true&quot;&gt; 
-    &lt;&#x2F;iframe&gt; 
-&lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- vlog模块 --></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span> 30% 45%<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"> 
+    <span class="token property">position</span><span class="token punctuation">:</span> absolute<span class="token punctuation">;</span> 
+    <span class="token property">width</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> 
+    <span class="token property">height</span><span class="token punctuation">:</span> 100%<span class="token punctuation">;</span> 
+    <span class="token property">left</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span> 
+    <span class="token property">top</span><span class="token punctuation">:</span> 0<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span> 
+    <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>//player.bilibili.com/player.html?aid=80181162&amp;bvid=BV1Tv411t7m7&amp;high_quality=1<span class="token punctuation">"</span></span> 
+    <span class="token attr-name">scrolling</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span> 
+    <span class="token attr-name">border</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> 
+    <span class="token attr-name">frameborder</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>no<span class="token punctuation">"</span></span> 
+    <span class="token attr-name">framespacing</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>0<span class="token punctuation">"</span></span> 
+    <span class="token attr-name">allowfullscreen</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>true<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>iframe</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span><span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>这里参考了<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/hexo-vlog-page.html">itsNekoDeng的博客</a></p>
 <h2 id="Twikoo评论系统"><a href="#Twikoo评论系统" class="headerlink" title="Twikoo评论系统"></a>Twikoo评论系统</h2><h2 id="Live2d"><a href="#Live2d" class="headerlink" title="Live2d"></a>Live2d</h2><h3 id="目的-3"><a href="#目的-3" class="headerlink" title="目的"></a>目的</h3><p>以前看明日方舟主播玩游戏的时候就经常看到他们的Live2d头像，很是羡慕，最近发现<code>Matery</code>模板也可以加<code>Live2d</code>，可以使自己的<code>Live2d</code>头像出现在博客中。</p>
 <h3 id="插件冲突问题"><a href="#插件冲突问题" class="headerlink" title="插件冲突问题"></a>插件冲突问题</h3><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46399753/article/details/104768713">hexo中matery主题的个性化定制</a>中提到：安装了live2d之后再运行时报了个错，totalcount is not defined，然后整个页面都不显示了。最后发现只要安装了live2d模块，之前所安装配置的search、wordcount等插件都没有了，就连hexo-deployer-git也没了都要重新下，具体为什么我也不清楚。总之遇到这种情况了比着readme文件重新下一遍就好了。<br>所以我就先没有安装Live2d模块</p>
@@ -888,10 +888,10 @@ prism_plugin:
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -935,7 +935,7 @@ prism_plugin:
                 <a href="/posts/e254.html">
                     <div class="card-image">
                         
-                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/20.jpg" class="responsive-img" alt="一些平日的积累">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/20.jpg" class="responsive-img" alt="一些平日的积累">
                         
                         <span class="card-title">一些平日的积累</span>
                     </div>
@@ -983,7 +983,7 @@ prism_plugin:
                 <a href="/posts/b39e.html">
                     <div class="card-image">
                         
-                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/7.jpg" class="responsive-img" alt="xlrd包处理.xlsx文件报错处理小Tip">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/7.jpg" class="responsive-img" alt="xlrd包处理.xlsx文件报错处理小Tip">
                         
                         <span class="card-title">xlrd包处理.xlsx文件报错处理小Tip</span>
                     </div>
@@ -1489,13 +1489,13 @@ $(function () {
 
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script>
+    <script type="text/javascript" src="/js/fireworks.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
     
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
 
 </html>
