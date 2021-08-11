@@ -1,0 +1,1982 @@
+<!DOCTYPE HTML>
+<html lang="zh-CN">
+
+
+<head>
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><meta charset="utf-8">
+    <meta name="keywords" content="SIT教育系统项目学习, Python,HTML">
+    <meta name="description" content="专注于数学与编程的完美结合,分享生活,分享知识">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="renderer" content="webkit|ie-stand|ie-comp">
+    <meta name="mobile-web-app-capable" content="yes">
+    <meta name="format-detection" content="telephone=no">
+    <meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+
+
+    <title>SIT教育系统项目学习 | 李拙诚的个人博客</title>
+    <link rel="icon" type="image/png" href="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/favicon.png">
+
+    <link rel="stylesheet" type="text/css" href="/libs/awesome/css/all.css">
+    <link rel="stylesheet" type="text/css" href="/libs/materialize/materialize.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/aos/aos.css">
+    <link rel="stylesheet" type="text/css" href="/libs/animate/animate.min.css">
+    <link rel="stylesheet" type="text/css" href="/libs/lightGallery/css/lightgallery.min.css">
+    <link rel="stylesheet" type="text/css" href="/css/matery.css">
+    <link rel="stylesheet" type="text/css" href="/css/my.css">
+
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/olig48/resources@latest/css/loading.css">
+
+    <script src="/libs/jquery/jquery.min.js"></script>
+
+<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+
+
+
+   <style>
+    body{
+       background-image: url(https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E8%83%8C%E6%99%AF1%E5%8E%8B%E7%BC%A9%E5%90%8E.webp);
+       background-repeat:no-repeat;
+       background-size:cover;
+       background-attachment:fixed;
+    }
+</style>
+
+
+
+<body>
+    
+    <!-- hexo-inject:begin --><!-- hexo-inject:end --><header class="navbar-fixed">
+    <nav id="headNav" class="bg-color nav-transparent">
+        <div id="navContainer" class="nav-wrapper container">
+            <div class="brand-logo">
+                <a href="/" class="waves-effect waves-light">
+                    
+                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    
+                    <span class="logo-span">李拙诚的个人博客</span>
+                </a>
+            </div>
+            
+
+<a href="#" data-target="mobile-nav" class="sidenav-trigger button-collapse"><i class="fas fa-bars"></i></a>
+<ul class="right nav-menu">
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/" class="waves-effect waves-light">
+      
+      <i class="fas fa-home" style="zoom: 0.6;"></i>
+      
+      <span>首页</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/categories" class="waves-effect waves-light">
+      
+      <i class="fas fa-bookmark" style="zoom: 0.6;"></i>
+      
+      <span>分类</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/calendar" class="waves-effect waves-light">
+      
+      <i class="fas fa-archive" style="zoom: 0.6;"></i>
+      
+      <span>日历</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/about" class="waves-effect waves-light">
+      
+      <i class="fas fa-user-circle" style="zoom: 0.6;"></i>
+      
+      <span>关于</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/contact" class="waves-effect waves-light">
+      
+      <i class="fas fa-comments" style="zoom: 0.6;"></i>
+      
+      <span>留言板</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/friends" class="waves-effect waves-light">
+      
+      <i class="fas fa-address-book" style="zoom: 0.6;"></i>
+      
+      <span>友情链接</span>
+    </a>
+    
+  </li>
+  
+  <li class="hide-on-med-and-down nav-item">
+    
+    <a href="/entertainments" class="waves-effect waves-light">
+
+      
+      <i class="fas fa-chess" style="zoom: 0.6;"></i>
+      
+      <span>娱乐</span>
+      <i class="fas fa-chevron-down" aria-hidden="true" style="zoom: 0.6;"></i>
+    </a>
+    <ul class="sub-nav menus_item_child ">
+      
+      <li>
+        <a href="/arknights">
+          
+          <i class="fas fa-chess-rook" style="margin-top: -20px; zoom: 0.6;"></i>
+          
+          <span>明日方舟</span>
+        </a>
+      </li>
+      
+    </ul>
+    
+  </li>
+  
+  <li>
+    <a href="#searchModal" class="modal-trigger waves-effect waves-light">
+      <i id="searchIcon" class="fas fa-search" title="搜索" style="zoom: 0.85;"></i>
+    </a>
+  </li>
+</ul>
+
+
+<div id="mobile-nav" class="side-nav sidenav">
+
+    <div class="mobile-head bg-color">
+        
+        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        
+        <div class="logo-name">李拙诚的个人博客</div>
+        <div class="logo-desc">
+            
+            专注于数学与编程的完美结合,分享生活,分享知识
+            
+        </div>
+    </div>
+
+    
+
+    <ul class="menu-list mobile-menu-list">
+        
+        <li class="m-nav-item">
+	  
+		<a href="/" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-home"></i>
+			
+			首页
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/categories" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-bookmark"></i>
+			
+			分类
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/calendar" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-archive"></i>
+			
+			日历
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/about" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-user-circle"></i>
+			
+			关于
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/contact" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-comments"></i>
+			
+			留言板
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="/friends" class="waves-effect waves-light">
+			
+			    <i class="fa-fw fas fa-address-book"></i>
+			
+			友情链接
+		</a>
+          
+        </li>
+        
+        <li class="m-nav-item">
+	  
+		<a href="javascript:;">
+			
+				<i class="fa-fw fas fa-chess"></i>
+			
+			娱乐
+			<span class="m-icon"><i class="fas fa-chevron-right"></i></span>
+		</a>
+            <ul  style="background:  ;" >
+              
+                <li>
+
+                  <a href="/arknights " style="margin-left:75px">
+				  
+				   <i class="fa fas fa-chess-rook" style="position: absolute;left:50px" ></i>
+			      
+		          <span>明日方舟</span>
+                  </a>
+                </li>
+              
+            </ul>
+          
+        </li>
+        
+        
+        <li><div class="divider"></div></li>
+        <li>
+            <a href="https://github.com/Heart-of-engine" class="waves-effect waves-light" target="_blank">
+                <i class="fab fa-github-square fa-fw"></i>Fork Me
+            </a>
+        </li>
+        
+    </ul>
+</div>
+
+
+        </div>
+
+        
+            <style>
+    .nav-transparent .github-corner {
+        display: none !important;
+    }
+
+    .github-corner {
+        position: absolute;
+        z-index: 10;
+        top: 0;
+        right: 0;
+        border: 0;
+        transform: scale(1.1);
+    }
+
+    .github-corner svg {
+        color: #0f9d58;
+        fill: #fff;
+        height: 64px;
+        width: 64px;
+    }
+
+    .github-corner:hover .octo-arm {
+        animation: a 0.56s ease-in-out;
+    }
+
+    .github-corner .octo-arm {
+        animation: none;
+    }
+
+    @keyframes a {
+        0%,
+        to {
+            transform: rotate(0);
+        }
+        20%,
+        60% {
+            transform: rotate(-25deg);
+        }
+        40%,
+        80% {
+            transform: rotate(10deg);
+        }
+    }
+</style>
+
+<a href="" class="github-corner tooltipped hide-on-med-and-down" target="_blank"
+   data-tooltip="Fork Me" data-position="left" data-delay="50">
+    <svg viewBox="0 0 250 250" aria-hidden="true">
+        <path d="M0,0 L115,115 L130,115 L142,142 L250,250 L250,0 Z"></path>
+        <path d="M128.3,109.0 C113.8,99.7 119.0,89.6 119.0,89.6 C122.0,82.7 120.5,78.6 120.5,78.6 C119.2,72.0 123.4,76.3 123.4,76.3 C127.3,80.9 125.5,87.3 125.5,87.3 C122.9,97.6 130.6,101.9 134.4,103.2"
+              fill="currentColor" style="transform-origin: 130px 106px;" class="octo-arm"></path>
+        <path d="M115.0,115.0 C114.9,115.1 118.7,116.5 119.8,115.4 L133.7,101.6 C136.9,99.2 139.9,98.4 142.2,98.6 C133.8,88.0 127.5,74.4 143.8,58.0 C148.5,53.4 154.0,51.2 159.7,51.0 C160.3,49.4 163.2,43.6 171.4,40.1 C171.4,40.1 176.1,42.5 178.8,56.2 C183.1,58.6 187.2,61.8 190.9,65.4 C194.5,69.0 197.7,73.2 200.1,77.6 C213.8,80.2 216.3,84.9 216.3,84.9 C212.7,93.1 206.9,96.0 205.4,96.6 C205.1,102.4 203.0,107.8 198.3,112.5 C181.9,128.9 168.3,122.5 157.7,114.1 C157.9,116.9 156.7,120.9 152.7,124.9 L141.0,136.5 C139.8,137.7 141.6,141.9 141.8,141.8 Z"
+              fill="currentColor" class="octo-body"></path>
+    </svg>
+</a>
+        
+    </nav>
+
+</header>
+
+    
+<script src="/libs/cryptojs/crypto-js.min.js"></script>
+<script>
+    (function() {
+        let pwd = '';
+        if (pwd && pwd.length > 0) {
+            if (pwd !== CryptoJS.SHA256(prompt('本文博主设为私密，请输入访问本文章的密码')).toString(CryptoJS.enc.Hex)) {
+                alert('密码错误，即将返回主页！');
+                location.href = '/';
+            }
+        }
+    })();
+</script>
+
+
+
+
+<div class="bg-cover pd-header post-cover" style="background-image: url('/medias/featureimages/22.jpg')">
+    <div class="container" style="right: 0px;left: 0px;">
+        <div class="row">
+            <div class="col s12 m12 l12">
+                <div class="brand">
+                    <h1 class="description center-align post-title">SIT教育系统项目学习</h1>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+
+
+<main class="post-container content">
+
+    
+    <link rel="stylesheet" href="/libs/tocbot/tocbot.css">
+<style>
+    #articleContent h1::before,
+    #articleContent h2::before,
+    #articleContent h3::before,
+    #articleContent h4::before,
+    #articleContent h5::before,
+    #articleContent h6::before {
+        display: block;
+        content: " ";
+        height: 100px;
+        margin-top: -100px;
+        visibility: hidden;
+    }
+
+    #articleContent :focus {
+        outline: none;
+    }
+
+    .toc-fixed {
+        position: fixed;
+        top: 64px;
+    }
+
+    .toc-widget {
+        width: 345px;
+        padding-left: 20px;
+    }
+
+    .toc-widget .toc-title {
+        padding: 35px 0 15px 17px;
+        font-size: 1.5rem;
+        font-weight: bold;
+        line-height: 1.5rem;
+    }
+
+    .toc-widget ol {
+        padding: 0;
+        list-style: none;
+    }
+
+    #toc-content {
+        padding-bottom: 30px;
+        overflow: auto;
+    }
+
+    #toc-content ol {
+        padding-left: 10px;
+    }
+
+    #toc-content ol li {
+        padding-left: 10px;
+    }
+
+    #toc-content .toc-link:hover {
+        color: #42b983;
+        font-weight: 700;
+        text-decoration: underline;
+    }
+
+    #toc-content .toc-link::before {
+        background-color: transparent;
+        max-height: 25px;
+
+        position: absolute;
+        right: 23.5vw;
+        display: block;
+    }
+
+    #toc-content .is-active-link {
+        color: #42b983;
+    }
+
+    #floating-toc-btn {
+        position: fixed;
+        right: 15px;
+        bottom: 76px;
+        padding-top: 15px;
+        margin-bottom: 0;
+        z-index: 998;
+    }
+
+    #floating-toc-btn .btn-floating {
+        width: 48px;
+        height: 48px;
+    }
+
+    #floating-toc-btn .btn-floating i {
+        line-height: 48px;
+        font-size: 1.4rem;
+    }
+</style>
+<div class="row">
+    <div id="main-content" class="col s12 m12 l9">
+        <!-- 文章内容详情 -->
+<div id="artDetail">
+    <div class="card">
+        <div class="card-content article-info">
+            <div class="row tag-cate">
+                <div class="col s7">
+                    
+                          <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                          </div>
+                    
+                </div>
+                <div class="col s5 right-align">
+                    
+                </div>
+            </div>
+
+            <div class="post-info">
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-minus fa-fw"></i>发布日期:&nbsp;&nbsp;
+                    2021-08-10
+                </div>
+                
+
+                
+                <div class="post-date info-break-policy">
+                    <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
+                    2021-08-10
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
+                    7.3k
+                </div>
+                
+
+                
+                <div class="info-break-policy">
+                    <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
+                    26 分
+                </div>
+                
+
+                
+                    <div id="busuanzi_container_page_pv" class="info-break-policy">
+                        <i class="far fa-eye fa-fw"></i>阅读次数:&nbsp;&nbsp;
+                        <span id="busuanzi_value_page_pv"></span>
+                    </div>
+				
+            </div>
+        </div>
+        <hr class="clearfix">
+
+        
+        <!-- 是否加载使用自带的 prismjs. -->
+        <link rel="stylesheet" href="/libs/prism/prism.css">
+        
+
+        
+
+        <div class="card-content article-card-content">
+            <div id="articleContent">
+                <h2 id="第一阶段（准备工作）"><a href="#第一阶段（准备工作）" class="headerlink" title="第一阶段（准备工作）"></a>第一阶段（准备工作）</h2><h3 id="7-5-7-11"><a href="#7-5-7-11" class="headerlink" title="7.5-7.11"></a>7.5-7.11</h3><p>查阅参考文献</p>
+<h4 id="参考文献"><a href="#参考文献" class="headerlink" title="参考文献"></a>参考文献</h4><p><a target="_blank" rel="noopener" href="https://en.wikipedia.org/wiki/Learning_management_system">教育管理系统(LMS)-维基百科</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/read/readlist/rl307959">简述学习管理系统-哔哩哔哩专栏</a></p>
+<p><a target="_blank" rel="noopener" href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2019&filename=FYJY201917015">大数据挖掘在互联网教育平台个性化教学中的实践运用探索_李斌</a></p>
+<p><a target="_blank" rel="noopener" href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2019&filename=WXDY201907014">基于大数据的在线学习内容个性化精准推荐分析_肖叶枝</a></p>
+<p><a target="_blank" rel="noopener" href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2020&filename=KJCB201923084">基于大数据的智慧教育云平台设计与实现_杨燕艳</a></p>
+<p><a target="_blank" rel="noopener" href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=XDDJ202105037">基于大数据技术的个性化在线教育系统设计_崔天明</a></p>
+<p><a target="_blank" rel="noopener" href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=XDDJ202110013">基于教育信息化的大学课程实训平台系统设计_陈洪华</a></p>
+<p><a target="_blank" rel="noopener" href="https://kns.cnki.net/kcms/detail/detail.aspx?dbcode=CJFD&dbname=CJFDLAST2021&filename=JSGJ202012014">教育大数据在教育管理应用中的研究现状与技术路径_徐蕾</a></p>
+<h3 id="7-12-7-18"><a href="#7-12-7-18" class="headerlink" title="7.12-7.18"></a>7.12-7.18</h3><blockquote>
+<p>请各位寻找国内外相关系统资料：<br>①大体功能相同有关其他学科的系统；<br>②有关数学（小学初高中）的学习或纯管理系统。<br>在此基础上请思考：<br>①已有功能如何应用到高等教育数学方面；<br>②现有的系统可以如何应用和改进；<br>③现有的系统还缺少哪些必要功能。<br>另：明确我们的系统用户为学校，教师，学生，不过大家可以把重点先放在学生方面。<br>📌选定资料请群文件上传以避免研读相同资料，下周一之前完成上述任意点即可，届时选合适时间开小会～</p>
+</blockquote>
+<h4 id="个人理解"><a href="#个人理解" class="headerlink" title="个人理解"></a>个人理解</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/92568956">该网址</a>内提到了大量的优质 LMS 系统，我选择对 Canvas LMS 进行研究，因为 Canvas LMS 是全球最大的<code>以学校为重点</code>的云LMS提供商之一，目前已被全球 3000 多个学区、大学和教育机构使用。它旨在使学生、教师和员工能够开发、提供和管理面对面的在线学习环境，以期实现学术和企业学习目标，而这与我们<code>面向湖南大学这一教育机构实现数学方面的智能学习管理</code>的目标不谋而合。</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/OgP5zjikYqSCUWT.png"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://i.loli.net/2021/08/10/EBKXFHQOaN75JWR.png"></p>
+<p>与此同时，众多国内顶尖高校都在使用本系统，这使得这个系统更具普适性与学习价值。</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/QQ%25E6%2588%25AA%25E5%259B%25BE20210716190502.png"></p>
+<p>最重要的一点在于，其为开源系统，其在 Github 上有大量的开源代码，它在 AGPLv3 许可下发布，供任何有兴趣了解或使用学习管理系统的人使用。并且其代码仓库获得了四千 Star ，说明其得到了很多人的认可。如果我们在后期需要进行代码的具体编写，将大大减轻我们的工作量。</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/QQ%25E6%2588%25AA%25E5%259B%25BE20210716184407.png"></p>
+<h4 id="初探Canvas-LMS"><a href="#初探Canvas-LMS" class="headerlink" title="初探Canvas LMS"></a>初探Canvas LMS</h4><h5 id="基本功能"><a href="#基本功能" class="headerlink" title="基本功能"></a>基本功能</h5><h6 id="学生端"><a href="#学生端" class="headerlink" title="学生端"></a>学生端</h6><p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/v2-e36be02120fd3e49457920e5347cfb30_720w.jpg"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://pic2.zhimg.com/80/v2-84feee7973cac7afa84753bd3fa7da89_720w.jpg"></p>
+<h6 id="教师端"><a href="#教师端" class="headerlink" title="教师端"></a>教师端</h6><p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/v2-a385c106661ca088b808c21984d707c8_720w.jpg"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://pic2.zhimg.com/80/v2-1549a99b6dc3bc7486661615defa0f3d_720w.jpg"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/v2-2c3faa1cf34071899f452cd3bf6a3b73_720w.jpg"></p>
+<h5 id="强大的整合功能"><a href="#强大的整合功能" class="headerlink" title="强大的整合功能"></a>强大的整合功能</h5><p>支持大量教育工具嵌入式用，集成了许多第三方教育应用、社交网络和即时聊天工具，并正在持续发展更新中。</p>
+<p>举个例子，Qualtrics 是一个非常强大的调查问卷设计及数据分析的软件，在研究型大学中的应用极其广泛，通过进入 Canvas 找到 Qualtrics 的访问通道就可以不用跳转到其他浏览器中进行访问和其他操作了。我们的 LMS 也可以设计一个内嵌腾讯文档等高效办公软件的接口。</p>
+<h5 id="学生与教师端的对接功能"><a href="#学生与教师端的对接功能" class="headerlink" title="学生与教师端的对接功能"></a>学生与教师端的对接功能</h5><p>学生可以通过这个平台了解关于这一学科课程的绝大部分信息：查看所有课程资料、提交作业、考试、得到评分与评语、获知成绩、与讨论小组合作交流等等；教授可以通过这个平台发布课程资料、布置作业和明确要求、设置考试内容和评分机制、撰写评语和公布成绩、将学生分组、获悉学生整体的学习情况等（见另一篇<a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/159336646">详细谈Canvas（二）“老师篇”</a>）。</p>
+<h5 id="总结"><a href="#总结" class="headerlink" title="总结"></a>总结</h5><p>Canvas LMS 是一个优质的在线学习管理系统，其界面干爽简洁，功能一应俱全，与此同时，其开源的源码可以帮助我们在后期完善代码的编写与系统的架构，能够为我们带来巨大的帮助。</p>
+<blockquote>
+<p>①已有功能如何应用到高等教育数学方面；</p>
+<p>在我看来，Canvas 内置的功能已经非常全面，可以全盘引入到高等数学教学模块中来；</p>
+<p>②现有的系统可以如何应用和改进；</p>
+<p>我们可以针对性地专攻<code>数学教育</code>模块（如果什么都想做那就与教务系统定位重合了），如果将该系统与伐树、志愿者辅导等有机结合起来并制作成一个APP，那又是一个很大的创新（据不可靠消息，一位信科院19级的同学自制了一个“离散数学”APP，其内含大量的功能，正处于内测开发期，我们可以去观摩学习）</p>
+<p>下面是我的一个构想：</p>
+<h6 id="作业情况及测验成绩查看"><a href="#作业情况及测验成绩查看" class="headerlink" title="作业情况及测验成绩查看"></a>作业情况及测验成绩查看</h6><p>在APP内能够查询到自己每次作业的批改情况并给出正确解析，同时也能看到自己历次机考的失分位置，找到自己掌握薄弱的部分。</p>
+<h6 id="基于大数据的知识点掌握度查看"><a href="#基于大数据的知识点掌握度查看" class="headerlink" title="基于大数据的知识点掌握度查看"></a>基于大数据的知识点掌握度查看</h6><p>APP能够根据历次的作业与测验情况自动给出知识点掌握程度的推断，让学生知道自己不掌握的知识点是哪些、在哪里、需要如何巩固。</p>
+<h6 id="基于未掌握知识点的网课推荐服务"><a href="#基于未掌握知识点的网课推荐服务" class="headerlink" title="基于未掌握知识点的网课推荐服务"></a>基于未掌握知识点的网课推荐服务</h6><p>众所周知，在很多大学课程中，课前自学+课下巩固的效果往往比仅仅上课听讲的效果好。</p>
+<p>在课前学生能通过听网课了解知识点的分布与结构层次，在课后学生能通过听网课巩固自己对知识点的理解，APP可以基于前面分析出的薄弱知识点给予学生个性化的、精确到某一单元某一节的网课推荐，让学生能够在百忙的学习生涯中更高效地巩固知识点。</p>
+<h6 id="基于匹配算法的伐树志愿者对接功能"><a href="#基于匹配算法的伐树志愿者对接功能" class="headerlink" title="基于匹配算法的伐树志愿者对接功能"></a>基于匹配算法的伐树志愿者对接功能</h6><p>数学院有定期举办“伐树”志愿者活动，该活动旨在帮助在高数学习中遇到困难的其他专业同学，数学院志愿者将在APP内与外院学生对接，给予一对一学习辅导帮助。</p>
+<p>在APP中，上述活动会数字化、常态化，通过在线预约，外院学生可以自行决定辅导时间、辅导地点，数院志愿者也可以在线上自由选择自己想要志愿服务的对象，大大提高了志愿活动的自由度，节省了大家的时间。</p>
+<p>与此同时，APP将与数院“伐树”微信公众号进行对接，定期更新高数知识点视频库，确保其他院的学生能及时收到最新的高数讲解视频。</p>
+<p>③现有的系统还缺少哪些必要功能。</p>
+<p>其缺少一个<code>基于往期成绩的知识点预测与成绩分析模型</code>，而这也是我们数学系学生擅长的部分，我们可以迎难而上，用自己的专业优势将其解决，这一小步也许就是 LMS 系统领域的一大步。</p>
+</blockquote>
+<h4 id="参考网址"><a href="#参考网址" class="headerlink" title="参考网址"></a>参考网址</h4><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/92568956">海外20大最受欢迎的学习管理系统(LMS)-知乎</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/instructure/canvas-lms">Canvas LMS 项目源码-Github</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.instructure.com/en-au">Canvas LMS 开发商 Instructure Inc 官网</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/143653601">学习管理平台Canvas的介绍(一)–学生篇</a></p>
+<p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/159336646">详细谈Canvas（二）“老师篇”</a></p>
+<h4 id="讨论整合"><a href="#讨论整合" class="headerlink" title="讨论整合"></a>讨论整合</h4><p>经过小组讨论交流，我们得到以下信息</p>
+<h5 id="项目流程"><a href="#项目流程" class="headerlink" title="项目流程"></a>项目流程</h5><p>李墨涵：</p>
+<ol>
+<li>明确系统功能，包括：<br>①现有系统平台、APP已有的可用功能；<br>②针对数学的创新功能。</li>
+<li>选取具有创新性质的项目难点，考察可行性，着手研究</li>
+<li>研究阶段：<br>①收集数据，建立数据库；<br>②尝试解决问题，设计算法程序。</li>
+<li>重复第2、3条，时间允许可尝试进行网页设计，实现系统的搭建</li>
+</ol>
+<h5 id="基础功能的补充完善"><a href="#基础功能的补充完善" class="headerlink" title="基础功能的补充完善"></a>基础功能的补充完善</h5><p>王弘烨：</p>
+<ol>
+<li>错题分析 相关知识点 相关习题</li>
+<li>作业情况，期末学情分析，成绩可视化</li>
+<li>建立社交网络，加强用户交互，资源共享</li>
+<li>开发论坛等形式，用户讨论</li>
+<li>录入教材的习题，作为数据基础</li>
+</ol>
+<p>高雨溦：<br>6. 教师可以创建班级，管理考试<br>7. 学生可以加入班级，查看同学学习情况</p>
+<p>李拙诚：<br>8. 增加学生分组功能<br>9. 关联网课推荐</p>
+<h5 id="项目实现可行的工具方法"><a href="#项目实现可行的工具方法" class="headerlink" title="项目实现可行的工具方法"></a>项目实现可行的工具方法</h5><p>李拙诚：</p>
+<ol>
+<li>参考Canvas</li>
+<li>考虑内嵌办公软件等程序</li>
+</ol>
+<h5 id="需要解决的难点"><a href="#需要解决的难点" class="headerlink" title="需要解决的难点"></a>需要解决的难点</h5><p>王路博：</p>
+<ol>
+<li>证明题 数据的处理</li>
+<li>内置习题以便于分析</li>
+</ol>
+<p>许佳敏：<br>3. 升学就业的预测，目标方向的解决方案</p>
+<h3 id="7-19-7-25"><a href="#7-19-7-25" class="headerlink" title="7.19-7.25"></a>7.19-7.25</h3><blockquote>
+<p>①请仔细阅读PDF《Moodle Course Design Best Practices》《CANVAS LMS Course Design-Create and Deliver Interactive Online Courses on the Canvas》<br>②编写系统普遍功能的Word文档（格式如下图），针对用户分组：王弘烨、王路博、李拙诚负责学校、教师两个方面，李墨涵、许佳敏、高雨薇负责学生方面<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/QQ%25E5%259B%25BE%25E7%2589%258720210722154056.png"><br>请各位尽快完成上述内容，文档写好在群里上传即可～辛苦啦</p>
+</blockquote>
+<h4 id="个人理解-1"><a href="#个人理解-1" class="headerlink" title="个人理解"></a>个人理解</h4><p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/QQ%25E6%2588%25AA%25E5%259B%25BE20210722161408.png"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/QQ%25E6%2588%25AA%25E5%259B%25BE20210722162819.png"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="heart-of-engine.top/img/QQ%25E6%2588%25AA%25E5%259B%25BE20210722164209.png"></p>
+<h4 id="总结-1"><a href="#总结-1" class="headerlink" title="总结"></a>总结</h4><p>针对学校与教师：</p>
+<ol>
+<li>基本设置：能够设置自己的个人信息、创建自己的课程以及相关内容（作业、讨论、小测等）</li>
+<li>成绩分析：能够录入学生的每次测试成绩帮助成绩预测模型正确分析出学生对知识点的掌握情况，且能够通过系统反馈的信息发现学生普遍的薄弱点，在课程中加以重点讲解</li>
+</ol>
+<h4 id="讨论整合-1"><a href="#讨论整合-1" class="headerlink" title="讨论整合"></a>讨论整合</h4><p>李墨涵：</p>
+<blockquote>
+<ul>
+<li><strong>教师上传教学进度</strong></li>
+<li><strong>教师直播课程</strong></li>
+<li><strong>教师可以创建班级，设管理员，发起投票、公告</strong></li>
+<li>==<strong>课程mooc  社交   答疑分析（学伴）  注册登录学业管理</strong>==</li>
+<li>==<strong>教学日历等功能性的小程序</strong>==</li>
+</ul>
+<ol>
+<li>注册登录：学校班级认证</li>
+<li>通讯录：用户可添加其他用户、教师成为好友，信息交流</li>
+<li>电子教材：提供数学教材和教辅的PDF，关联网课推荐</li>
+<li>课程信息推送：开课时间、任课老师等基础信息；加入班级或小组；以及==知识点预习，重难点提示==</li>
+<li>随堂互动：签到，同步PPT到个人，随堂问答，错题记录</li>
+<li>作业记录：线上批改作业，收录错题，==知识点分析和同类习题推荐==，查看在整体中的比例情况</li>
+<li>小测和考试记录：提供往年题库，帮助复习；根据作业和小测数据分析薄弱知识点，==提供复习重点==；成绩趋势分析</li>
+<li>学业就业趋势：推送保研夏令营、考研政策、出国留学、企业招聘信息；分析用户数据，判断其适合的方向，提供有相关需求的学校、企业信息</li>
+<li>问题检索：【参考作业帮】</li>
+<li>交流平台：系统内置课程同名论坛、学习资源分享论坛等，用户发帖、上传资源</li>
+<li>教学日历：跟进课表和教学进度，考试安排</li>
+<li>自习打卡：记录自习时间；完成自习任务【内置一个番茄钟】</li>
+</ol>
+</blockquote>
+<p>王弘烨：</p>
+<blockquote>
+<p>课程管理<br>课程管理：管理平台全部课程，课程章节设置，课件设置，考核设置等<br>课程制作：管理平台自定义课件，将文档、多媒体资料组合成学习课件</p>
+<p>资源管理<br>资源类型：管理平台资源类型，包括文档、资料、音频、视频等<br>资源分类：管理资源分类，分类可根据实际情况自定义<br>资源管理：管理平台资源，可设置开放状态</p>
+<p>考核作业<br>作业布置：管理课程作业，布置新作业<br>作业统计：统计作业批改情况，成绩分布</p>
+<p>人员管理<br>员工管理：管理企业、机构工作人员信息，给予一定权限协助管理<br>学员管理：管理平台所有学员，状态设置、资料编辑等，可批量导入<br>班级管理：管理平台所有班级，分配班级成员，分配课程，分配管理人员</p>
+<p>社区交流<br>课程评价：查询与回复学员对课程的评价<br>提问互动：解答学员在学习过程中提出的疑问</p>
+<p>系统管理<br>账户管理：实时查看账户剩余空间、流量、有效期等信息<br>公告管理：管理平台公告，接收平台系统的功能更新消息</p>
+</blockquote>
+<p>王路博：</p>
+<blockquote>
+<p>教师学校端：</p>
+<ol>
+<li><p>自己建立自己的账户，其中包括个人信息，所授专业等。同时生成课程讨论大群，由老师担任管理员，大群下内设小群，由助教担任管理员。大群负责通知考试，平时作业等内容，助教则在小群中进行答疑，达到学习平台与交流平台的互通。</p>
+</li>
+<li><p>资源库允许所有人向其中添加资料，并定期进行审核。以期达到属于自己平台的电子图书馆，有需要的同学均可在其中找到自己需要的pdf</p>
+</li>
+<li><p>在教授完成对应章节后，发布小测试。抽取其中部分同学设立成绩折线图，并进行统计，待学期即将结束时将各个章节进行归纳整理，即可看出学生对于不同章节的掌握情况，在复习时可以更加具有针对性。</p>
+</li>
+<li><p>学校方面管理者在查看学生成绩后进行学生间小范围分组，增强学生之间的互相讨论。</p>
+</li>
+<li><p>在需要进行直播授课时，若该门课程选择人数较多，则在允许的情况下分不同直播间进行管理，并在每个直播间中安排助教，避免产生因人数过多导致的网络波动以及在上课时由于提问人数过多导致遗漏的发生。</p>
+</li>
+<li><p>与现有超星、MOOC等进行数据互通，在其中一个平台上即可查阅其余平台上的学习资料、学习课程等。</p>
+</li>
+</ol>
+</blockquote>
+<p>经过小组讨论，我们向大家发出<a target="_blank" rel="noopener" href="https://www.wjx.cn/vm/rsw1sLR.aspx">在线问卷</a>，调查同学们在数学专业学习中常用的数学学习软件，并收集他们认为学习软件中一个加入的功能，最终得到以下结果：</p>
+<table>
+   <tr>
+      <td>序号</td>
+      <td>提交答卷时间</td>
+      <td>所用时间</td>
+      <td>来源</td>
+      <td>来源详情</td>
+      <td>来自IP</td>
+      <td>1、您的年级</td>
+      <td>您的专业</td>
+      <td>您较常用的数学学习软件</td>
+      <td>您觉得目前的数学学习系统里欠缺哪些功能</td>
+   </tr>
+   <tr>
+      <td>1</td>
+      <td>2021/7/26 15:51:36</td>
+      <td>25秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>120.200.54.253(辽宁-抚顺)</td>
+      <td>大二</td>
+      <td>计算机</td>
+      <td>中国大学mooc</td>
+      <td>能听明白的学生</td>
+   </tr>
+   <tr>
+      <td>2</td>
+      <td>2021/7/26 15:53:46</td>
+      <td>19秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>42.57.113.66(辽宁-鞍山)</td>
+      <td>大二</td>
+      <td>会计</td>
+      <td>中国大学mooc┋b站</td>
+      <td>不详细</td>
+   </tr>
+   <tr>
+      <td>3</td>
+      <td>2021/7/26 15:56:09</td>
+      <td>88秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>182.200.24.178(辽宁-沈阳)</td>
+      <td>大三</td>
+      <td>信息与计算科学</td>
+      <td>b站</td>
+      <td>学术论文的撰写的相关教学</td>
+   </tr>
+   <tr>
+      <td>4</td>
+      <td>2021/7/26 15:58:11</td>
+      <td>37秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>110.87.31.173(福建-厦门)</td>
+      <td>大二</td>
+      <td>计算机科学</td>
+      <td>b站</td>
+      <td>拍题解答</td>
+   </tr>
+   <tr>
+      <td>5</td>
+      <td>2021/7/26 15:59:35</td>
+      <td>36秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>211.97.129.191(福建-厦门)</td>
+      <td>大二</td>
+      <td>食品科学与工程</td>
+      <td>中国大学mooc┋学校课程中心</td>
+      <td>知识点总结</td>
+   </tr>
+   <tr>
+      <td>6</td>
+      <td>2021/7/26 16:05:50</td>
+      <td>20秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>175.169.126.162(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>自动化</td>
+      <td>b站</td>
+      <td>无</td>
+   </tr>
+   <tr>
+      <td>7</td>
+      <td>2021/7/26 16:05:59</td>
+      <td>60秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>175.167.146.96(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>交通运输</td>
+      <td>b站</td>
+      <td>答案详细解析</td>
+   </tr>
+   <tr>
+      <td>8</td>
+      <td>2021/7/26 16:08:12</td>
+      <td>72秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>113.224.103.163(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>生物科学</td>
+      <td>中国大学mooc┋b站</td>
+      <td>没有举一反三功能</td>
+   </tr>
+   <tr>
+      <td>9</td>
+      <td>2021/7/26 16:16:30</td>
+      <td>22秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>140.243.174.92(福建-福州)</td>
+      <td>大二</td>
+      <td>工程管理</td>
+      <td>b站┋学校课程中心</td>
+      <td>没有系统</td>
+   </tr>
+   <tr>
+      <td>10</td>
+      <td>2021/7/26 16:17:41</td>
+      <td>16秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>223.101.27.176(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>金融</td>
+      <td>中国大学mooc</td>
+      <td>无</td>
+   </tr>
+   <tr>
+      <td>11</td>
+      <td>2021/7/26 16:18:14</td>
+      <td>98秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>120.36.254.128(福建-厦门)</td>
+      <td>大三</td>
+      <td>母猪的产后护理专业</td>
+      <td>学校课程中心</td>
+      <td>无系统</td>
+   </tr>
+   <tr>
+      <td>12</td>
+      <td>2021/7/26 16:21:02</td>
+      <td>19秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>223.104.175.106(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>英语</td>
+      <td>中国大学mooc┋b站┋智慧树/知到</td>
+      <td>缺乏练习环节</td>
+   </tr>
+   <tr>
+      <td>13</td>
+      <td>2021/7/26 16:22:38</td>
+      <td>63秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>119.233.180.42(福建-厦门)</td>
+      <td>大二</td>
+      <td>食品</td>
+      <td>学校课程中心┋其他〖课堂派〗</td>
+      <td>没用过</td>
+   </tr>
+   <tr>
+      <td>14</td>
+      <td>2021/7/26 16:27:56</td>
+      <td>36秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>223.104.175.104(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>土木工程</td>
+      <td>中国大学mooc┋b站┋智慧树/知到┋学校课程中心</td>
+      <td>解答问题模块</td>
+   </tr>
+   <tr>
+      <td>15</td>
+      <td>2021/7/26 16:30:14</td>
+      <td>38秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>36.130.34.67(辽宁-未知)</td>
+      <td>大二</td>
+      <td>金融</td>
+      <td>中国大学mooc┋b站┋智慧树/知到┋学校课程中心</td>
+      <td>实时讲解</td>
+   </tr>
+   <tr>
+      <td>16</td>
+      <td>2021/7/26 16:36:42</td>
+      <td>56秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>36.251.188.150(福建-泉州)</td>
+      <td>大三</td>
+      <td>信息工程</td>
+      <td>b站</td>
+      <td>缺小猿搜题</td>
+   </tr>
+   <tr>
+      <td>17</td>
+      <td>2021/7/26 16:44:17</td>
+      <td>30秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>117.30.177.75(福建-厦门)</td>
+      <td>大二</td>
+      <td>能源</td>
+      <td>中国大学mooc┋b站</td>
+      <td>做习题加对答案</td>
+   </tr>
+   <tr>
+      <td>18</td>
+      <td>2021/7/26 16:54:34</td>
+      <td>15秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>219.217.158.137(辽宁-大连)</td>
+      <td>大二</td>
+      <td>人工智能</td>
+      <td>中国大学mooc┋b站</td>
+      <td>无</td>
+   </tr>
+   <tr>
+      <td>19</td>
+      <td>2021/7/26 17:11:19</td>
+      <td>152秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>175.161.89.161(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>机械工程</td>
+      <td>中国大学mooc┋b站</td>
+      <td>课后讨论不够</td>
+   </tr>
+   <tr>
+      <td>20</td>
+      <td>2021/7/26 17:42:00</td>
+      <td>130秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>116.2.123.100(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>经济学，心理学</td>
+      <td>b站┋学校课程中心</td>
+      <td>例题较少</td>
+   </tr>
+   <tr>
+      <td>21</td>
+      <td>2021/7/26 19:49:50</td>
+      <td>24秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>39.144.177.58(河南-商丘)</td>
+      <td>大三</td>
+      <td>化生</td>
+      <td>中国大学mooc┋智慧树/知到</td>
+      <td>没感觉</td>
+   </tr>
+   <tr>
+      <td>22</td>
+      <td>2021/7/26 20:12:05</td>
+      <td>21秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>182.200.181.36(辽宁-沈阳)</td>
+      <td>大二</td>
+      <td>ACC</td>
+      <td>b站</td>
+      <td>练习</td>
+   </tr>
+   <tr>
+      <td>23</td>
+      <td>2021/7/26 20:25:53</td>
+      <td>74秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>223.104.36.155(安徽-未知)</td>
+      <td>大三</td>
+      <td>数学系 概率统计专业</td>
+      <td>其他〖R,MATLAB,mathsmatica,latex〗</td>
+      <td>编程语句学习起来比较复杂</td>
+   </tr>
+   <tr>
+      <td>24</td>
+      <td>2021/7/27 7:27:28</td>
+      <td>32秒</td>
+      <td>微信</td>
+      <td>N/A</td>
+      <td>114.254.0.99(北京-北京)</td>
+      <td>大二</td>
+      <td>自动化</td>
+      <td>中国大学mooc┋b站</td>
+      <td>例题</td>
+   </tr>
+   <tr>
+      <td>25</td>
+      <td>2021/7/29 19:44:03</td>
+      <td>20秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>111.208.112.249(江苏-未知)</td>
+      <td>大一</td>
+      <td>统计学</td>
+      <td>中国大学mooc┋b站</td>
+      <td>好的课程</td>
+   </tr>
+   <tr>
+      <td>26</td>
+      <td>2021/7/29 20:04:20</td>
+      <td>93秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>111.22.248.144(湖南-长沙)</td>
+      <td>大二</td>
+      <td>电子科学与技术</td>
+      <td>中国大学mooc┋学校课程中心┋其他〖知乎，腾讯QQ〗</td>
+      <td>缺少详细的科学计算过程</td>
+   </tr>
+   <tr>
+      <td>27</td>
+      <td>2021/7/29 20:05:22</td>
+      <td>58秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>223.157.233.145(湖南-娄底)</td>
+      <td>大二</td>
+      <td>计算机科学与技术</td>
+      <td>b站</td>
+      <td>实际应用</td>
+   </tr>
+   <tr>
+      <td>28</td>
+      <td>2021/7/29 20:52:47</td>
+      <td>65秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>223.104.35.252(安徽-合肥)</td>
+      <td>大二</td>
+      <td>城乡规划</td>
+      <td>中国大学mooc┋b站┋智慧树/知到</td>
+      <td>红包奖励机制</td>
+   </tr>
+   <tr>
+      <td>29</td>
+      <td>2021/7/29 21:11:14</td>
+      <td>32秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>218.2.107.252(江苏-南京)</td>
+      <td>大四</td>
+      <td>计算机科学与技术（人工智能）</td>
+      <td>b站</td>
+      <td>不知道QAQ</td>
+   </tr>
+   <tr>
+      <td>30</td>
+      <td>2021/7/29 21:49:25</td>
+      <td>59秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>101.105.109.201(安徽-合肥)</td>
+      <td>大一</td>
+      <td>环境工程</td>
+      <td>学校课程中心</td>
+      <td>呃</td>
+   </tr>
+   <tr>
+      <td>31</td>
+      <td>2021/7/29 22:10:11</td>
+      <td>54秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>36.142.163.3(甘肃-未知)</td>
+      <td>大三</td>
+      <td>电气工程及其自动化</td>
+      <td>中国大学mooc┋b站┋学校课程中心</td>
+      <td>教学使用WolframAlpha</td>
+   </tr>
+   <tr>
+      <td>32</td>
+      <td>2021/7/29 23:34:35</td>
+      <td>49秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>106.112.12.159(河北-邯郸)</td>
+      <td>大二</td>
+      <td>计算机科学与技术</td>
+      <td>中国大学mooc┋b站</td>
+      <td>找资料似乎有点麻烦</td>
+   </tr>
+   <tr>
+      <td>33</td>
+      <td>2021/7/30 8:00:18</td>
+      <td>47秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>117.136.24.63(湖南-长沙)</td>
+      <td>大二</td>
+      <td>数学系</td>
+      <td>中国大学mooc┋b站</td>
+      <td>知识点梳理&网课对接</td>
+   </tr>
+   <tr>
+      <td>34</td>
+      <td>2021/7/30 15:12:53</td>
+      <td>34秒</td>
+      <td>手机提交</td>
+      <td>直接访问</td>
+      <td>112.32.41.142(安徽-合肥)</td>
+      <td>大二</td>
+      <td>工业工程</td>
+      <td>中国大学mooc┋智慧树/知到┋学校课程中心</td>
+      <td>杂乱且没有权威系统</td>
+   </tr>
+   <tr>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td></td>
+      <td>计算机，电气工程自动化，土木、机械、环境工程，数学、金融、统计等理工专业</td>
+      <td>中国大学mooc，b站</td>
+      <td>缺乏习题及详细解答过程，缺少知识点总结、举一反三和课后讨论，没有系统和实际应用渠道</td>
+   </tr>
+</table>
+
+<p>我们总结得到如下结果：</p>
+<blockquote>
+<p>学生端</p>
+<ol>
+<li>  注册登录：学校班级认证</li>
+<li>  通讯录：用户可添加其他用户、教师成为好友，信息交流</li>
+<li>  电子教材：提供数学教材和教辅的PDF，关联网课推荐</li>
+<li>  课程信息推送：开课时间、任课老师等基础信息；加入班级或小组；以及知识点预习，重难点提示</li>
+<li>  随堂互动：签到，同步PPT到个人，随堂问答，错题记录</li>
+<li>  作业记录：线上批改作业，收录错题，知识点分析和同类习题推荐，查看在整体中的比例情况</li>
+<li>  小测和考试记录：提供往年题库，帮助复习；根据作业和小测数据分析薄弱知识点，提供复习重点；成绩趋势分析</li>
+<li>  学业就业趋势：推送保研夏令营、考研政策、出国留学、企业招聘信息；分析用户数据，判断其适合的方向，提供有相关需求的学校、企业信息</li>
+<li>  问题检索：【参考作业帮】</li>
+<li>交流平台：系统内置课程同名论坛、学习资源分享论坛等，用户发帖、上传资源</li>
+<li>教学日历：跟进课表和教学进度，考试安排</li>
+<li>自习打卡：记录自习时间；完成自习任务【内置一个番茄钟】</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>教师端</p>
+<ol>
+<li>注册登录：学校学院认证，其中包括个人信息，所授专业等</li>
+<li>通讯录：可添加学生、教师成为好友，信息交流</li>
+<li>电子教材：可上传课程PPT、PDF等建立个人资源库，加入所授课程的学生可以查看下载</li>
+<li>课程信息推送：开课时间等基础信息；创建班级或小组，设管理员，发起投票、公告</li>
+<li>随堂互动：发起签到，发布习题，提问及答疑；直播授课时，允许多个直播间同时进行，避免因人数过多导致的网络波动、遗漏提问等问题</li>
+<li>作业记录：布置新作业并线上批改，系统统计错题情况，成绩分布 </li>
+<li>小测和考试记录：完成对应章节后，发布测试。抽取其中部分同学统计成绩折线图，期末归纳整理各章节情况，了解学生不同章节的掌握情况，便于进行针对性复习。</li>
+<li>交流平台：系统内置课程同名论坛、学习资源分享论坛等，教师发帖、上传资源、答疑，查询与回复学生对课程的评价</li>
+<li>教学日历：可发布课表，上传或更新教学进度，考试安排等信息</li>
+<li>自习打卡：发布班级自习任务，掌握学生自习情况</li>
+</ol>
+</blockquote>
+<blockquote>
+<p>学校平台端</p>
+<ol>
+<li>注册登录：学校认证</li>
+<li>课程管理：管理平台或本校全部课程，课程章节设置，课件设置，考核设置等</li>
+<li>课程制作：管理平台或本校自定义课件，将文档、多媒体资料组合成学习课件</li>
+<li>资源类型：管理平台或本校资源类型，包括文档、资料、音频、视频等</li>
+<li>资源分类：管理资源分类，分类可根据实际情况自定义</li>
+<li>资源管理：管理平台资源，可设置开放状态【与现有超星、MOOC等进行数据互通，在其中一个平台上即可查阅其余平台上的学习资料、学习课程等】</li>
+<li>员工管理：管理平台工作人员和学校教职工信息，给予一定权限协助管理</li>
+<li>学员管理：管理学生，状态设置、资料编辑等，可批量导入；管理班级成员，小组分配，分配课程及管理人员</li>
+<li>系统账户管理：实时查看账户剩余空间、流量、有效期等信息 </li>
+<li>公告管理：管理平台公告，接收系统的功能更新消息</li>
+</ol>
+</blockquote>
+<h4 id="参考网址-1"><a href="#参考网址-1" class="headerlink" title="参考网址"></a>参考网址</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/demon119/article/details/106802308">typora 快速复制excel到typora</a></p>
+<p><a target="_blank" rel="noopener" href="http://pressbin.com/tools/excel_to_html_table/index.html">No-Cruft Excel to HTML Table Converter</a></p>
+<h3 id="7-26-8-1"><a href="#7-26-8-1" class="headerlink" title="7.26-8.1"></a>7.26-8.1</h3><blockquote>
+<p>①请仔细阅读PDF《Moodle Course Design Best Practices》《CANVAS LMS Course Design-Create and Deliver Interactive Online Courses on the Canvas》<br>②补充系统功能清单，考虑感兴趣的研究方向</p>
+</blockquote>
+<p>鉴于自己对基于错题的知识点分析模型比较感兴趣，我选择对学生端的第7点：<code>根据作业和小测数据分析薄弱知识点，提供复习重点；成绩趋势分析</code>进行研究</p>
+<h3 id="8-2-8-8"><a href="#8-2-8-8" class="headerlink" title="8.2-8.8"></a>8.2-8.8</h3><blockquote>
+<p>鉴于小组成员私人学习工作安排较多，自行学习一周</p>
+</blockquote>
+<h2 id="第二阶段"><a href="#第二阶段" class="headerlink" title="第二阶段"></a>第二阶段</h2><h3 id="8-9-8-15"><a href="#8-9-8-15" class="headerlink" title="8.9-8.15"></a>8.9-8.15</h3><blockquote>
+<p>整理前期收集的数据资料，预约答疑跟进，着手第二阶段研究</p>
+<p>分组推进:<br>①在社交平台发布投票，收集更多的数据，由李墨涵进行前期资料成文<br>②李拙诚，高雨薇进行其他系统体验，记录使用过程，研读其实现方法<br>③王弘烨，王路博，许佳敏整理数学分析主要定理，着重找到典型题，研究其中的解题思路，提出系统实现分析的可能</p>
+</blockquote>
+<h4 id="我的思路"><a href="#我的思路" class="headerlink" title="我的思路"></a>我的思路</h4><p>将知识点作为学习特征，用机器学习的方法，通过训练集进行训练，再通过测试集进行测试；</p>
+<p>使得在拿到一个习题时，机器学习模型即可判断其涉及哪些知识点以及各知识点对本题的权重；</p>
+<p>学生一旦做错，这些知识点的“薄弱度”便会增大，一旦“薄弱度”超过阈值，便判断该知识点为“薄弱”，系统会向学生推荐相关习题；</p>
+<p>采用艾宾浩斯学习法，当学生在一个周期内的正确率超过阈值，该知识点判定为“掌握”，从“薄弱”知识点库中移除。</p>
+<h5 id="遇到的问题"><a href="#遇到的问题" class="headerlink" title="遇到的问题"></a>遇到的问题</h5><ol>
+<li>没有训练集与测试集</li>
+<li>知识点对习题的权重如何确定(投票打分?)</li>
+<li>机器学习零基础</li>
+</ol>
+<h5 id="机器学习"><a href="#机器学习" class="headerlink" title="机器学习"></a>机器学习</h5><h5 id="步骤-1-收集和准备数据"><a href="#步骤-1-收集和准备数据" class="headerlink" title="步骤 1:收集和准备数据"></a>步骤 1:收集和准备数据</h5><p>一旦确定了数据源，就可以编译可用的数据。可根据拥有的数据类型确定可使用的机器学习算法。数据的检查过程可以识别出异常，开发出结构，并解决数据完整性问题。</p>
+<h5 id="步骤-2：定型模型"><a href="#步骤-2：定型模型" class="headerlink" title="步骤 2：定型模型"></a>步骤 2：定型模型</h5><p>准备好的数据分为两组：训练集和测试集。训练集是用于将机器学习模型调整到最高精度的量较大的那部分数据。</p>
+<h5 id="步骤-3：验证模型"><a href="#步骤-3：验证模型" class="headerlink" title="步骤 3：验证模型"></a>步骤 3：验证模型</h5><p>当准备好选择最终的数据模型后，使用测试集评估性能和准确性。</p>
+<h5 id="步骤-4：解释结果"><a href="#步骤-4：解释结果" class="headerlink" title="步骤 4：解释结果"></a>步骤 4：解释结果</h5><p>查看结果以获取见解，得出结论并预测结果。</p>
+<h4 id="讨论整合-2"><a href="#讨论整合-2" class="headerlink" title="讨论整合"></a>讨论整合</h4><ol>
+<li>李墨涵进行阶段性的汇报，主要内容是针对数学学习问题的问卷调查结果和学习系统功能的预想。</li>
+<li>林铮翔学长就系统性和功能提供一些解决方法和思路，提出内置习题分析知识点的思路，明确下一阶段需要研究的内容。</li>
+<li>徐军老师指导课题，考虑从系统层面和研究层面两个方向解决问题，提出尝试已有系统的功能以补充课题，和其他小组合作、选取具体课程进行实践获得数据。关于知识点分析这一难点，提出按步骤或流程图，从时间或空间角度拆解分析的思路。</li>
+<li>李秋齐老师从教师用户的角度予以补充，着重强调学习的系统性，提出针对不同层次的学生提供相关帮助的内容不同，提出批改作业时不同学科不同时期教师的主要关注内容，给出实现系统批改作业的思路，给予本组数学分析相关内容的数据帮助。</li>
+</ol>
+<h4 id="参考链接"><a href="#参考链接" class="headerlink" title="参考链接"></a>参考链接</h4><p><a target="_blank" rel="noopener" href="https://azure.microsoft.com/zh-cn/overview/what-is-machine-learning-platform/">什么是机器学习?-训练机器像人类一样分析和学习数据的科学</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/MorvanZhou/tutorials">机器学习教程</a></p>
+
+                
+            </div>
+            <hr/>
+
+            
+
+    <div class="reprint" id="reprint-statement">
+        
+            <div class="reprint__author">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-user">
+                        文章作者:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="/about" rel="external nofollow noreferrer">Heart-of-engine</a>
+                </span>
+            </div>
+            <div class="reprint__type">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-link">
+                        文章链接:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    <a href="https://Heart-of-engine.github.io/posts/54367.html">https://Heart-of-engine.github.io/posts/54367.html</a>
+                </span>
+            </div>
+            <div class="reprint__notice">
+                <span class="reprint-meta" style="font-weight: bold;">
+                    <i class="fas fa-copyright">
+                        版权声明:
+                    </i>
+                </span>
+                <span class="reprint-info">
+                    本博客所有文章除特別声明外，均采用
+                    <a href="https://creativecommons.org/licenses/by/4.0/deed.zh" rel="external nofollow noreferrer" target="_blank">CC BY 4.0</a>
+                    许可协议。转载请注明来源
+                    <a href="/about" target="_blank">Heart-of-engine</a>
+                    !
+                </span>
+            </div>
+        
+    </div>
+
+    <script async defer>
+      document.addEventListener("copy", function (e) {
+        let toastHTML = '<span>复制成功，请遵循本文的转载规则</span><button class="btn-flat toast-action" onclick="navToReprintStatement()" style="font-size: smaller">查看</a>';
+        M.toast({html: toastHTML})
+      });
+
+      function navToReprintStatement() {
+        $("html, body").animate({scrollTop: $("#reprint-statement").offset().top - 80}, 800);
+      }
+    </script>
+
+
+
+            <div class="tag_share" style="display: block;">
+                <div class="post-meta__tag-list" style="display: inline-block;">
+                    
+                        <div class="article-tag">
+                            <span class="chip bg-color">无标签</span>
+                        </div>
+                    
+                </div>
+                <div class="post_share" style="zoom: 80%; width: fit-content; display: inline-block; float: right; margin: -0.15rem 0;">
+                    <link rel="stylesheet" type="text/css" href="/libs/share/css/share.min.css">
+<div id="article-share">
+
+    
+    <div class="social-share" data-sites="twitter,facebook,google,qq,qzone,wechat,weibo,douban,linkedin" data-wechat-qrcode-helper="<p>微信扫一扫即可分享！</p>"></div>
+    <script src="/libs/share/js/social-share.min.js"></script>
+    
+
+    
+
+</div>
+
+                </div>
+            </div>
+            
+                <style>
+    #reward {
+        margin: 40px 0;
+        text-align: center;
+    }
+
+    #reward .reward-link {
+        font-size: 1.4rem;
+    }
+
+    #reward .btn-floating:hover {
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2), 0 5px 15px rgba(0, 0, 0, 0.2);
+    }
+
+    #rewardModal {
+        width: 320px;
+        height: 350px;
+    }
+
+    #rewardModal .reward-title {
+        margin: 15px auto;
+        padding-bottom: 5px;
+    }
+
+    #rewardModal .modal-content {
+        padding: 10px;
+    }
+
+    #rewardModal .close {
+        position: absolute;
+        right: 15px;
+        top: 15px;
+        color: rgba(0, 0, 0, 0.5);
+        font-size: 1.3rem;
+        line-height: 20px;
+        cursor: pointer;
+    }
+
+    #rewardModal .close:hover {
+        color: #ef5350;
+        transform: scale(1.3);
+        -moz-transform:scale(1.3);
+        -webkit-transform:scale(1.3);
+        -o-transform:scale(1.3);
+    }
+
+    #rewardModal .reward-tabs {
+        margin: 0 auto;
+        width: 210px;
+    }
+
+    .reward-tabs .tabs {
+        height: 38px;
+        margin: 10px auto;
+        padding-left: 0;
+    }
+
+    .reward-content ul {
+        padding-left: 0 !important;
+    }
+
+    .reward-tabs .tabs .tab {
+        height: 38px;
+        line-height: 38px;
+    }
+
+    .reward-tabs .tab a {
+        color: #fff;
+        background-color: #ccc;
+    }
+
+    .reward-tabs .tab a:hover {
+        background-color: #ccc;
+        color: #fff;
+    }
+
+    .reward-tabs .wechat-tab .active {
+        color: #fff !important;
+        background-color: #22AB38 !important;
+    }
+
+    .reward-tabs .alipay-tab .active {
+        color: #fff !important;
+        background-color: #019FE8 !important;
+    }
+
+    .reward-tabs .reward-img {
+        width: 210px;
+        height: 210px;
+    }
+</style>
+
+<div id="reward">
+    <a href="#rewardModal" class="reward-link modal-trigger btn-floating btn-large waves-effect waves-light blue">打赏</a>
+
+    <!-- Modal Structure -->
+    <div id="rewardModal" class="modal">
+        <div class="modal-content">
+            <a class="close modal-close"><i class="fas fa-times"></i></a>
+            <h4 class="reward-title">你的赏识是我前进的动力</h4>
+            <div class="reward-content">
+                <div class="reward-tabs">
+                    <ul class="tabs row">
+                        <li class="tab col s6 alipay-tab waves-effect waves-light"><a href="#alipay">支付宝</a></li>
+                        <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
+                    </ul>
+                    <div id="alipay">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                    </div>
+                    <div id="wechat">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<script>
+    $(function () {
+        $('.tabs').tabs();
+    });
+</script>
+
+            
+        </div>
+    </div>
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+    
+
+<article id="prenext-posts" class="prev-next articles">
+    <div class="row article-row">
+        
+        <div class="article col s12 m6" data-aos="fade-up" data-aos="fade-up">
+            <div class="article-badge left-badge text-color">
+                <i class="far fa-dot-circle"></i>&nbsp;本篇
+            </div>
+            <div class="card">
+                <a href="/posts/54367.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/22.jpg" class="responsive-img" alt="SIT教育系统项目学习">
+                        
+                        <span class="card-title">SIT教育系统项目学习</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Heart-of-engine
+                            
+                        </span>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+        
+        
+        <div class="article col s12 m6" data-aos="fade-up">
+            <div class="article-badge right-badge text-color">
+                下一篇&nbsp;<i class="fas fa-chevron-right"></i>
+            </div>
+            <div class="card">
+                <a href="/posts/13271.html">
+                    <div class="card-image">
+                        
+                        
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/13.jpg" class="responsive-img" alt="记录我的17岁">
+                        
+                        <span class="card-title">记录我的17岁</span>
+                    </div>
+                </a>
+                <div class="card-content article-content">
+                    <div class="summary block-with-text">
+                        
+                            
+                        
+                    </div>
+                    <div class="publish-info">
+                            <span class="publish-date">
+                                <i class="far fa-clock fa-fw icon-date"></i>2021-08-10
+                            </span>
+                        <span class="publish-author">
+                            
+                            <i class="fas fa-user fa-fw"></i>
+                            Heart-of-engine
+                            
+                        </span>
+                    </div>
+                </div>
+                
+            </div>
+        </div>
+        
+    </div>
+</article>
+
+</div>
+
+
+
+<!-- 代码块功能依赖 -->
+<script type="text/javascript" src="/libs/codeBlock/codeBlockFuction.js"></script>
+
+<!-- 代码语言 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeLang.js"></script>
+
+
+<!-- 代码块复制 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeCopy.js"></script>
+
+
+<!-- 代码块收缩 -->
+
+<script type="text/javascript" src="/libs/codeBlock/codeShrink.js"></script>
+
+
+    </div>
+    <div id="toc-aside" class="expanded col l3 hide-on-med-and-down">
+        <div class="toc-widget card" style="background-color: white;">
+            <div class="toc-title"><i class="far fa-list-alt"></i>&nbsp;&nbsp;目录</div>
+            <div id="toc-content"></div>
+        </div>
+    </div>
+</div>
+
+<!-- TOC 悬浮按钮. -->
+
+<div id="floating-toc-btn" class="hide-on-med-and-down">
+    <a class="btn-floating btn-large bg-color">
+        <i class="fas fa-list-ul"></i>
+    </a>
+</div>
+
+
+<script src="/libs/tocbot/tocbot.min.js"></script>
+<script>
+    $(function () {
+        tocbot.init({
+            tocSelector: '#toc-content',
+            contentSelector: '#articleContent',
+            headingsOffset: -($(window).height() * 0.4 - 45),
+            collapseDepth: Number('0'),
+            headingSelector: 'h2, h3, h4'
+        });
+
+        // modify the toc link href to support Chinese.
+        let i = 0;
+        let tocHeading = 'toc-heading-';
+        $('#toc-content a').each(function () {
+            $(this).attr('href', '#' + tocHeading + (++i));
+        });
+
+        // modify the heading title id to support Chinese.
+        i = 0;
+        $('#articleContent').children('h2, h3, h4').each(function () {
+            $(this).attr('id', tocHeading + (++i));
+        });
+
+        // Set scroll toc fixed.
+        let tocHeight = parseInt($(window).height() * 0.4 - 64);
+        let $tocWidget = $('.toc-widget');
+        $(window).scroll(function () {
+            let scroll = $(window).scrollTop();
+            /* add post toc fixed. */
+            if (scroll > tocHeight) {
+                $tocWidget.addClass('toc-fixed');
+            } else {
+                $tocWidget.removeClass('toc-fixed');
+            }
+        });
+
+        
+        /* 修复文章卡片 div 的宽度. */
+        let fixPostCardWidth = function (srcId, targetId) {
+            let srcDiv = $('#' + srcId);
+            if (srcDiv.length === 0) {
+                return;
+            }
+
+            let w = srcDiv.width();
+            if (w >= 450) {
+                w = w + 21;
+            } else if (w >= 350 && w < 450) {
+                w = w + 18;
+            } else if (w >= 300 && w < 350) {
+                w = w + 16;
+            } else {
+                w = w + 14;
+            }
+            $('#' + targetId).width(w);
+        };
+
+        // 切换TOC目录展开收缩的相关操作.
+        const expandedClass = 'expanded';
+        let $tocAside = $('#toc-aside');
+        let $mainContent = $('#main-content');
+        $('#floating-toc-btn .btn-floating').click(function () {
+            if ($tocAside.hasClass(expandedClass)) {
+                $tocAside.removeClass(expandedClass).hide();
+                $mainContent.removeClass('l9');
+            } else {
+                $tocAside.addClass(expandedClass).show();
+                $mainContent.addClass('l9');
+            }
+            fixPostCardWidth('artDetail', 'prenext-posts');
+        });
+        
+    });
+</script>
+
+    
+
+</main>
+
+
+
+
+    <footer class="page-footer bg-color">
+    
+        <link rel="stylesheet" href="/libs/aplayer/APlayer.min.css">
+<style>
+    .aplayer .aplayer-lrc p {
+        
+        display: none;
+        
+        font-size: 12px;
+        font-weight: 700;
+        line-height: 16px !important;
+    }
+
+    .aplayer .aplayer-lrc p.aplayer-lrc-current {
+        
+        display: none;
+        
+        font-size: 15px;
+        color: #42b983;
+    }
+
+    
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body {
+        left: -66px !important;
+    }
+
+    .aplayer.aplayer-fixed.aplayer-narrow .aplayer-body:hover {
+        left: 0px !important;
+    }
+
+    
+</style>
+<div class="">
+    
+    <div class="row">
+        <meting-js class="col l8 offset-l2 m10 offset-m1 s12"
+                   server="netease"
+                   type="playlist"
+                   id="503838841"
+                   fixed='true'
+                   autoplay='false'
+                   theme='#42b983'
+                   loop='all'
+                   order='random'
+                   preload='auto'
+                   volume='0.7'
+                   list-folded='true'
+        >
+        </meting-js>
+    </div>
+</div>
+
+<script src="/libs/aplayer/APlayer.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/meting@2/dist/Meting.min.js"></script>
+
+    
+    <div class="container row center-align" style="margin-bottom: 15px !important;">
+        <div class="col s12 m8 l8 copy-right">
+            Copyright&nbsp;&copy;
+            
+                <span id="year">2020-2021</span>
+            
+            <span id="year">2020</span>
+            <a href="/about" target="_blank">Heart-of-engine</a>
+            |&nbsp;Powered by&nbsp;<a href="https://hexo.io/" target="_blank">Hexo</a>
+            |&nbsp;Theme&nbsp;<a href="https://github.com/blinkfox/hexo-theme-matery" target="_blank">Matery</a>
+            <br>
+            
+            &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
+                class="white-color">60.2k</span>&nbsp;字
+            
+            
+            
+            
+            
+            
+            <span id="busuanzi_container_site_pv">
+                |&nbsp;<i class="far fa-eye"></i>&nbsp;总访问量:&nbsp;<span id="busuanzi_value_site_pv"
+                    class="white-color"></span>&nbsp;次
+            </span>
+            
+            
+            <span id="busuanzi_container_site_uv">
+                |&nbsp;<i class="fas fa-users"></i>&nbsp;总访问人数:&nbsp;<span id="busuanzi_value_site_uv"
+                    class="white-color"></span>&nbsp;人
+            </span>
+            
+            <br>
+            
+            <span id="sitetime">载入运行时间...</span>
+            <script>
+                function siteTime() {
+                    var seconds = 1000;
+                    var minutes = seconds * 60;
+                    var hours = minutes * 60;
+                    var days = hours * 24;
+                    var years = days * 365;
+                    var today = new Date();
+                    var startYear = "2020";
+                    var startMonth = "11";
+                    var startDate = "23";
+                    var startHour = "0";
+                    var startMinute = "0";
+                    var startSecond = "0";
+                    var todayYear = today.getFullYear();
+                    var todayMonth = today.getMonth() + 1;
+                    var todayDate = today.getDate();
+                    var todayHour = today.getHours();
+                    var todayMinute = today.getMinutes();
+                    var todaySecond = today.getSeconds();
+                    var t1 = Date.UTC(startYear, startMonth, startDate, startHour, startMinute, startSecond);
+                    var t2 = Date.UTC(todayYear, todayMonth, todayDate, todayHour, todayMinute, todaySecond);
+                    var diff = t2 - t1;
+                    var diffYears = Math.floor(diff / years);
+                    var diffDays = Math.floor((diff / days) - diffYears * 365);
+                    var diffHours = Math.floor((diff - (diffYears * 365 + diffDays) * days) / hours);
+                    var diffMinutes = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours) /
+                        minutes);
+                    var diffSeconds = Math.floor((diff - (diffYears * 365 + diffDays) * days - diffHours * hours -
+                        diffMinutes * minutes) / seconds);
+                    if (startYear == todayYear) {
+                        document.getElementById("year").innerHTML = todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffDays + " 天 " + diffHours +
+                            " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    } else {
+                        document.getElementById("year").innerHTML = startYear + " - " + todayYear;
+                        document.getElementById("sitetime").innerHTML = "本站已安全运行 " + diffYears + " 年 " + diffDays +
+                            " 天 " + diffHours + " 小时 " + diffMinutes + " 分钟 " + diffSeconds + " 秒";
+                    }
+                }
+                setInterval(siteTime, 1000);
+            </script>
+            
+            <br>
+            
+        </div>
+        <div class="col s12 m4 l4 social-link social-statis">
+    <a href="https://github.com/Heart-of-engine" class="tooltipped" target="_blank" data-tooltip="访问我的GitHub:Heart-of-engine" data-position="top" data-delay="50">
+        <i class="fab fa-github"></i>
+    </a>
+
+
+
+    <a href="mailto:1055302133@qq.com" class="tooltipped" target="_blank" data-tooltip="邮件联系我:1055302133@qq.com" data-position="top" data-delay="50">
+        <i class="fas fa-envelope-open"></i>
+    </a>
+
+
+
+
+
+
+
+    <a href="tencent://AddContact/?fromId=50&fromSubId=1&subcmd=all&uin=1055302133" class="tooltipped" target="_blank" data-tooltip="QQ联系我: 1055302133" data-position="top" data-delay="50">
+        <i class="fab fa-qq"></i>
+    </a>
+
+
+
+
+
+
+
+
+
+    <a href="https://blog.csdn.net/weixin_50000392" class="tooltipped" target="_blank" data-tooltip="关注我的CSDN: https://blog.csdn.net/weixin_50000392" data-position="top" data-delay="50">
+        <i class="fab fa-csdn">C</i>
+    </a>
+</div>
+    </div>
+</footer>
+
+<div class="progress-bar"></div>
+
+
+    <!-- 搜索遮罩框 -->
+<div id="searchModal" class="modal">
+    <div class="modal-content">
+        <div class="search-header">
+            <span class="title"><i class="fas fa-search"></i>&nbsp;&nbsp;搜索</span>
+            <input type="search" id="searchInput" name="s" placeholder="请输入搜索的关键字"
+                   class="search-input">
+        </div>
+        <div id="searchResult"></div>
+    </div>
+</div>
+
+<script type="text/javascript">
+$(function () {
+    var searchFunc = function (path, search_id, content_id) {
+        'use strict';
+        $.ajax({
+            url: path,
+            dataType: "xml",
+            success: function (xmlResponse) {
+                // get the contents from search data
+                var datas = $("entry", xmlResponse).map(function () {
+                    return {
+                        title: $("title", this).text(),
+                        content: $("content", this).text(),
+                        url: $("url", this).text()
+                    };
+                }).get();
+                var $input = document.getElementById(search_id);
+                var $resultContent = document.getElementById(content_id);
+                $input.addEventListener('input', function () {
+                    var str = '<ul class=\"search-result-list\">';
+                    var keywords = this.value.trim().toLowerCase().split(/[\s\-]+/);
+                    $resultContent.innerHTML = "";
+                    if (this.value.trim().length <= 0) {
+                        return;
+                    }
+                    // perform local searching
+                    datas.forEach(function (data) {
+                        var isMatch = true;
+                        var data_title = data.title.trim().toLowerCase();
+                        var data_content = data.content.trim().replace(/<[^>]+>/g, "").toLowerCase();
+                        var data_url = data.url;
+                        data_url = data_url.indexOf('/') === 0 ? data.url : '/' + data_url;
+                        var index_title = -1;
+                        var index_content = -1;
+                        var first_occur = -1;
+                        // only match artiles with not empty titles and contents
+                        if (data_title !== '' && data_content !== '') {
+                            keywords.forEach(function (keyword, i) {
+                                index_title = data_title.indexOf(keyword);
+                                index_content = data_content.indexOf(keyword);
+                                if (index_title < 0 && index_content < 0) {
+                                    isMatch = false;
+                                } else {
+                                    if (index_content < 0) {
+                                        index_content = 0;
+                                    }
+                                    if (i === 0) {
+                                        first_occur = index_content;
+                                    }
+                                }
+                            });
+                        }
+                        // show search results
+                        if (isMatch) {
+                            str += "<li><a href='" + data_url + "' class='search-result-title'>" + data_title + "</a>";
+                            var content = data.content.trim().replace(/<[^>]+>/g, "");
+                            if (first_occur >= 0) {
+                                // cut out 100 characters
+                                var start = first_occur - 20;
+                                var end = first_occur + 80;
+                                if (start < 0) {
+                                    start = 0;
+                                }
+                                if (start === 0) {
+                                    end = 100;
+                                }
+                                if (end > content.length) {
+                                    end = content.length;
+                                }
+                                var match_content = content.substr(start, end);
+                                // highlight all keywords
+                                keywords.forEach(function (keyword) {
+                                    var regS = new RegExp(keyword, "gi");
+                                    match_content = match_content.replace(regS, "<em class=\"search-keyword\">" + keyword + "</em>");
+                                });
+
+                                str += "<p class=\"search-result\">" + match_content + "...</p>"
+                            }
+                            str += "</li>";
+                        }
+                    });
+                    str += "</ul>";
+                    $resultContent.innerHTML = str;
+                });
+            }
+        });
+    };
+
+    searchFunc('/search.xml', 'searchInput', 'searchResult');
+});
+</script>
+
+    <!-- 回到顶部按钮 -->
+<div id="backTop" class="top-scroll">
+    <a class="btn-floating btn-large waves-effect waves-light" href="#!">
+        <i class="fas fa-arrow-up"></i>
+    </a>
+</div>
+
+
+    <script src="/libs/materialize/materialize.min.js"></script>
+    <script src="/libs/masonry/masonry.pkgd.min.js"></script>
+    <script src="/libs/aos/aos.js"></script>
+    <script src="/libs/scrollprogress/scrollProgress.min.js"></script>
+    <script src="/libs/lightGallery/js/lightgallery-all.min.js"></script>
+    <script src="/js/matery.js"></script>
+
+    <!-- Baidu Analytics -->
+
+    <!-- Baidu Push -->
+
+<script>
+    (function () {
+        var bp = document.createElement('script');
+        var curProtocol = window.location.protocol.split(':')[0];
+        if (curProtocol === 'https') {
+            bp.src = 'https://zz.bdstatic.com/linksubmit/push.js';
+        } else {
+            bp.src = 'http://push.zhanzhang.baidu.com/push.js';
+        }
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(bp, s);
+    })();
+</script>
+
+    
+    <script src="/libs/others/clicklove.js" async="async"></script>
+    
+    
+    <script async src="/libs/others/busuanzi.pure.mini.js"></script>
+    
+
+    
+
+    
+
+	
+    
+
+    
+
+    
+
+    
+    <script src="/libs/instantpage/instantpage.js" type="module"></script>
+    
+
+    <!--动态线条背景-->
+    <script type="text/javascript"
+    color="122 103 238" opacity='1.0' zIndex="-2" count="200" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js">
+    </script>
+
+    <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
+    <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
+    <script type="text/javascript" src="/js/fireworks.js"></script>
+    
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
+            window.imageLazyLoadSetting = {
+                isSPA: false,
+                processImages: null,
+            };
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+
+</html>

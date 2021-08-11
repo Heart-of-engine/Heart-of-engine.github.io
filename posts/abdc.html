@@ -54,7 +54,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">李拙诚的个人博客</span>
                 </a>
@@ -167,7 +167,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">李拙诚的个人博客</div>
         <div class="logo-desc">
@@ -555,8 +555,8 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>期末考试考完啦！回到寝室就立刻打开电脑开始《地球帝国》游戏，由于之前重装了系统，更改了一些设置，导致游戏开始一局后就会卡死，无法正常运行</p>
-<h2 id="解决游戏卡死问题"><a href="#解决游戏卡死问题" class="headerlink" title="解决游戏卡死问题"></a>解决游戏卡死问题</h2><p>首先我们右击游戏<code>exe</code>文件，选择<code>属性-&gt;兼容性-&gt;兼容模式</code>，选择<code>Windows XP</code>运行游戏<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F10.jpg" alt="修改兼容性"><br>再双击运行游戏，进入设置界面，如下图调整分辨率（不要选择其他选项，否则游戏会卡死）<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F9.jpg" alt="修改分辨率"><br>之后就能进行游戏啦！<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F7.png" alt="游戏截图1"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F8.png" alt="游戏截图2"></p>
-<h2 id="解决游戏运行时电脑两端黑边问题"><a href="#解决游戏运行时电脑两端黑边问题" class="headerlink" title="解决游戏运行时电脑两端黑边问题"></a>解决游戏运行时电脑两端黑边问题</h2><p>游戏虽然能顺利运行了，但是运行游戏时电脑两端还是会出现黑边，影响游戏体验，这是由于我们的兼容性设置为<code>Windows XP</code>（否则无法运行游戏），<code>XP</code>的用户打开游戏直接就是全屏，这个针对的是<code>Win7 Win10 32位和64位操作系统</code>的用户。<br>所以我们还需要修改系统设置，让游戏能够全屏运行。<br>首先我们打开搜索栏输入<code>regedit</code>回车。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F1.png" alt="搜索栏输入`regedit`回车"><br>我们会看到以下目录<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F2.png" alt="注册表编辑器"><br>然后单击HKEY_LOCAL_MACHINE左边的小三角形符号。<br>顺序依次下来：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F3.png" alt="依次点击"><br>发现<code>Configuration</code>文件夹内有三个文件夹<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F4.png" alt="Configuration文件夹"><br>这里每个文件夹下都有子项“00\00\”，展开到此，在右边大格中可以发现有一项叫<code>Scaling</code>（意为“缩放比例”），双击它就可以修改它的值了，改成“3”确定即可，原值为4，接下来打开游戏，神奇的事情就会发生了，游戏能够全屏运行了。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F5.png" alt="Scaling选项位置"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F6.png" alt="Scaling选项修改"></p>
+<h2 id="解决游戏卡死问题"><a href="#解决游戏卡死问题" class="headerlink" title="解决游戏卡死问题"></a>解决游戏卡死问题</h2><p>首先我们右击游戏<code>exe</code>文件，选择<code>属性-&gt;兼容性-&gt;兼容模式</code>，选择<code>Windows XP</code>运行游戏<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F10.jpg" alt="修改兼容性"><br>再双击运行游戏，进入设置界面，如下图调整分辨率（不要选择其他选项，否则游戏会卡死）<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F9.jpg" alt="修改分辨率"><br>之后就能进行游戏啦！<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F7.png" alt="游戏截图1"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F8.png" alt="游戏截图2"></p>
+<h2 id="解决游戏运行时电脑两端黑边问题"><a href="#解决游戏运行时电脑两端黑边问题" class="headerlink" title="解决游戏运行时电脑两端黑边问题"></a>解决游戏运行时电脑两端黑边问题</h2><p>游戏虽然能顺利运行了，但是运行游戏时电脑两端还是会出现黑边，影响游戏体验，这是由于我们的兼容性设置为<code>Windows XP</code>（否则无法运行游戏），<code>XP</code>的用户打开游戏直接就是全屏，这个针对的是<code>Win7 Win10 32位和64位操作系统</code>的用户。<br>所以我们还需要修改系统设置，让游戏能够全屏运行。<br>首先我们打开搜索栏输入<code>regedit</code>回车。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F1.png" alt="搜索栏输入`regedit`回车"><br>我们会看到以下目录<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F2.png" alt="注册表编辑器"><br>然后单击HKEY_LOCAL_MACHINE左边的小三角形符号。<br>顺序依次下来：HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control\GraphicsDrivers\Configuration<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F3.png" alt="依次点击"><br>发现<code>Configuration</code>文件夹内有三个文件夹<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F4.png" alt="Configuration文件夹"><br>这里每个文件夹下都有子项“00\00\”，展开到此，在右边大格中可以发现有一项叫<code>Scaling</code>（意为“缩放比例”），双击它就可以修改它的值了，改成“3”确定即可，原值为4，接下来打开游戏，神奇的事情就会发生了，游戏能够全屏运行了。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F5.png" alt="Scaling选项位置"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E6%B8%B8%E6%88%8F%E4%B8%A4%E4%BE%A7%E9%BB%91%E5%B1%8F6.png" alt="Scaling选项修改"></p>
 <p>这里大量参考了<a target="_blank" rel="noopener" href="https://jingyan.baidu.com/article/91f5db1b346b871c7e05e369.html">win10如何设置游戏全屏，简单技巧。</a></p>
 <h2 id="游戏展示"><a href="#游戏展示" class="headerlink" title="游戏展示"></a>游戏展示</h2><!-- vlog模块 --> 
 <div style="position: relative; padding: 30% 45%;"> 
@@ -767,10 +767,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -815,7 +815,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/15.jpg" class="responsive-img" alt="Twikoo--一个简洁、安全、免费的静态网站评论系统">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/15.jpg" class="responsive-img" alt="Twikoo--一个简洁、安全、免费的静态网站评论系统">
                         
                         <span class="card-title">Twikoo--一个简洁、安全、免费的静态网站评论系统</span>
                     </div>
@@ -864,7 +864,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/19.jpg" class="responsive-img" alt="博客报错及解决方案一览">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/19.jpg" class="responsive-img" alt="博客报错及解决方案一览">
                         
                         <span class="card-title">博客报错及解决方案一览</span>
                     </div>
@@ -1098,7 +1098,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">52.2k</span>&nbsp;字
+                class="white-color">60.2k</span>&nbsp;字
             
             
             
@@ -1370,9 +1370,9 @@ $(function () {
 
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="/js/fireworks.js"></script>
     
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,

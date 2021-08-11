@@ -54,7 +54,7 @@
             <div class="brand-logo">
                 <a href="/" class="waves-effect waves-light">
                     
-                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
+                    <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img" alt="LOGO">
                     
                     <span class="logo-span">李拙诚的个人博客</span>
                 </a>
@@ -167,7 +167,7 @@
 
     <div class="mobile-head bg-color">
         
-        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
+        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/logo.png" class="logo-img circle responsive-img">
         
         <div class="logo-name">李拙诚的个人博客</div>
         <div class="logo-desc">
@@ -508,21 +508,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-05-24
+                    2021-07-08
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    787
+                    819
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    2 分
+                    3 分
                 </div>
                 
 
@@ -559,23 +559,22 @@
 <p>在实际项目开发中，我们通常会根据自己的需求去下载各种相应的框架库，如 Scrapy、Beautiful Soup 等，但是可能每个项目使用的框架库并不一样，或使用框架的版本不一样，这样需要我们根据需求不断的更新或卸载相应的库。直接怼我们的Python环境操作会让我们的开发环境和项目造成很多不必要的麻烦，管理也相当混乱。</p>
 <p>所以我们需要使用虚拟环境这个“容器”，在这个容器中，我们可以只安装我们需要的依赖包，各个容器之间互相隔离，互不影响。</p>
 <p>在 Windows程序栏 Anaconda3(64-bit) 中选择 Anaconda Prompt，并输入</p>
-<pre class="line-numbers language-none"><code class="language-none">conda create -n lzc1 python&#x3D;3.8<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n lzc1 python&#x3D;3.8</span><br></pre></td></tr></table></figure>
 <p>上述意为：创建一个名为 lzc1 的3.8版本python虚拟环境，Anaconda会帮助我们安装好所有3.8版本的基础库</p>
 <h4 id="安装第三方库"><a href="#安装第三方库" class="headerlink" title="安装第三方库"></a>安装第三方库</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>在虚拟环境中安装库</p>
-<pre class="line-numbers language-none"><code class="language-none">conda install -n lzc1 numpy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -n lzc1 numpy</span><br></pre></td></tr></table></figure>
 <p>查看虚拟环境中的库</p>
-<pre class="line-numbers language-none"><code class="language-none">conda list -n lzc1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list -n lzc1</span><br></pre></td></tr></table></figure>
 
 
 <h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>先在 Anaconda Prompt 中输入</p>
-<pre class="line-numbers language-none"><code class="language-none">activate lzc1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate lzc1</span><br></pre></td></tr></table></figure>
 <p>再输入如下（这里的xxx为你需要安装的库名），让 Anaconda 帮助我们安装所需要的库</p>
-<pre class="line-numbers language-none"><code class="language-none">conda install xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda install xxx</span><br><span class="line"># 用国内镜像源安装</span><br><span class="line">不能用conda install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple pandas </span><br><span class="line"></span><br></pre></td></tr></table></figure>
 <p>如果显示安装失败，说明Anaconda总库中没有该库，我们就需要使用 Python 自带的 pip 方法安装第三方库</p>
 <p>那么在 Anaconda Prompt 中输入</p>
-<pre class="line-numbers language-none"><code class="language-none">pip install xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-
-
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install xxx</span><br></pre></td></tr></table></figure>
+<h4 id="退出虚拟环境"><a href="#退出虚拟环境" class="headerlink" title="退出虚拟环境"></a>退出虚拟环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
 <h4 id="在编译器中选择自己的虚拟环境"><a href="#在编译器中选择自己的虚拟环境" class="headerlink" title="在编译器中选择自己的虚拟环境"></a>在编译器中选择自己的虚拟环境</h4><p> Pycharm 编译器：在设置内修改虚拟环境为conda类环境，选择虚拟环境文件夹中的 python.exe 作为 python 位置即可</p>
 <h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/godot06/article/details/81079064">Python为什么要使用虚拟环境</a></p>
 
@@ -772,10 +771,10 @@
                         <li class="tab col s6 wechat-tab waves-effect waves-light"><a href="#wechat">微 信</a></li>
                     </ul>
                     <div id="alipay">
-                        <img src="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/alipay.jpg" class="reward-img" alt="支付宝打赏二维码">
                     </div>
                     <div id="wechat">
-                        <img src="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/reward/wechat.png" class="reward-img" alt="微信打赏二维码">
                     </div>
                 </div>
             </div>
@@ -820,7 +819,7 @@
                     <div class="card-image">
                         
                         
-                        <img src="/medias/featureimages/23.jpg" class="responsive-img" alt="Git学习记录">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="/medias/featureimages/23.jpg" class="responsive-img" alt="Git学习记录">
                         
                         <span class="card-title">Git学习记录</span>
                     </div>
@@ -864,7 +863,7 @@
                 <a href="/posts/3e0d.html">
                     <div class="card-image">
                         
-                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/4.jpg" class="responsive-img" alt="期中考试复习一图流">
+                        <img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/4.jpg" class="responsive-img" alt="期中考试复习一图流">
                         
                         <span class="card-title">期中考试复习一图流</span>
                     </div>
@@ -1098,7 +1097,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">52.2k</span>&nbsp;字
+                class="white-color">60.2k</span>&nbsp;字
             
             
             
@@ -1370,9 +1369,9 @@ $(function () {
 
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="/js/fireworks.js"></script>
     
-<script>
+<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
