@@ -1316,7 +1316,7 @@ default-character-set &#x3D; utf8mb4<span aria-hidden="true" class="line-numbers
 <pre class="line-numbers language-php" data-language="php"><code class="language-php">　　if （ （isset（$_GET[&#39;cache&#39;]） and $_GET[&#39;cache&#39;] &#x3D;&#x3D;&#x3D; &#39;0&#39;） 
 　　...... 
 　　&#125; else &#123;$cache &#x3D; 1；&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>这段代码为检测 Moodle 是否有缓存信息和关键数据保护检测。会根据不同的情况给 cache 字段赋值。<br>　　（1）将这段代码注释或删除掉，使得 moodle 平台在第一次安装后进入该页面不去考虑cache值的设置，而直接进入平台的主页面。<br>　　（2）在目录栏内输入<a target="_blank" rel="noopener" href="http://localhost/moodle/index.php?cache=1%EF%BC%8C%E7%84%B6%E5%90%8E%E5%AF%B9%E5%B9%B3%E5%8F%B0%E8%BF%9B%E8%A1%8C%E6%93%8D%E4%BD%9C%E6%97%B6%EF%BC%8C%E8%BF%98%E6%98%AF%E4%BC%9A%E6%98%BE%E7%A4%BAlocalhost%E9%87%8D%E5%AE%9A%E5%90%91%E6%AC%A1%E6%95%B0%E8%BF%87%E5%A4%9A%EF%BC%8C%E6%AD%A4%E6%97%B6%E6%95%B0%E6%8D%AE%E5%BA%93%E5%92%8C%E7%BC%93%E5%AD%98%E4%B8%AD%E4%BC%9A%E6%9C%89%E6%96%B0%E7%94%9F%E6%88%90%E6%95%B0%E6%8D%AE%E7%9A%84%E5%86%99%E5%85%A5(%E6%88%91%E8%BF%99%E9%87%8C%E7%9B%B4%E6%8E%A5%E8%BE%93%E5%85%A5http://localhost%E6%A0%B9%E5%9C%B0%E5%9D%80%EF%BC%8C%E5%9B%A0%E4%B8%BA%E6%8C%89%E7%85%A7%E5%AE%83%E7%9A%84%E4%B9%9F%E6%98%AF%E9%87%8D%E5%AE%9A%E5%90%91%E9%A1%B5%E9%9D%A2)%E3%80%82">http://localhost/moodle/index.php?cache=1，然后对平台进行操作时，还是会显示localhost重定向次数过多，此时数据库和缓存中会有新生成数据的写入(我这里直接输入http://localhost根地址，因为按照它的也是重定向页面)。</a><br>　　（3）此时再在<code>index.php</code>文件中恢复上述注释或删除的代码段。再次打开 Moodle 平台时，检测机制会顺利的通过，而不会出现因检测语句冗余而产生的页面重定向循环问题。</p>
+<p>这段代码为检测 Moodle 是否有缓存信息和关键数据保护检测。会根据不同的情况给 cache 字段赋值。<br>　　（1）将这段代码注释或删除掉，使得 moodle 平台在第一次安装后进入该页面不去考虑cache值的设置，而直接进入平台的主页面。<br>　　（2）在目录栏内输入<code>http://localhost/moodle/index.php?cache=1</code>，然后对平台进行操作时，还是会显示localhost重定向次数过多，此时数据库和缓存中会有新生成数据的写入(我这里直接输入<code>http://localhost</code>根地址，因为按照它的也是重定向页面)。<br>　　（3）此时再在<code>index.php</code>文件中恢复上述注释或删除的代码段。再次打开 Moodle 平台时，检测机制会顺利的通过，而不会出现因检测语句冗余而产生的页面重定向循环问题。</p>
 </blockquote>
 <h5 id="实现Moodle外网访问：内网穿透"><a href="#实现Moodle外网访问：内网穿透" class="headerlink" title="实现Moodle外网访问：内网穿透"></a>实现Moodle外网访问：内网穿透</h5><ol>
 <li><p>下载花生壳，获取免费公网域名</p>
@@ -1359,6 +1359,9 @@ default-character-set &#x3D; utf8mb4<span aria-hidden="true" class="line-numbers
 <pre class="line-numbers language-none"><code class="language-none">cd &#x2F;d H:\钉钉内网穿透\pierced\windows_64
 ding -config&#x3D;ding.cfg -subdomain&#x3D;sit666 80<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 <p>即可实现内网穿透(端口为80，域名为<a target="_blank" rel="noopener" href="http://sit666.vaiwan.com/">http://sit666.vaiwan.com</a>)</p>
+<blockquote>
+<p>这里的网址需要在本地开启钉钉穿透功能才能被访问</p>
+</blockquote>
 <p>在实践中又遇到了新的问题：新注册的用户会被告知其邮箱已经被注册，于是我参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/socalabo/article/details/82886508">本篇教程</a></p>
 <ol>
 <li><p><a target="_blank" rel="noopener" href="http://glob.com.au/sendmail/">下载<code>sendmail</code></a>，直接解压到<code>C:\xampp</code>目录下</p>
@@ -1446,14 +1449,14 @@ hostname&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <ol start="4">
 <li><p>配置<code>Moodle</code></p>
 <p>在网站管理—服务器—发送邮件设置中进行如下设置</p>
-<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://img-blog.csdn.net/20180928221544599?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvY2FsYWJv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/20180928221544599.png"></p>
 </li>
 <li><p>调试<code>Moodle</code></p>
 <p><a target="_blank" rel="noopener" href="https://moodle.org/plugins/local_mailtest/versions">下载<code>mailtest</code>插件</a>，解压到位置<code>C:\xampp\htdocs\moodle\local</code></p>
 <p>在网站管理—服务器—邮件测试中测试邮件是否能发送出</p>
-<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://img-blog.csdn.net/20180928222203871?watermark/2/text/aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3NvY2FsYWJv/font/5a6L5L2T/fontsize/400/fill/I0JBQkFCMA==/dissolve/70"></p>
 </li>
 </ol>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/20180928222203871.png"></p>
 <h5 id="参考链接-1"><a href="#参考链接-1" class="headerlink" title="参考链接"></a>参考链接</h5><p><a target="_blank" rel="noopener" href="https://blog.51cto.com/u_3603088/2538965">Windows系统moodle平台安装及环境配置</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zcyzsy/article/details/52012664">moodle平台安装及环境配置（包括安装过程详细截图）</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ckshcjhacmsabcbba/article/details/71252789">XAMPP下安装Moodle时，解决MYSQL升级以及页面重定向问题</a></p>
@@ -1961,7 +1964,7 @@ hostname&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">62.8k</span>&nbsp;字
+                class="white-color">63k</span>&nbsp;字
             
             
             
