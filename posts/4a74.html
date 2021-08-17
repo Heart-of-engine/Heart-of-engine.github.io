@@ -504,14 +504,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-08-15
+                    2021-08-16
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.9k
+                    10k
                 </div>
                 
 
@@ -1362,7 +1362,7 @@ ding -config&#x3D;ding.cfg -subdomain&#x3D;sit666 80<span aria-hidden="true" cla
 <blockquote>
 <p>这里的网址需要在本地开启钉钉穿透功能才能被访问</p>
 </blockquote>
-<p>在实践中又遇到了新的问题：新注册的用户会被告知其邮箱已经被注册，于是我参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/socalabo/article/details/82886508">本篇教程</a></p>
+<h5 id="邮件发送问题"><a href="#邮件发送问题" class="headerlink" title="邮件发送问题"></a>邮件发送问题</h5><p>在实践中又遇到了新的问题：新注册的用户会被告知其邮箱已经被注册，于是我参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/socalabo/article/details/82886508">本篇教程</a></p>
 <ol>
 <li><p><a target="_blank" rel="noopener" href="http://glob.com.au/sendmail/">下载<code>sendmail</code></a>，直接解压到<code>C:\xampp</code>目录下</p>
 </li>
@@ -1449,14 +1449,16 @@ hostname&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <ol start="4">
 <li><p>配置<code>Moodle</code></p>
 <p>在网站管理—服务器—发送邮件设置中进行如下设置</p>
-<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/20180928221544599.png"></p>
+<p>SMTP用户名 填写邮箱(我这里是QQ邮箱), SMTP密码 填写之前QQ邮箱给的STMP授权密码</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/QQ%E6%88%AA%E5%9B%BE20210816222808.png"></p>
 </li>
 <li><p>调试<code>Moodle</code></p>
 <p><a target="_blank" rel="noopener" href="https://moodle.org/plugins/local_mailtest/versions">下载<code>mailtest</code>插件</a>，解压到位置<code>C:\xampp\htdocs\moodle\local</code></p>
-<p>在网站管理—服务器—邮件测试中测试邮件是否能发送出</p>
+<p>在网站管理—服务器—测试邮件发送的配置中测试邮件是否能发送出，能够发送出代表成功</p>
 </li>
 </ol>
 <p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/20180928222203871.png"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-2.oss-cn-hangzhou.aliyuncs.com/img/QQ%E6%88%AA%E5%9B%BE20210816224809.png"></p>
 <h5 id="参考链接-1"><a href="#参考链接-1" class="headerlink" title="参考链接"></a>参考链接</h5><p><a target="_blank" rel="noopener" href="https://blog.51cto.com/u_3603088/2538965">Windows系统moodle平台安装及环境配置</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zcyzsy/article/details/52012664">moodle平台安装及环境配置（包括安装过程详细截图）</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ckshcjhacmsabcbba/article/details/71252789">XAMPP下安装Moodle时，解决MYSQL升级以及页面重定向问题</a></p>
@@ -1465,6 +1467,7 @@ hostname&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/socalabo/article/details/82886508">尝试发送给您一封email，但是失败了！</a></p>
 <p><a target="_blank" rel="noopener" href="https://blog.csdn.net/JackLiu16/article/details/80697424">关于邮箱SSL端口</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/kimsbo/p/10671851.html">QQ邮箱SMTP设置</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/ning521513/article/details/79217203">常用邮箱SMTP服务器地址大全</a></p>
 
                 
             </div>
@@ -1964,7 +1967,7 @@ hostname&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">63k</span>&nbsp;字
+                class="white-color">63.6k</span>&nbsp;字
             
             
             
@@ -2236,13 +2239,13 @@ $(function () {
 
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="/js/fireworks.js"></script>
     
-<script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script><script>
+<script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --><script src="/live2dw/lib/L2Dwidget.min.js?094cbace49a39548bed64abff5988b05"></script><script>L2Dwidget.init({"pluginRootPath":"live2dw/","pluginJsPath":"lib/","pluginModelPath":"assets/","tagMode":false,"debug":false,"model":{"jsonPath":"live2d-widget-model-wanko"},"display":{"position":"right","width":150,"height":300},"mobile":{"show":true},"log":false});</script></body>
 
 </html>
