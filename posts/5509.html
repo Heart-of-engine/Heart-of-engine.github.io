@@ -525,7 +525,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-06
+                    2021-09-04
                 </div>
                 
 
@@ -694,7 +694,9 @@ for i in range(1,124,1):
     print(cell_Ei);
 
     print(&quot;%f&quot;%(sum))#打印总和的值<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="代码三-慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片丢死人）"><a href="#代码三-慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片丢死人）" class="headerlink" title="代码三 慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片丢死人）"></a>代码三 慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片<del>丢死人</del>）</h2><h3 id="手绘风图片处理（我用来处理艾莉的照片）"><a href="#手绘风图片处理（我用来处理艾莉的照片）" class="headerlink" title="手绘风图片处理（我用来处理艾莉的照片）"></a>手绘风图片处理（我用来处理艾莉的照片）</h3><p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://i.loli.net/2020/12/30/9qsIklQJubpAfci.jpg" alt="艾莉原图像"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://i.loli.net/2020/12/30/iH9D2hZ4koeKMOF.jpg" alt="艾莉手绘风处理后图像"><br>这里我使用了<code>图床</code>，搭建图床的目的是让图片直接从国内阿里云仓库而非国外的Github仓库里获取，让图片的加载速度更快。我选择的是<code>阿里云OSS</code>，大公司的服务还有传输速度都非常不错，而且<code>对象存储OSS</code> 的价格一年才8.4元（双12打7折）<del>马爸爸又赚一笔</del>。详情见<a target="_blank" rel="noopener" href="https://noionion.top/44642.html">麻麻，我有自己的图床啦！简单搭建一个廉价、私人、无限制图片大小的稳定图床</a></p>
+<h2 id="代码三-慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片丢死人）"><a href="#代码三-慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片丢死人）" class="headerlink" title="代码三 慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片丢死人）"></a>代码三 慕课小项目（一个手绘风图像处理，一个定向图片爬虫，爬虫只能爬确定链接的图片<del>丢死人</del>）</h2><h3 id="手绘风图片处理（我用来处理艾莉的照片）"><a href="#手绘风图片处理（我用来处理艾莉的照片）" class="headerlink" title="手绘风图片处理（我用来处理艾莉的照片）"></a>手绘风图片处理（我用来处理艾莉的照片）</h3><p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://i.loli.net/2020/12/30/9qsIklQJubpAfci.jpg" alt="艾莉原图像"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://i.loli.net/2020/12/30/iH9D2hZ4koeKMOF.jpg" alt="艾莉手绘风处理后图像"></p>
+<p>这里我使用了<code>图床</code>，搭建图床的目的是让图片直接从国内阿里云仓库而非国外的Github仓库里获取，让图片的加载速度更快。我选择的是<code>阿里云OSS</code>，大公司的服务还有传输速度都非常不错，而且<code>对象存储OSS</code> 的价格一年才8.4元（双12打7折）<del>马爸爸又赚一笔</del>。详情见<a target="_blank" rel="noopener" href="https://noionion.top/44642.html">麻麻，我有自己的图床啦！简单搭建一个廉价、私人、无限制图片大小的稳定图床</a></p>
 <pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># -*- coding: utf-8 -*-
 &quot;&quot;&quot;
 Created on Wed Sep 23 23:59:07 2020
@@ -729,9 +731,9 @@ b &#x3D; b.clip(0,255) # 为防止数据越界，使RGB值保持在0-255之间
 
 im &#x3D; Image.fromarray(b.astype(&#39;uint8&#39;)) # RGB的R、G、B三个值分别由uint8类型数据表示
 im.save(&#39;F:\选修课\python数据分析与展示（慕课）\第一单元：NumPy库 自己调整图片RGB\自己试验\艾莉手绘.jpg&#39;)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h3 id="定向图片爬虫（需要指定图片地址）"><a href="#定向图片爬虫（需要指定图片地址）" class="headerlink" title="定向图片爬虫（需要指定图片地址）"></a>定向图片爬虫（需要指定图片地址）</h3><p>爬取的是明日方舟干员<code>泡泡</code>的精二立绘</p>
-<hr>
-<p>2020年12月31日更新：<br>做了一个<a target="_blank" rel="noopener" href="http://www.heart-of-engine.top/posts/fccf.html">明日方舟全干员立绘爬虫</a></p>
 <pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import requests
 import os
 
@@ -759,8 +761,11 @@ except:
 # &quot;rb&quot;--以二进制读方式打开,只能读文件,如果文件不存在,会发生异常
 
 # &quot;wb&quot;--以二进制写方式打开,只能写文件,如果文件不存在,创建该文件;如果文件已存在,先清空,再打开文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="代码四-自动读取班级统计表格与打卡情况、年级挂科情况"><a href="#代码四-自动读取班级统计表格与打卡情况、年级挂科情况" class="headerlink" title="代码四 自动读取班级统计表格与打卡情况、年级挂科情况"></a>代码四 自动读取班级统计表格与打卡情况、年级挂科情况</h2><p>第一份具有实用性的代码，自此我体会到了，用代码处理文件的高效与快捷：<a target="_blank" rel="noopener" href="https://www.bilibili.com/video/BV1Tv411t7m7/">自动读取班级打卡情况表格</a></p>
-<h3 id="自动读取班级统计表格"><a href="#自动读取班级统计表格" class="headerlink" title="自动读取班级统计表格"></a>自动读取班级统计表格</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import xlrd# 引入宏包
+<hr>
+<p>2020年12月31日更新：</p>
+<p>做了一个<a target="_blank" rel="noopener" href="http://www.heart-of-engine.top/posts/fccf.html">明日方舟全干员立绘爬虫</a></p>
+<h2 id="代码四-自动读取班级统计表格与打卡情况、年级挂科情况"><a href="#代码四-自动读取班级统计表格与打卡情况、年级挂科情况" class="headerlink" title="代码四 自动读取班级统计表格与打卡情况、年级挂科情况"></a>代码四 自动读取班级统计表格与打卡情况、年级挂科情况</h2><p>第一份具有实用性的代码，自此我体会到了，用代码处理文件的高效与快捷</p>
+<h3 id="自动读取班级购书统计表格"><a href="#自动读取班级购书统计表格" class="headerlink" title="自动读取班级购书统计表格"></a>自动读取班级购书统计表格</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import xlrd# 引入宏包
 data &#x3D; xlrd.open_workbook(r&quot;C:\Users\李\Desktop\小甲鱼学习python实验文件\数学1901班购买《中文实训写作》情况表.xlsx&quot;)#读取文件
 table &#x3D; data.sheets()[0]#读取表格
 print(table.nrows)
@@ -771,6 +776,8 @@ for i in range(1,30,1):
     if cell_Bi &#x3D;&#x3D; 1:
         list.append(&#39;cell_Ai&#39;)
 print (list)<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h3 id="自动读取班级打卡情况"><a href="#自动读取班级打卡情况" class="headerlink" title="自动读取班级打卡情况"></a>自动读取班级打卡情况</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">from docx import Document
 import xlrd
 import xlwt
@@ -810,6 +817,26 @@ for k in range(0,30,1):
             table3.write(k+1,4,label &#x3D; &#39;已打卡&#39;)#写入打卡情况
 
 table2.save(r&quot;C:\Users\Administrator\Desktop\每日班级打卡统计\自习打卡EXCEL文件\群内打卡信息-&quot;+today_Year+&quot;年&quot;+today_month+&quot;月&quot;+today_day+&quot;日&quot;+&quot;.xlsx&quot;)# 保存文件<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<div style="position: relative; padding: 30% 45%;"> 
+    <iframe style=" 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    left: 0; 
+    top: 0;" 
+    src="//player.bilibili.com/player.html?aid=80181162&bvid=BV1Tv411t7m7&high_quality=1" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"> 
+    </iframe> 
+</div>
+
+
+
 <h3 id="自动读取年级挂科情况"><a href="#自动读取年级挂科情况" class="headerlink" title="自动读取年级挂科情况"></a>自动读取年级挂科情况</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># 引入处理文件需要的包
 import xlrd
 import re # 正则表达式
@@ -852,7 +879,10 @@ for row in range(2, 114): # 初始行令为2
 
 # 打印各班挂科的人数
 print(&quot;一班挂科人数为%d人 二班挂科人数为%d人 三班挂科人数为%d人 四班挂科人数为%d人&quot;%(gua1,gua2,gua3,gua4))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h2 id="代码五-与Designer-exe的初接触"><a href="#代码五-与Designer-exe的初接触" class="headerlink" title="代码五 与Designer.exe的初接触"></a>代码五 与Designer.exe的初接触</h2><p>这篇代码是我们的“Python概论与应用”小组作业，目的是使用给出的x与y的npy文件画出连接后的平滑曲线，我负责了大量的初始工作，这是初始代码（因为初始代码很多是我敲的，而最终版大量优化是<a target="_blank" rel="noopener" href="https://noionion.top/">noionion</a>做的，所以我在这里只放初始版的代码)<br><del>别问我为什么不参与最终版的制作，因为那节课我在重装系统</del></p>
+
+
+<h2 id="代码五-与Designer-exe的初接触"><a href="#代码五-与Designer-exe的初接触" class="headerlink" title="代码五 与Designer.exe的初接触"></a>代码五 与Designer.exe的初接触</h2><p>这篇代码是我们的“Python概论与应用”小组作业，目的是使用给出的x与y的npy文件画出连接后的平滑曲线，我负责了大量的初始工作，这是初始代码（因为初始代码很多是我敲的，而最终版大量优化是<a target="_blank" rel="noopener" href="https://noionion.top/">noionion</a>做的，所以我在这里只放初始版的代码)</p>
+<p><del>别问我为什么不参与最终版的制作，因为那节课我在重装系统</del></p>
 <h3 id="main-py文件"><a href="#main-py文件" class="headerlink" title="main.py文件"></a>main.py文件</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python">import sys
 from PyQt5.QtCore import *
 from PyQt5.QtGui import *
@@ -942,6 +972,8 @@ win &#x3D; MyWindow()
 win.show()
 
 sys.exit(app.exec())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h3 id="practice1-py文件（与practice1-ui对接的python文件）"><a href="#practice1-py文件（与practice1-ui对接的python文件）" class="headerlink" title="practice1.py文件（与practice1.ui对接的python文件）"></a>practice1.py文件（与practice1.ui对接的python文件）</h3><pre class="line-numbers language-Python" data-language="Python"><code class="language-Python"># -*- coding: utf-8 -*-
 
 # Form implementation generated from reading ui file &#39;F:\选修课\Python概论与应用\期末大作业\程序文件\practice1.ui&#39;
@@ -1037,7 +1069,27 @@ class Ui_MainWindow(object):
         self.comboBox.setItemText(0, _translate(&quot;MainWindow&quot;, &quot;Linear&quot;))
         self.comboBox.setItemText(1, _translate(&quot;MainWindow&quot;, &quot;Cubic&quot;))
         self.pushButton.setText(_translate(&quot;MainWindow&quot;, &quot;Plot&quot;))<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p><a target="_blank" rel="noopener" href="https://www.bilibili.com/video/bv1jK411g79b">代码效果</a><br>视频上传到图床有点占用空间，所以我上传B站了（这里用的是最终版的效果）<br>通过这次大作业的编写，我深刻认识到了<del>团队合作</del>抱紧大佬大腿的重要性，原来，一个<del>高效合作的团队</del>强大的大佬才是项目的关键\暗中观察</p>
+
+
+<p>代码效果如下：</p>
+<div style="position: relative; padding: 30% 45%;"> 
+    <iframe style=" 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    left: 0; 
+    top: 0;" 
+    src="//player.bilibili.com/player.html?aid=80181162&bvid=bv1jK411g79b&high_quality=1" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"> 
+    </iframe> 
+</div>
+
+<p>视频上传到图床有点占用空间，所以调用的B站视频（将B站当作视频床，这里用的是最终版的效果）</p>
+<p>通过这次大作业的编写，我深刻认识到了<del>团队合作</del>抱紧大佬大腿的重要性，原来，一个<del>高效合作的团队</del>强大的大佬才是项目的关键\暗中观察</p>
 <p>暂时就这么多啦，让我们明年再战！</p>
 
                 
@@ -1574,7 +1626,7 @@ class Ui_MainWindow(object):
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">64.4k</span>&nbsp;字
+                class="white-color">65.2k</span>&nbsp;字
             
             
             

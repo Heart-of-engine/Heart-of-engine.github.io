@@ -517,14 +517,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-01-12
+                    2021-09-04
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    241
+                    236
                 </div>
                 
 
@@ -554,8 +554,10 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p><del>昨天晚上</del>今天凌晨一点，我还像往常一样，打开程序<a href="https://heart-of-engine.github.io/posts/5509.html">对本周班级的打卡情况进行读取</a>（详见代码四），然而在上次重装后我没有重新安装xlrd包，所以我重新使用conda安装了最新版的xlrd包。<br>重新运行程序，却出现了报错</p>
-<!-- vlog模块 --> 
+                <p>今天凌晨一点，我还像往常一样，打开程序<a href="https://heart-of-engine.github.io/posts/5509.html">对本周班级的打卡情况进行读取</a>（详见代码四），然而在上次重装后我没有重新安装xlrd包，所以我重新使用conda安装了最新版的xlrd包。</p>
+<p>重新运行程序，却出现了报错</p>
+<!-- vlog模块 -->
+
 <div style="position: relative; padding: 30% 45%;"> 
     <iframe style=" 
     position: absolute; 
@@ -573,9 +575,15 @@
 </div>
 
 <p>这里的视频插入参考了<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/posts/hexo-vlog-page.html">itsNekoDeng的博客</a></p>
-<p>可以看到，报错内容如下：<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%8F%AD%E7%BA%A7%E8%87%AA%E4%B9%A0%E6%89%93%E5%8D%A1%E6%83%85%E5%86%B5%E7%BB%9F%E8%AE%A1%E6%8A%A5%E9%94%99.png" alt="报错内容"><br>查阅了<a target="_blank" rel="noopener" href="https://xlrd.readthedocs.io/en/latest/">官方文档</a>后我发现，最近xlrd包更新到了2.0.1版本，只支持.xls文件，所以我选择用conda安装旧版本1.2.0。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/xled%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3.png" alt="官方文档提示"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E5%AE%89%E8%A3%85%E6%97%A7xlrd%E5%8C%85.png" alt="在虚拟环境Python3中安装xlrd1.2.0版本包"><br>安装完毕后，程序又可以平稳运行啦！</p>
-<p>注：麻雀虽小，五脏俱全。本文虽然篇幅较短，但是为xlrd库更新后的.xlsx文件处理报错提供了处理思路与方法。<br><del>所以别再说博主水文啦OVO</del></p>
-<p>参考网站：<br><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44073728/article/details/111054157">pandas无法打开.xlsx文件，xlrd.biffh.XLRDError: Excel xlsx file； not supported</a></p>
+<p>可以看到，报错内容如下：</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E7%8F%AD%E7%BA%A7%E8%87%AA%E4%B9%A0%E6%89%93%E5%8D%A1%E6%83%85%E5%86%B5%E7%BB%9F%E8%AE%A1%E6%8A%A5%E9%94%99.png" alt="报错内容"></p>
+<p>查阅了<a target="_blank" rel="noopener" href="https://xlrd.readthedocs.io/en/latest/">官方文档</a>后我发现，最近xlrd包更新到了2.0.1版本，只支持.xls文件，所以我选择用conda安装旧版本1.2.0。</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/xled%E5%AE%98%E6%96%B9%E6%96%87%E6%A1%A3.png" alt="官方文档提示"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E5%AE%89%E8%A3%85%E6%97%A7xlrd%E5%8C%85.png" alt="在虚拟环境Python3中安装xlrd1.2.0版本包"></p>
+<p>安装完毕后，程序又可以平稳运行啦！</p>
+<p>注：麻雀虽小，五脏俱全。本文虽然篇幅较短，但是为xlrd库更新后的.xlsx文件处理报错提供了处理思路与方法。<br><del>所以别再说博主水文啦</del></p>
+<p>参考网站：</p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_44073728/article/details/111054157">pandas无法打开.xlsx文件，xlrd.biffh.XLRDError: Excel xlsx file； not supported</a></p>
 
                 
             </div>
@@ -1103,7 +1111,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">64.4k</span>&nbsp;字
+                class="white-color">65.2k</span>&nbsp;字
             
             
             

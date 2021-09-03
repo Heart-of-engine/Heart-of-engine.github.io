@@ -517,7 +517,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-06-18
+                    2021-09-04
                 </div>
                 
 
@@ -555,12 +555,15 @@
         <div class="card-content article-card-content">
             <div id="articleContent">
                 <p>今天早上大物期末考完啦~~~我下午就把模板改回了<code>Matery</code>，主要是因为虽然<code>Matery</code>模板不像<code>Butterfly</code>那样配置了大量的初始设置，但通过使用Matery模板，我可以对很多内容自行配置，我能学到更多有关<code>html</code>、<code>css</code>和<code>js</code>的知识，相较别人做好给我使用，我更倾向于自己动手丰衣足食。</p>
-<h2 id="加载动画配置"><a href="#加载动画配置" class="headerlink" title="加载动画配置"></a>加载动画配置</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>部分博文由于内含音乐播放器/大量未压缩图片等原因加载速度较慢，为了让大家拥有更好的访问体验，我设置了博文加载动画<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.png" alt="加载动画效果"><br>后来发现引入加载动画反而会减慢网页加载速度，在2021年1月30日删除，详见<a target="_blank" rel="noopener" href="http://www.heart-of-engine.top/posts/85af.html">博客更新日志</a></p>
+<h2 id="加载动画配置"><a href="#加载动画配置" class="headerlink" title="加载动画配置"></a>加载动画配置</h2><h3 id="目的"><a href="#目的" class="headerlink" title="目的"></a>目的</h3><p>部分博文由于内含音乐播放器/大量未压缩图片等原因加载速度较慢，为了让大家拥有更好的访问体验，我设置了博文加载动画</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E5%8A%A0%E8%BD%BD%E5%8A%A8%E7%94%BB.png" alt="加载动画效果"></p>
+<p>后来发现引入加载动画反而会减慢网页加载速度，在2021年1月30日删除，详见<a target="_blank" rel="noopener" href="http://www.heart-of-engine.top/posts/85af.html">博客更新日志</a></p>
 <h3 id="设置方式"><a href="#设置方式" class="headerlink" title="设置方式"></a>设置方式</h3><p>这里参考了<a target="_blank" rel="noopener" href="https://www.ltazc.tk/archives/7a1a7cc9.html">liu’s blog</a>，文章里写得很清楚，这里就不再赘述。</p>
 <h2 id="链接永久化"><a href="#链接永久化" class="headerlink" title="链接永久化"></a>链接永久化</h2><h3 id="目的-1"><a href="#目的-1" class="headerlink" title="目的"></a>目的</h3><p>通过使用<code>hexo-abbrlink</code>插件，引入<code>abbrlink</code>字段确保了我们在修改<code>Front-matter</code>内的博客标题<code>title</code>或创建日期<code>date</code>字段之后，不会改变链接的地址。</p>
 <h3 id="设置方式-1"><a href="#设置方式-1" class="headerlink" title="设置方式"></a>设置方式</h3><p>首先我们在自己的博客目录下使用<code>Git Bush Here</code>插入插件</p>
 <pre class="line-numbers language-git" data-language="git"><code class="language-git">npm install hexo-abbrlink --save<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
-<p>再在自己的站点配置文件中添加如下配置<br>注：<br>首先需要明白什么是站点配置文件，什么是主题配置文件，站点配置文件就是根目录下的配置文件，比如我的博客文件在<code>F:\blog\blog2\LZCblog1</code>下，那么站点配置文件就是<code>F:\blog\blog2\LZCblog1\_config.yml</code>，主题配置文件就是<code>F:\blog\blog2\LZCblog1\themes\hexo-theme-matery\_config.yml</code>。</p>
+<p>再在自己的站点配置文件中添加如下配置</p>
+<p>注：首先需要明白什么是站点配置文件，什么是主题配置文件，站点配置文件就是根目录下的配置文件，比如我的博客文件在<code>F:\blog\blog2\LZCblog1</code>下，那么站点配置文件就是<code>F:\blog\blog2\LZCblog1\_config.yml</code>，主题配置文件就是<code>F:\blog\blog2\LZCblog1\themes\hexo-theme-matery\_config.yml</code>。</p>
 <p>另外注意，配置文件中的标点符号不要出现中文格式的标点符号，不然运行会出错。</p>
 <pre class="line-numbers language-md" data-language="md"><code class="language-md">abbrlink:
     alg: crc16   #算法： crc16(default) and crc32
@@ -578,8 +581,13 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;8ddf18fb.html
 
 crc32 &amp; dec
 https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>生成完后，原<code>md</code>文件的<code>Front-matter</code>内会增加<code>abbrlink</code>字段，值为生成的<code>ID</code>。引入<code>abbrlink</code>字段确保了我们在修改<code>Front-matter</code>内的博客标题<code>title</code>或创建日期<code>date</code>字段之后，不会改变链接的地址。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E9%93%BE%E6%8E%A5%E6%B0%B8%E4%B9%85%E5%8C%96.png" alt="链接永久化示例"></p>
-<h3 id="自己的探索历程"><a href="#自己的探索历程" class="headerlink" title="自己的探索历程"></a>自己的探索历程</h3><p>在建立博客后，一个问题一直迷惑着我：设置了链接永久化之后，<code>abbrlink</code>一行（博文链接<code>.html</code>前的四位字母）是何时插进<code>.md</code>文件里的？经过一番探寻，我发现，该行是在<code>hexo g -d</code>上传博客时自动生成的，你甚至能亲眼看见上传后的瞬间<code>.md</code>文件里多了一行，我们无需在<code>hexo g -d</code>前关闭<code>.md</code>文件等待<code>abbrlink</code>一行的生成<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/abbrlink%E5%89%8D.png" alt="链接永久化前"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/abbrlink%E5%90%8E.png" alt="链接永久化后"><br>注：之前我一直误解了<code>abbrlink</code>的作用，以为是中文链接转拼音，然而在查看了<a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/4ab2.html">官方文档</a>后，发现其实是在进行链接永久化。<br>链接永久化的目的：通过使用<code>hexo-abbrlink</code>插件，引入<code>abbrlink</code>字段确保了我们在修改<code>Front-matter</code>内的博客标题<code>title</code>或创建日期<code>date</code>字段之后，不会改变链接的地址。<br>中文链接转拼音的目的：如果你的文章名称是中文的，那么<code>Hexo</code>默认生成的永久链接也会有中文，这样不利于<code>SEO</code>，且<code>gitment</code>评论对中文链接也不支持。所以我们可以用<code>hexo-permalink-pinyin Hexo</code>插件使在生成文章时生成中文拼音的永久链接。<br>这里大量参考了<a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/4ab2.html">官方文档</a></p>
+<p>生成完后，原<code>md</code>文件的<code>Front-matter</code>内会增加<code>abbrlink</code>字段，值为生成的<code>ID</code>。引入<code>abbrlink</code>字段确保了我们在修改<code>Front-matter</code>内的博客标题<code>title</code>或创建日期<code>date</code>字段之后，不会改变链接的地址。</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E9%93%BE%E6%8E%A5%E6%B0%B8%E4%B9%85%E5%8C%96.png" alt="链接永久化示例"></p>
+<h3 id="自己的探索历程"><a href="#自己的探索历程" class="headerlink" title="自己的探索历程"></a>自己的探索历程</h3><p>在建立博客后，一个问题一直迷惑着我：设置了链接永久化之后，<code>abbrlink</code>一行（博文链接<code>.html</code>前的四位字母）是何时插进<code>.md</code>文件里的？经过一番探寻，我发现，该行是在<code>hexo g -d</code>上传博客时自动生成的，你甚至能亲眼看见上传后的瞬间<code>.md</code>文件里多了一行，我们无需在<code>hexo g -d</code>前关闭<code>.md</code>文件等待<code>abbrlink</code>一行的生成</p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/abbrlink%E5%89%8D.png" alt="链接永久化前"></p>
+<p><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/abbrlink%E5%90%8E.png" alt="链接永久化后"></p>
+<p>注：之前我一直误解了<code>abbrlink</code>的作用，以为是中文链接转拼音，然而在查看了<a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/4ab2.html">官方文档</a>后，发现其实是在进行链接永久化。<br>链接永久化的目的：通过使用<code>hexo-abbrlink</code>插件，引入<code>abbrlink</code>字段确保了我们在修改<code>Front-matter</code>内的博客标题<code>title</code>或创建日期<code>date</code>字段之后，不会改变链接的地址。</p>
+<p>中文链接转拼音的目的：如果你的文章名称是中文的，那么<code>Hexo</code>默认生成的永久链接也会有中文，这样不利于<code>SEO</code>，且<code>gitment</code>评论对中文链接也不支持。所以我们可以用<code>hexo-permalink-pinyin Hexo</code>插件使在生成文章时生成中文拼音的永久链接。<br>这里大量参考了<a target="_blank" rel="noopener" href="https://yafine-blog.cn/posts/4ab2.html">官方文档</a></p>
 <h2 id="不蒜子统计问题"><a href="#不蒜子统计问题" class="headerlink" title="不蒜子统计问题"></a>不蒜子统计问题</h2><p><a target="_blank" rel="noopener" href="https://github.com/blinkfox/hexo-theme-matery/issues/592">chrome浏览器85版本之后关于不蒜子统计错误的问题</a></p>
 <h2 id="博文中插入视频"><a href="#博文中插入视频" class="headerlink" title="博文中插入视频"></a>博文中插入视频</h2><h3 id="目的-2"><a href="#目的-2" class="headerlink" title="目的"></a>目的</h3><p>之前想要在博客里展示视频全部需要设置一个超链接，访客点击后需要转入其他网站查看，非常不方便，在博文中直接插入视频可以大大节省访客们的时间，也符合我们对博客设计的要求</p>
 <h3 id="设置方式-2"><a href="#设置方式-2" class="headerlink" title="设置方式"></a>设置方式</h3><p>在博文<code>.md</code>文件内，插入以下代码(本代码指向我自己写的自动读取班级打卡情况表格，实际使用时仅需更改<code>src</code>行即可）：</p>
@@ -599,7 +607,8 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
     allowfullscreen&#x3D;&quot;true&quot;&gt; 
     &lt;&#x2F;iframe&gt; 
 &lt;&#x2F;div&gt;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<h3 id="视频清晰度问题"><a href="#视频清晰度问题" class="headerlink" title="视频清晰度问题"></a>视频清晰度问题</h3><p>在1月12日为明日方舟模块引入三大底部视频后，发现效果并不是很理想，究其原因是视频的清晰度太低导致视频模糊，于是我联系了本方法的创作者<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">itsNekoDeng</a>，他提出若想调整视频默认清晰度，可以在<code>src</code>引入路径最后加上<code>&amp;high_quality=1</code>（480P）或<code>&amp;high_quality=0</code>（360P）<br>那么上例的代码更改如下：</p>
+<h3 id="视频清晰度问题"><a href="#视频清晰度问题" class="headerlink" title="视频清晰度问题"></a>视频清晰度问题</h3><p>在1月12日为明日方舟模块引入三大底部视频后，发现效果并不是很理想，究其原因是视频的清晰度太低导致视频模糊，于是我联系了本方法的创作者<a target="_blank" rel="noopener" href="https://nekodeng.gitee.io/">itsNekoDeng</a>，他提出若想调整视频默认清晰度，可以在<code>src</code>引入路径最后加上<code>&amp;high_quality=1</code>（480P）或<code>&amp;high_quality=0</code>（360P）</p>
+<p>那么上例的代码更改如下：</p>
 <pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token comment">&lt;!-- vlog模块 --></span> 
 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"><span class="token property">position</span><span class="token punctuation">:</span> relative<span class="token punctuation">;</span> <span class="token property">padding</span><span class="token punctuation">:</span> 30% 45%<span class="token punctuation">;</span></span><span class="token punctuation">"</span></span></span><span class="token punctuation">></span></span> 
     <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token style-attr"><span class="token attr-name">style</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span><span class="token style language-css"> 
@@ -622,7 +631,7 @@ https:&#x2F;&#x2F;post.zz173.com&#x2F;posts&#x2F;1690090958.html<span aria-hidde
 <p>这里参考了<a target="_blank" rel="noopener" href="https://github.com/EYHN/hexo-helper-live2d">EYHN/hexo-helper-live2d</a>与<a target="_blank" rel="noopener" href="https://blog.csdn.net/weixin_46399753/article/details/104768713">hexo中matery主题的个性化定制</a></p>
 <h2 id="图片懒加载"><a href="#图片懒加载" class="headerlink" title="图片懒加载"></a>图片懒加载</h2><h3 id="目的-4"><a href="#目的-4" class="headerlink" title="目的"></a>目的</h3><p>在用手机查看我的博客时，我发现自己的“明日方舟”模块一直在加载无法打开，原来是要一次性完成的图片读取工作过多，要很长时间才能完成，所以我引入了图片懒加载，让访客们获得更舒适的浏览体验。（懒加载对服务器前端有一定的缓解压力作用）<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" alt="懒加载使用的动图（这就是加载用动图呀，不会加载出其他什么的OVO）"></p>
 <h3 id="设置方式-3"><a href="#设置方式-3" class="headerlink" title="设置方式"></a>设置方式</h3><p>参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/guixinchn/article/details/108185530">Hexo-matery主题性能优化</a>，文章里写得很清楚，这里就不再赘述。</p>
-<h2 id="封面图片前置颜色去除"><a href="#封面图片前置颜色去除" class="headerlink" title="封面图片前置颜色去除"></a>封面图片前置颜色去除</h2><h3 id="目的-5"><a href="#目的-5" class="headerlink" title="目的"></a>目的</h3><p>之前由于matery模板自带封面图片前置颜色，不仅十分绕眼，还占用加载资源，加载速度较慢。去除封面颜色后不仅能够清晰显示封面大图，还能加快博客加载速度，一举两得。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B22.jpg" alt="修改前"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B24.jpg" alt="修改后"></p>
+<h2 id="封面图片前置颜色去除"><a href="#封面图片前置颜色去除" class="headerlink" title="封面图片前置颜色去除"></a>封面图片前置颜色去除</h2><h3 id="目的-5"><a href="#目的-5" class="headerlink" title="目的"></a>目的</h3><p>之前由于 Matery 模板自带封面图片前置颜色，不仅十分绕眼，还占用加载资源，加载速度较慢。去除封面颜色后不仅能够清晰显示封面大图，还能加快博客加载速度，一举两得。<br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B22.jpg" alt="修改前"><br><img src="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/loading1.gif" data-original="https://heart-of-engine-picture-bed-1.oss-cn-beijing.aliyuncs.com/img/%E4%BF%AE%E6%94%B9%E5%B0%81%E9%9D%A2%E5%9B%BE%E7%89%87%E9%A2%9C%E8%89%B24.jpg" alt="修改后"></p>
 <h3 id="设置方式-4"><a href="#设置方式-4" class="headerlink" title="设置方式"></a>设置方式</h3><p>找到主题文件夹下的<code>source\css</code>文件夹，并找到里面的<code>matery.css</code>文件（我这里的文件路径是<code>F:\blog\blog2\LZCblog1\themes\hexo-theme-matery\source\css</code>），在两处进行修改：<br>第一处：<br>修改<code>bg-color</code>栏为</p>
 <pre class="line-numbers language-css" data-language="css"><code class="language-css"><span class="token comment">/**.bg-color &#123;
         background-image: linear-gradient(to right, #4cbf30 0%, #0f9d58 100%); 
@@ -1217,7 +1226,7 @@ prism_plugin:
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">64.4k</span>&nbsp;字
+                class="white-color">65.2k</span>&nbsp;字
             
             
             
