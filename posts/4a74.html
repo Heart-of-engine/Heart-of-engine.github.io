@@ -504,21 +504,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-06
+                    2021-09-09
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11k
+                    11.5k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    40 分
+                    43 分
                 </div>
                 
 
@@ -1507,15 +1507,103 @@ hostname&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><s
 <li><p>如何识别用户的点击请求？可以参考<a target="_blank" rel="noopener" href="https://moodle.org/plugins/search_elastic">Moodle 插件 elastic</a> （难度最大）</p>
 </li>
 </ol>
+<h4 id="HTML网址实现"><a href="#HTML网址实现" class="headerlink" title="HTML网址实现"></a>HTML网址实现</h4><pre class="line-numbers language-html" data-language="html"><code class="language-html"><span class="token doctype"><span class="token punctuation">&lt;!</span><span class="token doctype-tag">DOCTYPE</span> <span class="token name">html</span><span class="token punctuation">></span></span>  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>html</span><span class="token punctuation">></span></span>  
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>head</span><span class="token punctuation">></span></span>  
+    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>meta</span> <span class="token attr-name">charset</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>utf-8<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>  
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>style</span><span class="token punctuation">></span></span><span class="token style"><span class="token language-css">
+	<span class="token selector">#header</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span>black<span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>
+		<span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span>5px<span class="token punctuation">;</span>
+	<span class="token punctuation">&#125;</span>
+	<span class="token selector">#nav</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">line-height</span><span class="token punctuation">:</span>50px<span class="token punctuation">;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span>#eeeeee<span class="token punctuation">;</span>
+		<span class="token property">height</span><span class="token punctuation">:</span>540px<span class="token punctuation">;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span>220px<span class="token punctuation">;</span>
+		<span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span>5px<span class="token punctuation">;</span>	      
+	<span class="token punctuation">&#125;</span>
+	<span class="token selector">#section</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">width</span><span class="token punctuation">:</span>350px<span class="token punctuation">;</span>
+		<span class="token property">float</span><span class="token punctuation">:</span>left<span class="token punctuation">;</span>
+		<span class="token property">padding</span><span class="token punctuation">:</span>7px<span class="token punctuation">;</span>	 	 
+	<span class="token punctuation">&#125;</span>
+	<span class="token selector">#footer</span> <span class="token punctuation">&#123;</span>
+		<span class="token property">background-color</span><span class="token punctuation">:</span>black<span class="token punctuation">;</span>
+		<span class="token property">color</span><span class="token punctuation">:</span>white<span class="token punctuation">;</span>
+		<span class="token property">clear</span><span class="token punctuation">:</span>both<span class="token punctuation">;</span>
+		<span class="token property">text-align</span><span class="token punctuation">:</span>center<span class="token punctuation">;</span>
+	    <span class="token property">padding</span><span class="token punctuation">:</span>1px<span class="token punctuation">;</span>	 	 
+	<span class="token punctuation">&#125;</span>
+	</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>style</span><span class="token punctuation">></span></span>	
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>script</span> <span class="token attr-name">language</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>javascript<span class="token punctuation">"</span></span><span class="token punctuation">></span></span><span class="token script"><span class="token language-javascript">     
+	<span class="token keyword">function</span> <span class="token function">exec1</span><span class="token punctuation">(</span><span class="token parameter">command</span><span class="token punctuation">)</span> 
+	<span class="token punctuation">&#123;</span>     
+	  <span class="token keyword">var</span> ws <span class="token operator">=</span> <span class="token keyword">new</span> <span class="token class-name">ActiveXObject</span><span class="token punctuation">(</span><span class="token string">"WScript.Shell"</span><span class="token punctuation">)</span><span class="token punctuation">;</span>      
+	  ws<span class="token punctuation">.</span><span class="token function">run</span><span class="token punctuation">(</span>command<span class="token punctuation">)</span><span class="token punctuation">;</span>           <span class="token comment">//exec 和 run</span>
+	  ws <span class="token operator">=</span> <span class="token keyword">null</span><span class="token punctuation">;</span>
+	  <span class="token comment">//alert("ok");             弹出一个小框显示“ok”</span>
+	<span class="token punctuation">&#125;</span>     
+	</span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>script</span><span class="token punctuation">></span></span>   
+  <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>head</span><span class="token punctuation">></span></span>  
+  
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>body</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>header<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h1</span><span class="token punctuation">></span></span>文字识别<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h1</span><span class="token punctuation">></span></span>
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>nav<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 
+		文字识别    
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>a</span> <span class="token attr-name">href</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>facerecognize.py<span class="token punctuation">"</span></span> <span class="token attr-name">target</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>show<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 源代码 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>a</span><span class="token punctuation">></span></span>    
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>input</span> <span class="token attr-name">type</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>button<span class="token punctuation">"</span></span> <span class="token attr-name">value</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>运行 python<span class="token punctuation">"</span></span> <span class="token attr-name">onclick</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>exec1(<span class="token punctuation">'</span>python facerecognize.py<span class="token punctuation">'</span>)<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>  
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span>  
+
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>p</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>b</span><span class="token punctuation">></span></span>点击 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>U</span><span class="token punctuation">></span></span>源代码<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>U</span><span class="token punctuation">></span></span> 将显示代码，
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>br</span><span class="token punctuation">/></span></span> 点击 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>U</span><span class="token punctuation">></span></span>button<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>U</span><span class="token punctuation">></span></span> 将执行代码<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>b</span><span class="token punctuation">></span></span><span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>p</span><span class="token punctuation">></span></span>	
+         <span class="token comment">&lt;!-- 待识别图像插入位置 --></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>img</span> <span class="token attr-name">src</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>demo.gif<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>220<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>200<span class="token punctuation">"</span></span> <span class="token punctuation">/></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>footer<span class="token punctuation">"</span></span><span class="token punctuation">></span></span>
+	    版权 © 李拙诚 
+	    <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span> 
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>div</span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>section<span class="token punctuation">"</span></span><span class="token punctuation">></span></span> 	
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>h2</span><span class="token punctuation">></span></span>代码框 <span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>h2</span><span class="token punctuation">></span></span>
+		<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;</span>iframe</span> <span class="token attr-name">name</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>show<span class="token punctuation">"</span></span> <span class="token attr-name">id</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>show<span class="token punctuation">"</span></span> <span class="token attr-name">width</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>1100<span class="token punctuation">"</span></span> <span class="token attr-name">height</span><span class="token attr-value"><span class="token punctuation attr-equals">=</span><span class="token punctuation">"</span>466<span class="token punctuation">"</span></span><span class="token punctuation">/></span></span>   		 
+	<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>div</span><span class="token punctuation">></span></span>
+
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>body</span><span class="token punctuation">></span></span> 
+<span class="token tag"><span class="token tag"><span class="token punctuation">&lt;/</span>html</span><span class="token punctuation">></span></span> <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h4 id="网址工具"><a href="#网址工具" class="headerlink" title="网址工具"></a>网址工具</h4><p><a target="_blank" rel="noopener" href="http://www.jsons.cn/img2base64">图片base64数据获取</a></p>
+<pre class="line-numbers language-python" data-language="python"><code class="language-python">### base64 转码
+import base64
+
+f&#x3D;open(&quot;填写你的图片完整名称 例如：1.png&quot;,&quot;rb&quot;)
+img &#x3D; base64.b64encode(f.read())<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p><a target="_blank" rel="noopener" href="https://www.base64encode.net/python-base64-b64encode">base64.b64encode函数具体说明</a></p>
 <p><a target="_blank" rel="noopener" href="http://www.jsons.cn/urlencode">base64数据进行urlencode</a></p>
-<h4 id="参考网址-2"><a href="#参考网址-2" class="headerlink" title="参考网址"></a>参考网址</h4><p><a target="_blank" rel="noopener" href="https://cloud.baidu.com/doc/OCR/s/jk9m7mj1l">百度教育场景文字识别API文档</a></p>
-<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenguoli/p/8520888.html">php方法调用</a></p>
+<h4 id="参考网址-2"><a href="#参考网址-2" class="headerlink" title="参考网址"></a>参考网址</h4><h5 id="文字识别"><a href="#文字识别" class="headerlink" title="文字识别"></a>文字识别</h5><p><a target="_blank" rel="noopener" href="https://cloud.baidu.com/doc/OCR/s/jk9m7mj1l">百度教育场景文字识别API文档</a></p>
 <p><a target="_blank" rel="noopener" href="https://abcxueyuan.baidu.com/?_=1630800574349#/play_video?id=15428&courseId=15428&mediaId=mda-mhcmpctvkfzj5517&videoId=4538&sectionId=15681">使用API Explorer调用API接口</a></p>
-<p><a target="_blank" rel="noopener" href="https://docs.mathpix.com/">公式识别 mathpix API 文档</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_15029743/article/details/86129690">百度AI图像处理—文字识别OCR（通用文字识别）调用教程（基于Python3-附Demo）_APPID AK SK使用方式</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/zhinian06/article/details/111194003">最新调用百度OCR文字识别API–一看就会（python实现）_图片转码</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_15029743/article/details/84934631">百度AI图像处理—图像主体识别调用教程（基于Python3-附Demo）_返回值字符串切割</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/yzy_1996/article/details/80223053">【方法】HTML网页调用本地Python程序_内含网站内置人脸识别&amp;代码</a></p>
+<p><a target="_blank" rel="noopener" href="https://github.com/yzy1996/Face-Detection">上述博文的Github仓库</a></p>
+<h5 id="公式识别"><a href="#公式识别" class="headerlink" title="公式识别"></a>公式识别</h5><p><a target="_blank" rel="noopener" href="https://docs.mathpix.com/">公式识别 mathpix API 文档</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/262994624">免费 Mathpix Api 调用代码_需要美国信用卡</a></p>
 <p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/380433944">教你轻松调用API获得每个月500次免费识别！_有代码，相比上面那篇更详细</a></p>
-<p><a target="_blank" rel="noopener" href="https://docs.moodle.org/all/zh/%E5%BC%80%E5%8F%91%E8%80%85%E6%96%87%E6%A1%A3">Moodle 开发者文档</a></p>
+<h5 id="Moodle插件开发"><a href="#Moodle插件开发" class="headerlink" title="Moodle插件开发"></a>Moodle插件开发</h5><p><a target="_blank" rel="noopener" href="https://docs.moodle.org/all/zh/%E5%BC%80%E5%8F%91%E8%80%85%E6%96%87%E6%A1%A3">Moodle 开发者文档</a></p>
+<h5 id="企鹅物流截图识别插件"><a href="#企鹅物流截图识别插件" class="headerlink" title="企鹅物流截图识别插件"></a>企鹅物流截图识别插件</h5><p><a target="_blank" rel="noopener" href="https://penguin-stats.io/report/recognition">企鹅物流截图识别__基于 WebAssembly</a></p>
+<p><a target="_blank" rel="noopener" href="http://webassembly.org.cn/">Webassembly 中文文档</a></p>
+<h5 id="其他OCR方式"><a href="#其他OCR方式" class="headerlink" title="其他OCR方式"></a>其他OCR方式</h5><p><a target="_blank" rel="noopener" href="https://zhuanlan.zhihu.com/p/60767671">cnocr: 极简的中文OCR Python包</a></p>
+<h5 id="接下来有可能要学习PHP，学习资料整理如下s"><a href="#接下来有可能要学习PHP，学习资料整理如下s" class="headerlink" title="接下来有可能要学习PHP，学习资料整理如下s"></a>接下来有可能要学习PHP，学习资料整理如下s</h5><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenguoli/p/8520888.html">百度文字识别 OCR php 方法调用</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/php-learning-recommend.html">适用于PHP初学者的学习线路和建议</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/feng18/p/9211342.html">PHP带参数传值调用python脚本</a></p>
 
                 
             </div>
@@ -2015,7 +2103,7 @@ hostname&#x3D;<span aria-hidden="true" class="line-numbers-rows"><span></span><s
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67.4k</span>&nbsp;字
+                class="white-color">68.7k</span>&nbsp;字
             
             
             

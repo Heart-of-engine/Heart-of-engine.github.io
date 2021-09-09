@@ -508,14 +508,14 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-07-08
+                    2021-09-07
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    819
+                    860
                 </div>
                 
 
@@ -545,13 +545,13 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <p>对于很多刚上手Python的小白（比如我）来说，搭建一个能够进行基本数据运算与处理的Python运行环境是至关重要的。</p>
-<p>然而对于系统自带的Python环境，安装一个库时会涉及很多其他的基本库，如果一个一个用pip install方式安装，后期还会遇到库的版本不齐，从而导致更大的问题（比如A库需要用到旧版本的B库，但由于B库的更新，A库暂时无法调用B库，程序中涉及A库的代码就会报错）</p>
-<p>那么有没有一种方法能够自动管理所有Python库且能管理好所有库的版本呢？</p>
+                <p>对于很多刚上手 Python 的小白（比如我）来说，搭建一个能够进行基本数据运算与处理的 Python 运行环境是至关重要的。</p>
+<p>然而对于系统自带的 Python 环境，安装一个库时会涉及很多其他的基本库，如果一个一个用 pip install 方式安装，后期还会遇到库的版本不齐，从而导致更大的问题（比如A库需要用到旧版本的B库，但由于 B 库的更新，A 库暂时无法调用 B 库，程序中涉及 A 库的代码就会报错）</p>
+<p>那么有没有一种方法能够自动管理所有 Python 库且能管理好所有库的版本呢？</p>
 <p>当然有！ 下面就由我来带大家一起学习</p>
-<h4 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h4><p>在<a target="_blank" rel="noopener" href="https://www.anaconda.com/">Anaconda官网</a>上下载Anaconda并安装，Anaconda是一个科学计算库，其中集成了大量的库，可以方便我们的管理和使用</p>
+<h4 id="安装Anaconda"><a href="#安装Anaconda" class="headerlink" title="安装Anaconda"></a>安装Anaconda</h4><p>在<a target="_blank" rel="noopener" href="https://www.anaconda.com/">Anaconda官网</a>上下载 Anaconda 并安装，Anaconda 是一个科学计算库，其中集成了大量的库，可以方便我们的管理和使用</p>
 <p>下载完毕后，按照默认选项安装即可</p>
-<p>安装完毕后，打开 Windows程序栏 -&gt; Anaconda3(64-bit) ，其中</p>
+<p>安装完毕后，打开 Windows 程序栏 -&gt; Anaconda3(64-bit) ，其中</p>
 <p>Anaconda Prompt 为 Anaconda 的命令行，可以用于安装第三方库等操作</p>
 <p>Jupyter Notebook 为一款非常好用的基于浏览器的数据可视化处理软件</p>
 <p>Spyder 就是 Anaconda 自带的编译器</p>
@@ -559,23 +559,26 @@
 <p>在实际项目开发中，我们通常会根据自己的需求去下载各种相应的框架库，如 Scrapy、Beautiful Soup 等，但是可能每个项目使用的框架库并不一样，或使用框架的版本不一样，这样需要我们根据需求不断的更新或卸载相应的库。直接怼我们的Python环境操作会让我们的开发环境和项目造成很多不必要的麻烦，管理也相当混乱。</p>
 <p>所以我们需要使用虚拟环境这个“容器”，在这个容器中，我们可以只安装我们需要的依赖包，各个容器之间互相隔离，互不影响。</p>
 <p>在 Windows程序栏 Anaconda3(64-bit) 中选择 Anaconda Prompt，并输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda create -n lzc1 python&#x3D;3.8</span><br></pre></td></tr></table></figure>
-<p>上述意为：创建一个名为 lzc1 的3.8版本python虚拟环境，Anaconda会帮助我们安装好所有3.8版本的基础库</p>
+<pre class="line-numbers language-none"><code class="language-none">conda create -n lzc1 python&#x3D;3.8<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<p>上述意为：创建一个名为 lzc1 的3.8版本 Python 虚拟环境，Anaconda 会帮助我们安装好所有3.8版本的基础库</p>
 <h4 id="安装第三方库"><a href="#安装第三方库" class="headerlink" title="安装第三方库"></a>安装第三方库</h4><h5 id="方法一"><a href="#方法一" class="headerlink" title="方法一"></a>方法一</h5><p>在虚拟环境中安装库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda install -n lzc1 numpy</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">conda install -n lzc1 numpy<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>查看虚拟环境中的库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">conda list -n lzc1</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">conda list -n lzc1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 
 
 <h5 id="方法二"><a href="#方法二" class="headerlink" title="方法二"></a>方法二</h5><p>先在 Anaconda Prompt 中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">activate lzc1</span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">activate lzc1<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
 <p>再输入如下（这里的xxx为你需要安装的库名），让 Anaconda 帮助我们安装所需要的库</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">conda install xxx</span><br><span class="line"># 用国内镜像源安装</span><br><span class="line">不能用conda install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple pandas </span><br><span class="line"></span><br></pre></td></tr></table></figure>
+<pre class="line-numbers language-none"><code class="language-none">conda install xxx
+# 用国内镜像源安装
+不能用conda install -i https:&#x2F;&#x2F;pypi.tuna.tsinghua.edu.cn&#x2F;simple pandas<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
 <p>如果显示安装失败，说明Anaconda总库中没有该库，我们就需要使用 Python 自带的 pip 方法安装第三方库</p>
 <p>那么在 Anaconda Prompt 中输入</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">pip install xxx</span><br></pre></td></tr></table></figure>
-<h4 id="退出虚拟环境"><a href="#退出虚拟环境" class="headerlink" title="退出虚拟环境"></a>退出虚拟环境</h4><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">deactivate</span><br></pre></td></tr></table></figure>
-<h4 id="在编译器中选择自己的虚拟环境"><a href="#在编译器中选择自己的虚拟环境" class="headerlink" title="在编译器中选择自己的虚拟环境"></a>在编译器中选择自己的虚拟环境</h4><p> Pycharm 编译器：在设置内修改虚拟环境为conda类环境，选择虚拟环境文件夹中的 python.exe 作为 python 位置即可</p>
+<pre class="line-numbers language-none"><code class="language-none">pip install xxx<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="退出虚拟环境"><a href="#退出虚拟环境" class="headerlink" title="退出虚拟环境"></a>退出虚拟环境</h4><pre class="line-numbers language-none"><code class="language-none">conda deactivate<span aria-hidden="true" class="line-numbers-rows"><span></span></span></code></pre>
+<h4 id="在编译器中选择自己的虚拟环境"><a href="#在编译器中选择自己的虚拟环境" class="headerlink" title="在编译器中选择自己的虚拟环境"></a>在编译器中选择自己的虚拟环境</h4><p>Pycharm 编译器：在设置内修改虚拟环境为 conda 类环境，选择虚拟环境文件夹中的 python.exe 作为 python 位置即可</p>
+<p>Spyder 编译器：工具 -&gt; 偏好设置 -&gt; Python解释器，选择虚拟环境文件夹中的 python.exe 作为 python 位置即可</p>
 <h4 id="参考文章"><a href="#参考文章" class="headerlink" title="参考文章"></a>参考文章</h4><p><a target="_blank" rel="noopener" href="https://blog.csdn.net/godot06/article/details/81079064">Python为什么要使用虚拟环境</a></p>
 
                 
@@ -1097,7 +1100,7 @@
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">67.4k</span>&nbsp;字
+                class="white-color">68.7k</span>&nbsp;字
             
             
             
