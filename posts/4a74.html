@@ -31,7 +31,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
+<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
 
 
 
@@ -504,21 +504,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-09-11
+                    2021-09-15
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    11.6k
+                    12.3k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    43 分
+                    47 分
                 </div>
                 
 
@@ -1362,6 +1362,9 @@ ding -config&#x3D;ding.cfg -subdomain&#x3D;sit666 80<span aria-hidden="true" cla
 <blockquote>
 <p>这里的网址需要在本地开启钉钉穿透功能才能被访问</p>
 </blockquote>
+<blockquote>
+<p>内网 $IP$ 查询方法键盘同时摁 <code>Win</code> 和 <code>R</code> 运行 <code>cmd</code> ，输入 <code>ipconfig</code> ，其中的 $IPV4$ 地址即为内网 $IP$</p>
+</blockquote>
 <h5 id="邮件发送问题"><a href="#邮件发送问题" class="headerlink" title="邮件发送问题"></a>邮件发送问题</h5><p>在实践中又遇到了新的问题：新注册的用户会被告知其邮箱已经被注册，于是我参考了<a target="_blank" rel="noopener" href="https://blog.csdn.net/socalabo/article/details/82886508">本篇教程</a></p>
 <ol>
 <li><p><a target="_blank" rel="noopener" href="http://glob.com.au/sendmail/">下载<code>sendmail</code></a>，直接解压到<code>C:\xampp</code>目录下</p>
@@ -1606,6 +1609,103 @@ img &#x3D; base64.b64encode(f.read())<span aria-hidden="true" class="line-number
 <h5 id="接下来有可能要学习PHP，学习资料整理如下"><a href="#接下来有可能要学习PHP，学习资料整理如下" class="headerlink" title="接下来有可能要学习PHP，学习资料整理如下"></a>接下来有可能要学习PHP，学习资料整理如下</h5><p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/chenguoli/p/8520888.html">百度文字识别 OCR php 方法调用</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.runoob.com/w3cnote/php-learning-recommend.html">适用于PHP初学者的学习线路和建议</a></p>
 <p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/feng18/p/9211342.html">PHP带参数传值调用python脚本</a></p>
+<h3 id="9-5-结题答辩后"><a href="#9-5-结题答辩后" class="headerlink" title="9.5 结题答辩后"></a>9.5 结题答辩后</h3><h4 id="与张嘉健老师交流"><a href="#与张嘉健老师交流" class="headerlink" title="与张嘉健老师交流"></a>与张嘉健老师交流</h4><p>详细构想应用场景，具体步骤用流程图表示</p>
+<ol>
+<li>扫描试卷或作业 $pdf$</li>
+<li>切割 $pdf$ 以提取单个题目</li>
+<li>对提取出的题目图样进行文字识别，并提取标签（提取关键词 或 与给定题目的模糊匹配）</li>
+<li>老师判断对错</li>
+</ol>
+<p>我接下来要做的事</p>
+<ol>
+<li>检验 $OCR$ 对真实应用场景的识别能力</li>
+<li>整理总结 $Moodle$ 平台的功能，与 <a target="_blank" rel="noopener" href="http://diip.xxribd.org.cn/xxribd/">深度创新培育平台</a> 的功能进行对比</li>
+</ol>
+<h4 id="Moodle-部署云服务器"><a href="#Moodle-部署云服务器" class="headerlink" title="$Moodle$ 部署云服务器"></a>$Moodle$ 部署云服务器</h4><p>docker 装环境</p>
+<p>在文件夹内按住 $Shift$ 与鼠标右键，选择在此处打开 $Powershell$ 窗口，依次输入以下命令</p>
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">ssh
+ssh root@121.37.249.141 # root 为用户名，121.37.249.141为服务器的IP地址
+yes
+hnu@12#$ # 服务器密码<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<pre class="line-numbers language-powershell" data-language="powershell"><code class="language-powershell">PS C:\xampp\htdocs\moodle&gt; ssh root@121.37.249.141
+The authenticity of host &#39;121.37.249.141 (121.37.249.141)&#39; can&#39;t be established.
+ECDSA key fingerprint is SHA256:Y+2d&#x2F;v4zvFzEqvPGWi+llri5vnYhDHNJOmAZlWs4sSM.
+Are you sure you want to continue connecting (yes&#x2F;no&#x2F;[fingerprint])? yes
+Warning: Permanently added &#39;121.37.249.141&#39; (ECDSA) to the list of known hosts.
+root@121.37.249.141&#39;s password:
+Welcome to Ubuntu 18.04.5 LTS (GNU&#x2F;Linux 4.15.0-136-generic x86_64)
+
+ * Documentation:  https:&#x2F;&#x2F;help.ubuntu.com
+ * Management:     https:&#x2F;&#x2F;landscape.canonical.com
+ * Support:        https:&#x2F;&#x2F;ubuntu.com&#x2F;advantage
+
+  System information as of Wed Sep 15 15:56:48 CST 2021
+
+  System load:  0.25               Processes:              514
+  Usage of &#x2F;:   77.9% of 39.12GB   Users logged in:        1
+  Memory usage: 54%                IP address for eth0:    192.168.0.192
+  Swap usage:   0%                 IP address for docker0: 172.17.0.1
+
+  &#x3D;&gt; There are 3 zombie processes.
+
+ * Super-optimized for small spaces - read how we shrank the memory
+   footprint of MicroK8s to make it the smallest full K8s around.
+
+   https:&#x2F;&#x2F;ubuntu.com&#x2F;blog&#x2F;microk8s-memory-optimisation
+
+ * Canonical Livepatch is available for installation.
+   - Reduce system reboots and improve kernel security. Activate at:
+     https:&#x2F;&#x2F;ubuntu.com&#x2F;livepatch
+
+18 updates can be applied immediately.
+14 of these updates are standard security updates.
+To see these additional updates run: apt list --upgradable
+
+New release &#39;20.04.3 LTS&#39; available.
+Run &#39;do-release-upgrade&#39; to upgrade to it.
+
+
+*** System restart required ***
+
+        Welcome to Huawei Cloud Service
+
+Warning
+HSS has detected that you are using a weak password for your server.
+Choose Security &gt; Host Security Service &gt; Baseline Inspection &gt; Common Weak Password Detection to view details.
+To prevent your account from being cracked, please change the password immediately.
+Warning
+Last login: Wed Sep 15 11:11:44 2021 from 222.244.139.159
+root@ecs-ff44:~#<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h4 id="参考链接-3"><a href="#参考链接-3" class="headerlink" title="参考链接"></a>参考链接</h4><div style="position: relative; padding: 30% 45%;"> 
+    <iframe style=" 
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    left: 0; 
+    top: 0;" 
+    src="//player.bilibili.com/player.html?aid=80181162&bvid=BV1n7411c7Kw&high_quality=1" 
+    scrolling="no" 
+    border="0" 
+    frameborder="no" 
+    framespacing="0" 
+    allowfullscreen="true"> 
+    </iframe> 
+</div>
+[MobaXterm详细使用教程系列一](https://zhuanlan.zhihu.com/p/61013117)
+
+<p><a href="Windows%E5%85%A8%E8%83%BD%E7%BB%88%E7%AB%AF%E7%A5%9E%E5%99%A8MobaXterm">Windows全能终端神器MobaXterm</a></p>
+<p><a target="_blank" rel="noopener" href="https://support.huaweicloud.com/bestpractice-ecs/zh-cn_topic_0139870683.html">镜像部署Moodle课程管理系统（Linux）_华为云</a></p>
+<p><a target="_blank" rel="noopener" href="https://marketplace.huaweicloud.com/contents/d476e4b2-9a58-48ca-aaf9-1162f37266b4">Moodle LMS在线学习系统（LAMP）服务购买</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/shengChristine/p/9293996.html">阿里云服务器Centos7安装PHP、MySQL、apache</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/zhangwy1024/p/8880656.html">Windows下使用CMD命令进入和退出MySQL数据库</a></p>
+<p><a target="_blank" rel="noopener" href="https://support.huaweicloud.com/bestpractice-website/zh-cn_topic_0089385186.html">搭建网站_华为云</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/qq_31766907/article/details/77891551">CentOS7下解决yum install mysql-server 异常：No package mysql-server available.问题</a></p>
+<p><a target="_blank" rel="noopener" href="https://www.cnblogs.com/suesky/p/12767313.html">yum install mysql-community-server错误解决方案</a></p>
+<p><a target="_blank" rel="noopener" href="https://blog.csdn.net/blueney/article/details/80266710">使用MobaXterm直接修改文件 与 vi命令修改文件</a></p>
 
                 
             </div>
@@ -2040,6 +2140,13 @@ img &#x3D; base64.b64encode(f.read())<span aria-hidden="true" class="line-number
 </main>
 
 
+<script src="https://cdn.bootcss.com/mathjax/2.7.5/MathJax.js?config=TeX-AMS-MML_HTMLorMML"></script>
+<script>
+    MathJax.Hub.Config({
+        tex2jax: {inlineMath: [['$', '$'], ['\(', '\)']]}
+    });
+</script>
+
 
 
     <footer class="page-footer bg-color">
@@ -2111,7 +2218,7 @@ img &#x3D; base64.b64encode(f.read())<span aria-hidden="true" class="line-number
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">72.6k</span>&nbsp;字
+                class="white-color">73.4k</span>&nbsp;字
             
             
             
