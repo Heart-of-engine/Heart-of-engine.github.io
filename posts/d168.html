@@ -31,7 +31,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -504,21 +504,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-12
+                    2021-10-22
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    5.9k
+                    9.1k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    28 分
+                    44 分
                 </div>
                 
 
@@ -541,7 +541,7 @@
 
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h3 id="实验一：线性表"><a href="#实验一：线性表" class="headerlink" title="实验一：线性表"></a>实验一：线性表</h3><h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><p>熟悉线性表顺序存储结构的类型说明及基本操作的实现</p>
+                <h3 id="实验一：顺序表-2021-10-08"><a href="#实验一：顺序表-2021-10-08" class="headerlink" title="实验一：顺序表$(2021.10.08)$"></a>实验一：顺序表$(2021.10.08)$</h3><h4 id="一、实验目的"><a href="#一、实验目的" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><p>熟悉线性表顺序存储结构的类型说明及基本操作的实现</p>
 <h4 id="二、实验内容"><a href="#二、实验内容" class="headerlink" title="二、实验内容"></a>二、实验内容</h4><ol>
 <li><p>利用顺序表的基本操作实现两个有序表合并（教材算法2.2）</p>
 </li>
@@ -644,6 +644,7 @@ int main()&#123;
 	DestroyList(lb);
 	DestroyList(lc);
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>实验结束后，请将源程序（<code>.h</code> 或 <code>.cpp</code>）和实验报告打包后上传至课程中心的网站。</p>
 <h4 id="四、问题"><a href="#四、问题" class="headerlink" title="四、问题"></a>四、问题</h4><ol>
 <li><p>如果线性表的元素类型为字符型，应如何修改，请实验之。</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">&#x2F;&#x2F; 问题一.cpp
@@ -988,9 +989,12 @@ Status InitList(SqList &amp;L) &#x2F;&#x2F; 算法2.3
 	*&#x2F; 
    return OK;
  &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>实验结束后，请将源程序（<code>.h</code> 或 <code>.cpp</code>）和实验报告打包后上传至课程中心的网站。</p>
-<p>与同学作业比对后的个人作业：</p>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"> &#x2F;&#x2F; SqList.cpp 顺序表示的线性表
+
+
+</li>
+</ol>
+<p>   与同学作业比对后修改的个人作业：</p>
+   <pre class="line-numbers language-c" data-language="c"><code class="language-c"> &#x2F;&#x2F; SqList.cpp 顺序表示的线性表
  #define LIST_INIT_SIZE 10 &#x2F;&#x2F; 线性表存储空间的初始分配量
  #define LISTINCREMENT 2 &#x2F;&#x2F; 线性表存储空间的分配增量
  struct SqList
@@ -1165,9 +1169,7 @@ Status InitList(SqList &amp;L) &#x2F;&#x2F; 算法2.3
    return OK;
  &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <p>另一位同学的作业：</p>
-</li>
-</ol>
-<pre class="line-numbers language-c" data-language="c"><code class="language-c"> &#x2F;&#x2F; SqList.cpp 顺序表示的线性表
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"> &#x2F;&#x2F; SqList.cpp 顺序表示的线性表
  #define LIST_INIT_SIZE 10 &#x2F;&#x2F; 线性表存储空间的初始分配量
  #define LISTINCREMENT 2 &#x2F;&#x2F; 线性表存储空间的分配增量
  struct SqList
@@ -1337,8 +1339,6 @@ int compare(ElemType a,ElemType b)&#x2F;&#x2F;定义了一个比较函数
  &#123;
  	
  &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-
-
 <h4 id="五、附件"><a href="#五、附件" class="headerlink" title="五、附件"></a>五、附件</h4><pre class="line-numbers language-c" data-language="c"><code class="language-c">&#x2F;&#x2F; c1.h
 #include&lt;string.h&gt;
 #include&lt;ctype.h&gt;
@@ -1366,13 +1366,15 @@ typedef int Boolean; &#x2F;&#x2F; Boolean是布尔类型,其值是TRUE或FALSE<s
 &#x2F;&#x2F; 见实验三<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span></span></code></pre>
 
 
-<h4 id="六、其他"><a href="#六、其他" class="headerlink" title="六、其他"></a>六、其他</h4><h5 id="调用-iostream-h-头文件方式"><a href="#调用-iostream-h-头文件方式" class="headerlink" title="调用 iostream.h 头文件方式"></a>调用 <code>iostream.h</code> 头文件方式</h5><p>在 $DEV \ C$++ 中调用头文件 <code>iostream.h</code> 需使用如下语法</p>
+<h4 id="六、发现"><a href="#六、发现" class="headerlink" title="六、发现"></a>六、发现</h4><h5 id="调用-iostream-h-头文件方式"><a href="#调用-iostream-h-头文件方式" class="headerlink" title="调用 iostream.h 头文件方式"></a>调用 <code>iostream.h</code> 头文件方式</h5><p>在 $DEV \ C$++ 中调用头文件 <code>iostream.h</code> 需使用如下语法（因为 $C$ ++ 文件没有 $.h$ 后缀）</p>
 <pre class="line-numbers language-c" data-language="c"><code class="language-c">&#x2F;&#x2F; .h文件中
 #include&lt;iostream&gt; &#x2F;&#x2F; cout,cin
 using namespace std;
 
 &#x2F;&#x2F; main函数文件中
 std::cout&lt;&lt;endl;&#x2F;&#x2F; endl就相当于输出的时候回车<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
 <h5 id="x-意义"><a href="#x-意义" class="headerlink" title="%x 意义"></a>%x 意义</h5><ol>
 <li><p>%c，%y这些代表你要输出的数据的数据类型；</p>
 </li>
@@ -1397,6 +1399,472 @@ std::cout&lt;&lt;endl;&#x2F;&#x2F; endl就相当于输出的时候回车<span ar
 <li><p>%g表示输出自动选择合适的表示法。</p>
 </li>
 </ol>
+<h3 id="实验二：链式表-2021-10-22"><a href="#实验二：链式表-2021-10-22" class="headerlink" title="实验二：链式表$(2021.10.22)$"></a>实验二：链式表$(2021.10.22)$</h3><h4 id="一、实验目的-1"><a href="#一、实验目的-1" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><p>熟悉线性表的链式存储结构的类型说明和基本操作定义</p>
+<h4 id="二、实验内容-1"><a href="#二、实验内容-1" class="headerlink" title="二、实验内容"></a>二、实验内容</h4><ol>
+<li><p>利用基本操作实现两个有序表合并（教材算法2.2）</p>
+</li>
+<li><p>补充未完成的基本操作：<code>InitList</code> ，<code>DestroyList</code> ，<code>ListLength</code> ，<code>ListTraverse</code> ，<code>GetElem</code> ，<code>ListInsert</code></p>
+</li>
+<li><p>记录实验过程并总结实验经验，完成实验报告</p>
+</li>
+</ol>
+<h4 id="三、实验步骤-1"><a href="#三、实验步骤-1" class="headerlink" title="三、实验步骤"></a>三、实验步骤</h4><ol>
+<li><p>新建一个文件夹，并在其中新建一个扩展名为 <code>.cpp</code> 的文件。</p>
+</li>
+<li><p>将实验材料(附件)中的 <code>c1.h</code> 和 <code>linklist.cpp</code> 文件复制到同一个文件夹中。</p>
+</li>
+</ol>
+<p>其中，<code>c1.h</code> 中包含程序中常用的头文件及宏定义，以后每次都要记得将该文件包括到你的源程序中。</p>
+<p><code>linklist.cpp</code> 中包含线性表顺序存储结构的定义和部分基本操作的实现。</p>
+<ol start="3">
+<li>新建一个 <code>MergeLink.cpp</code> 源文件(主文件)中，在其中输入以下三个命令(语句)及一个空的 <code>main</code> 函数</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">typedef int ElemType;
+
+ ＃include &quot;c1.h&quot;
+
+ ＃include &quot;linklist.cpp&quot;
+
+ main()
+
+ &#123;
+
+ &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="4">
+<li>在 <code>linklist.cpp</code> 实现两有序表合并所需要的基本操作：<code>InitList</code> ，<code>DestroyList</code> ，<code>ListTraverse</code> ，<code>GetElem</code> ，<code>ListInsert</code></li>
+</ol>
+<p>请注意：写完一个函数后，应回到 <code>MergeLink.cpp</code> 进行编译。测试正确后，再开始写其它函数</p>
+<ol start="5">
+<li>将上一次实验中的 <code>Merge</code> 函数和 <code>main</code> 函数复制到 <code>MergeLink.cpp</code> 文件中，将其中的 <code>SqList</code> 类型均改为 <code>LinkList</code> 类型，就可以运行了</li>
+</ol>
+<p>实验结束后，请将源程序（ <code>.h</code> 或 <code>.cpp</code> ）和实验报告打包后上传至课程中心的网站</p>
+<h4 id="四、问题-1"><a href="#四、问题-1" class="headerlink" title="四、问题"></a>四、问题</h4><ol>
+<li>请另写一个算法：直接利用指针对链表操作实现两有序表合并</li>
+</ol>
+<ol start="2">
+<li><p>认真体会并回答：基本操作集以外的操作通过调用基本操作来实现，而不是直接对顺序表或链表操作，有什么好处？</p>
+<p>答：通过调用基本操作来实现，而不是直接对顺序表或链表操作可以提高代码的复用性，从而在成功编写一次代码后不必担心调用的函数会出现错误，从而减少检查量。</p>
+</li>
+</ol>
+<h4 id="五、附件-1"><a href="#五、附件-1" class="headerlink" title="五、附件"></a>五、附件</h4><p>同实验一</p>
+<h4 id="六、发现-1"><a href="#六、发现-1" class="headerlink" title="六、发现"></a>六、发现</h4><h5 id="两个程序卡死问题"><a href="#两个程序卡死问题" class="headerlink" title="两个程序卡死问题"></a>两个程序卡死问题</h5><p>当 <code>ListTraverse</code> 函数为</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Status ListTraverse(LinkList L,void(*vi)(ElemType))	&#x2F;&#x2F;*************
+&#x2F;&#x2F; vi的形参类型为ElemType，与bo2-1.cpp中相应函数的形参类型ElemType&amp;不同
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在
+&#x2F;&#x2F; 操作结果:依次对L的每个数据元素调用函数vi()。一旦vi()失败,则操作失败
+	LinkList p;
+	p &#x3D; L; &#x2F;&#x2F;p指向头结点 
+	while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+		p &#x3D; p -&gt; next;
+		vi(p -&gt; data);
+	&#125; 
+	printf(&quot;\n&quot;);
+	return OK;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>时，输出结果为</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+--------------------------------
+Process exited after 5.842 seconds with return value 3221225477
+请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而当</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+	p &#x3D; p -&gt; next;
+	vi(p -&gt; data);
+&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>更换为</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+	vi(p -&gt; data);
+	p &#x3D; p -&gt; next;
+&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>时，输出结果为</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+
+lb&#x3D;2  4  6  8  10
+
+lc&#x3D;1  1  1  1  2  2  2  2  2
+
+--------------------------------
+Process exited after 0.07741 seconds with return value 0
+请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我认为这样的结果出现的原因在于：</p>
+<p>出错的函数中的 <code>p = p -&gt; next;</code> 语句在 <code>vi(p -&gt; data);</code> 语句之前，这样就会导致当 <code>p</code> 指向 <code>NULL</code> 时，<code>vi</code> 继续对 <code>NULL -&gt; data</code> 进行操作，导致程序卡死</p>
+<p>与此同时，当问题一中 <code>MergeList_L</code> 函数为</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
+	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
+	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
+	LinkList pa,pb,pc;
+	
+	pa &#x3D; la -&gt; next;
+	pb &#x3D; lb -&gt; next;
+	lc &#x3D; la;
+	pc &#x3D; pa;
+	
+	while(pa &amp;&amp; pb)&#123;&#x2F;&#x2F;pa,pb皆非空 
+		if(pa-&gt;data &lt;&#x3D; pb-&gt;data)&#123;
+			pc-&gt;next &#x3D; pa;
+			pc &#x3D; pa;
+			pa &#x3D; pa-&gt;next;
+		&#125;
+		else&#123;
+			pc-&gt;next &#x3D; pb;
+			pc &#x3D; pb;
+			pb &#x3D; pb-&gt;next;
+		&#125;
+	&#125;
+	
+	pc-&gt;next &#x3D; pa?pa:pb;&#x2F;&#x2F;当la,lb中的一个空时，将未空的一个接入lc
+	free(lb);&#x2F;&#x2F;释放lb的头结点
+&#125;&#x2F;&#x2F; MergeList_L<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>时，输出结果卡死在</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+
+lb&#x3D;2  4  6  8  10
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而当 <code>pc = pa;</code> 调整为 <code>pc = la;</code> 时，输出结果正常：</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+
+lb&#x3D;2  4  6  8  10
+
+lc&#x3D;1  2  3  4  5  6  7  8  10
+
+--------------------------------
+Process exited after 2.031 seconds with return value 3221226356
+请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我认为这样的结果出现的原因在于：</p>
+<p>错误程序中的 <code>pc = pa;</code> 使函数 <code>MergeList_L(la,lb,lc);</code> 中无法正常进行</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">pc-&gt;next &#x3D; pa;
+pc &#x3D; pa;
+pa &#x3D; pa-&gt;next;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>操作，致使主函数卡在函数 <code>MergeList_L(la,lb,lc);</code> 中无法离开，造成程序卡死</p>
+<h4 id="七、程序"><a href="#七、程序" class="headerlink" title="七、程序"></a>七、程序</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; MergeLink.cpp
+typedef int ElemType;&#x2F;&#x2F; 要加分号
+# include &quot;c1.h&quot;
+# include &quot;linklist.cpp&quot;
+
+void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
+	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
+	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
+
+	InitList(lc);
+	int i,j,k;
+	i&#x3D;j&#x3D;1;
+	k&#x3D;0;
+
+	int la_len,lb_len;
+	la_len &#x3D; ListLength(la);
+	lb_len &#x3D; ListLength(lb);
+
+	ElemType ai,bj;
+	while((i&lt;&#x3D;la_len)&amp;&amp;(j&lt;&#x3D;lb_len))&#123;&#x2F;&#x2F; la与lb均非空
+		GetElem(la,i,ai);
+		GetElem(lb,j,bj);
+		if(ai&lt;&#x3D;bj)&#123;
+			ListInsert(lc,++k,ai);
+			++i;
+		&#125;else&#123;
+			ListInsert(lc,++k,bj);
+			++j;
+		&#125;
+	&#125;
+
+	while(i&lt;&#x3D;la_len)&#123;
+		GetElem(la,i++,ai);
+		ListInsert(lc,++k,ai);
+	&#125;
+
+	while(j&lt;&#x3D;lb_len)&#123;
+		GetElem(lb,j++,bj);
+		ListInsert(lc,++k,bj);
+	&#125;
+
+&#125;&#x2F;&#x2F; MergeList_L
+
+void print(ElemType c)&#123;
+	printf(&quot;%d  &quot;,c);
+&#125;
+
+int main()&#123;
+	LinkList la,lb,lc;
+	int j,a[4]&#x3D;&#123;1,3,5,7&#125;,b[5]&#x3D;&#123;2,4,6,8,10&#125;;
+
+	InitList(la);
+	InitList(lb);
+	
+	for(j&#x3D;1;j&lt;&#x3D;4;j++)&#123;
+		ListInsert(la,j,a[j-1]);
+	&#125;
+	printf(&quot;la&#x3D;&quot;);
+	ListTraverse(la,print);
+	printf(&quot;\n&quot;);
+
+	for(j&#x3D;1;j&lt;&#x3D;5;j++)&#123;
+		ListInsert(lb,j,b[j-1]);
+	&#125;
+	printf(&quot;lb&#x3D;&quot;);
+	ListTraverse(lb,print);
+	printf(&quot;\n&quot;);
+
+	MergeList_L(la,lb,lc);
+	printf(&quot;lc&#x3D;&quot;);
+	ListTraverse(lc,print);
+
+	DestroyList(la);
+	DestroyList(lb);
+	DestroyList(lc);
+	
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 问题一.cpp
+typedef int ElemType;&#x2F;&#x2F; 要加分号
+# include &quot;c1.h&quot;
+# include &quot;linklist.cpp&quot;
+
+void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
+	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
+	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
+	LinkList pa,pb,pc;
+	
+	pa &#x3D; la -&gt; next;
+	pb &#x3D; lb -&gt; next;
+	lc &#x3D; la;
+	pc &#x3D; la;
+	
+	while(pa &amp;&amp; pb)&#123;&#x2F;&#x2F;pa,pb皆非空 
+		if(pa-&gt;data &lt;&#x3D; pb-&gt;data)&#123;
+			pc-&gt;next &#x3D; pa;
+			pc &#x3D; pa;
+			pa &#x3D; pa-&gt;next;
+		&#125;
+		else&#123;
+			pc-&gt;next &#x3D; pb;
+			pc &#x3D; pb;
+			pb &#x3D; pb-&gt;next;
+		&#125;
+	&#125;
+	
+	pc-&gt;next &#x3D; pa?pa:pb;&#x2F;&#x2F;当la,lb中的一个空时，将未空的一个接入lc
+	free(lb);&#x2F;&#x2F;释放lb的头结点
+&#125;&#x2F;&#x2F; MergeList_L
+
+void print(ElemType c)&#123;
+	printf(&quot;%d  &quot;,c);
+&#125;
+
+int main()&#123;
+	LinkList la,lb,lc;
+	int j,a[4]&#x3D;&#123;1,3,5,7&#125;,b[5]&#x3D;&#123;2,4,6,8,10&#125;;
+
+	InitList(la);
+	InitList(lb);
+	
+	for(j&#x3D;1;j&lt;&#x3D;4;j++)&#123;
+		ListInsert(la,j,a[j-1]);
+	&#125;
+	printf(&quot;la&#x3D;&quot;);
+	ListTraverse(la,print);
+	printf(&quot;\n&quot;);
+
+	for(j&#x3D;1;j&lt;&#x3D;5;j++)&#123;
+		ListInsert(lb,j,b[j-1]);
+	&#125;
+	printf(&quot;lb&#x3D;&quot;);
+	ListTraverse(lb,print);
+	printf(&quot;\n&quot;);
+
+	MergeList_L(la,lb,lc);
+	printf(&quot;lc&#x3D;&quot;);
+	ListTraverse(lc,print);
+
+	DestroyList(la);
+	DestroyList(lb);
+	DestroyList(lc);
+	
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; linklist.cpp
+&#x2F;&#x2F; 线性表的单链表存储结构
+typedef struct LNode
+&#123;
+	ElemType data;
+	LNode *next;
+&#125;*LinkList; 
+
+&#x2F;&#x2F; 单链表线性表的基本操作(12个)
+Status InitList(LinkList &amp;L) 		&#x2F;&#x2F;*************
+&#123; &#x2F;&#x2F; 操作结果：构造一个空的线性表L
+	L &#x3D; (LinkList)malloc(sizeof(LNode));&#x2F;&#x2F;分配空间 
+	if(!L)&#123;
+		exit(OVERFLOW);
+	&#125;
+	L -&gt; next &#x3D; NULL;
+	return OK;
+&#125;
+
+Status DestroyList(LinkList &amp;L)	&#x2F;&#x2F;*************
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在。操作结果：销毁线性表L
+	LinkList p,q;
+	p &#x3D; L -&gt; next;
+	while(p)&#123;
+		q &#x3D; p -&gt; next; &#x2F;&#x2F;用q保存p-&gt;next的值，方便free()操作 
+		free(p); &#x2F;&#x2F;同时删除p的data域与next域 
+		p &#x3D; q;
+	&#125;
+	L &#x3D; NULL; &#x2F;&#x2F;置空L指针 
+	return OK;
+&#125;
+
+Status ClearList(LinkList L) &#x2F;&#x2F; 不改变L
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在。操作结果：将L重置为空表
+	LinkList p,q;
+	p&#x3D;L-&gt;next; &#x2F;&#x2F; p指向第一个结点
+	while(p) &#x2F;&#x2F; 没到表尾
+	&#123;
+	 q&#x3D;p-&gt;next;
+	 free(p);
+	 p&#x3D;q;
+	&#125;
+	L-&gt;next&#x3D;NULL; &#x2F;&#x2F; 头结点指针域为空
+	return OK;
+&#125;
+
+Status ListEmpty(LinkList L)
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在。操作结果：若L为空表，则返回TRUE，否则返回FALSE
+	if(L-&gt;next) &#x2F;&#x2F; 非空
+	 return FALSE;
+	else
+	 return TRUE;
+&#125;
+
+int ListLength(LinkList L)	&#x2F;&#x2F;*************
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在。操作结果：返回L中数据元素个数
+	LinkList p;
+	int i &#x3D; 0;
+	p &#x3D; L -&gt; next;&#x2F;&#x2F;p指向首元结点 
+	while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+		p &#x3D; p -&gt; next;
+		i++;
+	&#125; 
+	return i;
+&#125;
+
+Status GetElem(LinkList L,int i,ElemType &amp;e) &#x2F;&#x2F; 算法2.8
+&#123; &#x2F;&#x2F; L为带头结点的单链表的头指针。当第i个元素存在时,其值赋给e并返回OK,否则返回ERROR
+	LinkList p; 
+	int j &#x3D; 1; &#x2F;&#x2F;初始化 
+	p &#x3D; L -&gt; next; &#x2F;&#x2F;p指向首元结点 
+	while(p &amp;&amp; j&lt;1)&#123; &#x2F;&#x2F;顺指针向后查找，直到 p 指向第 i 个元素或 p 为空 
+		p &#x3D; p -&gt; next;
+		++j;
+	&#125;
+	if(!p || j&gt;i)&#123; &#x2F;&#x2F;i&gt;l.len或i&lt;1情况 
+		return ERROR;
+	&#125;
+	e &#x3D; p -&gt; data; &#x2F;&#x2F;将p结点中的data域值赋给e 
+	return OK;
+&#125;
+
+int LocateElem(LinkList L,ElemType e,Status(*compare)(ElemType,ElemType))
+&#123; &#x2F;&#x2F; 初始条件: 线性表L已存在,compare()是数据元素判定函数(满足为1,否则为0)
+&#x2F;&#x2F; 操作结果: 返回L中第1个与e满足关系compare()的数据元素的位序。
+&#x2F;&#x2F;           若这样的数据元素不存在,则返回值为0
+	int i&#x3D;0;
+	LinkList p&#x3D;L-&gt;next;
+	while(p)
+	&#123;
+	 i++;
+	 if(compare(p-&gt;data,e)) &#x2F;&#x2F; 找到这样的数据元素
+	   return i;
+	 p&#x3D;p-&gt;next;
+	&#125;
+	return 0;
+&#125;
+
+Status PriorElem(LinkList L,ElemType cur_e,ElemType &amp;pre_e)
+&#123; &#x2F;&#x2F; 初始条件: 线性表L已存在
+&#x2F;&#x2F; 操作结果: 若cur_e是L的数据元素,且不是第一个,则用pre_e返回它的前驱,
+&#x2F;&#x2F;           返回OK;否则操作失败,pre_e无定义,返回INFEASIBLE
+	LinkList q,p&#x3D;L-&gt;next; &#x2F;&#x2F; p指向第一个结点
+	while(p-&gt;next) &#x2F;&#x2F; p所指结点有后继
+	&#123;
+	 q&#x3D;p-&gt;next; &#x2F;&#x2F; q为p的后继
+	 if(q-&gt;data&#x3D;&#x3D;cur_e)
+	 &#123;
+	   pre_e&#x3D;p-&gt;data;
+	   return OK;
+	 &#125;
+	 p&#x3D;q; &#x2F;&#x2F; p向后移
+	&#125;
+	return INFEASIBLE;
+&#125;
+
+Status NextElem(LinkList L,ElemType cur_e,ElemType &amp;next_e)
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在
+&#x2F;&#x2F; 操作结果：若cur_e是L的数据元素，且不是最后一个，则用next_e返回它的后继，
+&#x2F;&#x2F;           返回OK;否则操作失败，next_e无定义，返回INFEASIBLE
+	LinkList p&#x3D;L-&gt;next; &#x2F;&#x2F; p指向第一个结点
+	while(p-&gt;next) &#x2F;&#x2F; p所指结点有后继
+	&#123;
+	 if(p-&gt;data&#x3D;&#x3D;cur_e)
+	 &#123;
+	   next_e&#x3D;p-&gt;next-&gt;data;
+	   return OK;
+	 &#125;
+	 p&#x3D;p-&gt;next;
+	&#125;
+	return INFEASIBLE;
+&#125;
+
+Status ListInsert(LinkList L,int i,ElemType e) &#x2F;&#x2F;*************
+&#123; &#x2F;&#x2F; 在带头结点的单链线性表L中第i个位置之前插入元素e
+	LinkList p &#x3D; L;
+	LinkList s;
+	int j &#x3D; 0;
+	while(p &amp;&amp; j&lt;i-1)&#123; &#x2F;&#x2F;寻找第i个结点(j&#x3D;i-1时，找到第i个结点) 
+		p &#x3D; p -&gt; next;
+		++j;
+	&#125;
+	if(!p || j&gt;i-1)&#123; &#x2F;&#x2F;i 值非法 
+		return ERROR;
+	&#125;
+	s &#x3D; (LinkList)malloc(sizeof(LNode)); &#x2F;&#x2F;新建结点 
+	s -&gt; data &#x3D; e; &#x2F;&#x2F;赋值 
+	s -&gt; next &#x3D; p -&gt; next; &#x2F;&#x2F;将结点插入链表  
+	p -&gt; next &#x3D; s; &#x2F;&#x2F;将结点插入链表 
+	return OK;
+&#125;
+
+Status ListDelete(LinkList L,int i,ElemType &amp;e) &#x2F;&#x2F; 算法2.10。不改变L
+&#123; &#x2F;&#x2F; 在带头结点的单链线性表L中，删除第i个元素,并由e返回其值
+	int j&#x3D;0;
+	LinkList p&#x3D;L,q;
+	while(p-&gt;next&amp;&amp;j&lt;i-1) &#x2F;&#x2F; 寻找第i个结点,并令p指向其前趋
+	&#123;
+	 p&#x3D;p-&gt;next;
+	 j++;
+	&#125;
+	if(!p-&gt;next||j&gt;i-1) &#x2F;&#x2F; 删除位置不合理
+	 	return ERROR;
+	q&#x3D;p-&gt;next; &#x2F;&#x2F; 删除并释放结点
+	p-&gt;next&#x3D;q-&gt;next;
+	e&#x3D;q-&gt;data;
+	free(q);
+	return OK;
+&#125;
+
+Status ListTraverse(LinkList L,void(*vi)(ElemType))	&#x2F;&#x2F;*************
+&#x2F;&#x2F; vi的形参类型为ElemType，与bo2-1.cpp中相应函数的形参类型ElemType&amp;不同
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在
+&#x2F;&#x2F; 操作结果:依次对L的每个数据元素调用函数vi()。一旦vi()失败,则操作失败
+	LinkList p;
+	p &#x3D; L-&gt;next; &#x2F;&#x2F;p指向首元结点 
+	while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+		vi(p -&gt; data);
+		p &#x3D; p -&gt; next;
+	&#125; 
+	printf(&quot;\n&quot;);
+	return OK;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 
                 
             </div>
@@ -1911,7 +2379,7 @@ std::cout&lt;&lt;endl;&#x2F;&#x2F; endl就相当于输出的时候回车<span ar
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">85k</span>&nbsp;字
+                class="white-color">88.3k</span>&nbsp;字
             
             
             
@@ -2183,13 +2651,13 @@ $(function () {
 
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="/js/fireworks.js"></script>
     
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
