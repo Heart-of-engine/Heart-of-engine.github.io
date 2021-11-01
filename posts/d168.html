@@ -31,7 +31,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.3.0"><!-- hexo-inject:begin --><!-- hexo-inject:end --><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
+<meta name="generator" content="Hexo 5.3.0"><link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"><!-- hexo-inject:begin --><!-- hexo-inject:end --></head>
 
 
 
@@ -504,21 +504,21 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-10-22
+                    2021-10-30
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-file-word fa-fw"></i>文章字数:&nbsp;&nbsp;
-                    9.1k
+                    10.9k
                 </div>
                 
 
                 
                 <div class="info-break-policy">
                     <i class="far fa-clock fa-fw"></i>阅读时长:&nbsp;&nbsp;
-                    44 分
+                    51 分
                 </div>
                 
 
@@ -1434,254 +1434,6 @@ std::cout&lt;&lt;endl;&#x2F;&#x2F; endl就相当于输出的时候回车<span ar
 <li>在 <code>linklist.cpp</code> 实现两有序表合并所需要的基本操作：<code>InitList</code> ，<code>DestroyList</code> ，<code>ListTraverse</code> ，<code>GetElem</code> ，<code>ListInsert</code></li>
 </ol>
 <p>请注意：写完一个函数后，应回到 <code>MergeLink.cpp</code> 进行编译。测试正确后，再开始写其它函数</p>
-<ol start="5">
-<li>将上一次实验中的 <code>Merge</code> 函数和 <code>main</code> 函数复制到 <code>MergeLink.cpp</code> 文件中，将其中的 <code>SqList</code> 类型均改为 <code>LinkList</code> 类型，就可以运行了</li>
-</ol>
-<p>实验结束后，请将源程序（ <code>.h</code> 或 <code>.cpp</code> ）和实验报告打包后上传至课程中心的网站</p>
-<h4 id="四、问题-1"><a href="#四、问题-1" class="headerlink" title="四、问题"></a>四、问题</h4><ol>
-<li>请另写一个算法：直接利用指针对链表操作实现两有序表合并</li>
-</ol>
-<ol start="2">
-<li><p>认真体会并回答：基本操作集以外的操作通过调用基本操作来实现，而不是直接对顺序表或链表操作，有什么好处？</p>
-<p>答：通过调用基本操作来实现，而不是直接对顺序表或链表操作可以提高代码的复用性，从而在成功编写一次代码后不必担心调用的函数会出现错误，从而减少检查量。</p>
-</li>
-</ol>
-<h4 id="五、附件-1"><a href="#五、附件-1" class="headerlink" title="五、附件"></a>五、附件</h4><p>同实验一</p>
-<h4 id="六、发现-1"><a href="#六、发现-1" class="headerlink" title="六、发现"></a>六、发现</h4><h5 id="两个程序卡死问题"><a href="#两个程序卡死问题" class="headerlink" title="两个程序卡死问题"></a>两个程序卡死问题</h5><p>当 <code>ListTraverse</code> 函数为</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Status ListTraverse(LinkList L,void(*vi)(ElemType))	&#x2F;&#x2F;*************
-&#x2F;&#x2F; vi的形参类型为ElemType，与bo2-1.cpp中相应函数的形参类型ElemType&amp;不同
-&#123; &#x2F;&#x2F; 初始条件：线性表L已存在
-&#x2F;&#x2F; 操作结果:依次对L的每个数据元素调用函数vi()。一旦vi()失败,则操作失败
-	LinkList p;
-	p &#x3D; L; &#x2F;&#x2F;p指向头结点 
-	while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
-		p &#x3D; p -&gt; next;
-		vi(p -&gt; data);
-	&#125; 
-	printf(&quot;\n&quot;);
-	return OK;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>时，输出结果为</p>
-<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
---------------------------------
-Process exited after 5.842 seconds with return value 3221225477
-请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>而当</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
-	p &#x3D; p -&gt; next;
-	vi(p -&gt; data);
-&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>更换为</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
-	vi(p -&gt; data);
-	p &#x3D; p -&gt; next;
-&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>时，输出结果为</p>
-<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
-
-lb&#x3D;2  4  6  8  10
-
-lc&#x3D;1  1  1  1  2  2  2  2  2
-
---------------------------------
-Process exited after 0.07741 seconds with return value 0
-请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我认为这样的结果出现的原因在于：</p>
-<p>出错的函数中的 <code>p = p -&gt; next;</code> 语句在 <code>vi(p -&gt; data);</code> 语句之前，这样就会导致当 <code>p</code> 指向 <code>NULL</code> 时，<code>vi</code> 继续对 <code>NULL -&gt; data</code> 进行操作，导致程序卡死</p>
-<p>与此同时，当问题一中 <code>MergeList_L</code> 函数为</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
-	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
-	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
-	LinkList pa,pb,pc;
-	
-	pa &#x3D; la -&gt; next;
-	pb &#x3D; lb -&gt; next;
-	lc &#x3D; la;
-	pc &#x3D; pa;
-	
-	while(pa &amp;&amp; pb)&#123;&#x2F;&#x2F;pa,pb皆非空 
-		if(pa-&gt;data &lt;&#x3D; pb-&gt;data)&#123;
-			pc-&gt;next &#x3D; pa;
-			pc &#x3D; pa;
-			pa &#x3D; pa-&gt;next;
-		&#125;
-		else&#123;
-			pc-&gt;next &#x3D; pb;
-			pc &#x3D; pb;
-			pb &#x3D; pb-&gt;next;
-		&#125;
-	&#125;
-	
-	pc-&gt;next &#x3D; pa?pa:pb;&#x2F;&#x2F;当la,lb中的一个空时，将未空的一个接入lc
-	free(lb);&#x2F;&#x2F;释放lb的头结点
-&#125;&#x2F;&#x2F; MergeList_L<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>时，输出结果卡死在</p>
-<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
-
-lb&#x3D;2  4  6  8  10
-
-<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
-<p>而当 <code>pc = pa;</code> 调整为 <code>pc = la;</code> 时，输出结果正常：</p>
-<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
-
-lb&#x3D;2  4  6  8  10
-
-lc&#x3D;1  2  3  4  5  6  7  8  10
-
---------------------------------
-Process exited after 2.031 seconds with return value 3221226356
-请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<p>我认为这样的结果出现的原因在于：</p>
-<p>错误程序中的 <code>pc = pa;</code> 使函数 <code>MergeList_L(la,lb,lc);</code> 中无法正常进行</p>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">pc-&gt;next &#x3D; pa;
-pc &#x3D; pa;
-pa &#x3D; pa-&gt;next;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
-<p>操作，致使主函数卡在函数 <code>MergeList_L(la,lb,lc);</code> 中无法离开，造成程序卡死</p>
-<h4 id="七、程序"><a href="#七、程序" class="headerlink" title="七、程序"></a>七、程序</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; MergeLink.cpp
-typedef int ElemType;&#x2F;&#x2F; 要加分号
-# include &quot;c1.h&quot;
-# include &quot;linklist.cpp&quot;
-
-void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
-	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
-	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
-
-	InitList(lc);
-	int i,j,k;
-	i&#x3D;j&#x3D;1;
-	k&#x3D;0;
-
-	int la_len,lb_len;
-	la_len &#x3D; ListLength(la);
-	lb_len &#x3D; ListLength(lb);
-
-	ElemType ai,bj;
-	while((i&lt;&#x3D;la_len)&amp;&amp;(j&lt;&#x3D;lb_len))&#123;&#x2F;&#x2F; la与lb均非空
-		GetElem(la,i,ai);
-		GetElem(lb,j,bj);
-		if(ai&lt;&#x3D;bj)&#123;
-			ListInsert(lc,++k,ai);
-			++i;
-		&#125;else&#123;
-			ListInsert(lc,++k,bj);
-			++j;
-		&#125;
-	&#125;
-
-	while(i&lt;&#x3D;la_len)&#123;
-		GetElem(la,i++,ai);
-		ListInsert(lc,++k,ai);
-	&#125;
-
-	while(j&lt;&#x3D;lb_len)&#123;
-		GetElem(lb,j++,bj);
-		ListInsert(lc,++k,bj);
-	&#125;
-
-&#125;&#x2F;&#x2F; MergeList_L
-
-void print(ElemType c)&#123;
-	printf(&quot;%d  &quot;,c);
-&#125;
-
-int main()&#123;
-	LinkList la,lb,lc;
-	int j,a[4]&#x3D;&#123;1,3,5,7&#125;,b[5]&#x3D;&#123;2,4,6,8,10&#125;;
-
-	InitList(la);
-	InitList(lb);
-	
-	for(j&#x3D;1;j&lt;&#x3D;4;j++)&#123;
-		ListInsert(la,j,a[j-1]);
-	&#125;
-	printf(&quot;la&#x3D;&quot;);
-	ListTraverse(la,print);
-	printf(&quot;\n&quot;);
-
-	for(j&#x3D;1;j&lt;&#x3D;5;j++)&#123;
-		ListInsert(lb,j,b[j-1]);
-	&#125;
-	printf(&quot;lb&#x3D;&quot;);
-	ListTraverse(lb,print);
-	printf(&quot;\n&quot;);
-
-	MergeList_L(la,lb,lc);
-	printf(&quot;lc&#x3D;&quot;);
-	ListTraverse(lc,print);
-
-	DestroyList(la);
-	DestroyList(lb);
-	DestroyList(lc);
-	
-	return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
-<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 问题一.cpp
-typedef int ElemType;&#x2F;&#x2F; 要加分号
-# include &quot;c1.h&quot;
-# include &quot;linklist.cpp&quot;
-
-void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
-	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
-	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
-	LinkList pa,pb,pc;
-	
-	pa &#x3D; la -&gt; next;
-	pb &#x3D; lb -&gt; next;
-	lc &#x3D; la;
-	pc &#x3D; la;
-	
-	while(pa &amp;&amp; pb)&#123;&#x2F;&#x2F;pa,pb皆非空 
-		if(pa-&gt;data &lt;&#x3D; pb-&gt;data)&#123;
-			pc-&gt;next &#x3D; pa;
-			pc &#x3D; pa;
-			pa &#x3D; pa-&gt;next;
-		&#125;
-		else&#123;
-			pc-&gt;next &#x3D; pb;
-			pc &#x3D; pb;
-			pb &#x3D; pb-&gt;next;
-		&#125;
-	&#125;
-	
-	pc-&gt;next &#x3D; pa?pa:pb;&#x2F;&#x2F;当la,lb中的一个空时，将未空的一个接入lc
-	free(lb);&#x2F;&#x2F;释放lb的头结点
-&#125;&#x2F;&#x2F; MergeList_L
-
-void print(ElemType c)&#123;
-	printf(&quot;%d  &quot;,c);
-&#125;
-
-int main()&#123;
-	LinkList la,lb,lc;
-	int j,a[4]&#x3D;&#123;1,3,5,7&#125;,b[5]&#x3D;&#123;2,4,6,8,10&#125;;
-
-	InitList(la);
-	InitList(lb);
-	
-	for(j&#x3D;1;j&lt;&#x3D;4;j++)&#123;
-		ListInsert(la,j,a[j-1]);
-	&#125;
-	printf(&quot;la&#x3D;&quot;);
-	ListTraverse(la,print);
-	printf(&quot;\n&quot;);
-
-	for(j&#x3D;1;j&lt;&#x3D;5;j++)&#123;
-		ListInsert(lb,j,b[j-1]);
-	&#125;
-	printf(&quot;lb&#x3D;&quot;);
-	ListTraverse(lb,print);
-	printf(&quot;\n&quot;);
-
-	MergeList_L(la,lb,lc);
-	printf(&quot;lc&#x3D;&quot;);
-	ListTraverse(lc,print);
-
-	DestroyList(la);
-	DestroyList(lb);
-	DestroyList(lc);
-	
-	return 0;
-&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
 <pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; linklist.cpp
 &#x2F;&#x2F; 线性表的单链表存储结构
 typedef struct LNode
@@ -1865,6 +1617,452 @@ Status ListTraverse(LinkList L,void(*vi)(ElemType))	&#x2F;&#x2F;*************
 	printf(&quot;\n&quot;);
 	return OK;
 &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="5">
+<li>将上一次实验中的 <code>Merge</code> 函数和 <code>main</code> 函数复制到 <code>MergeLink.cpp</code> 文件中，将其中的 <code>SqList</code> 类型均改为 <code>LinkList</code> 类型，就可以运行了</li>
+</ol>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; MergeLink.cpp
+typedef int ElemType;&#x2F;&#x2F; 要加分号
+# include &quot;c1.h&quot;
+# include &quot;linklist.cpp&quot;
+
+void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
+	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
+	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
+
+	InitList(lc);
+	int i,j,k;
+	i&#x3D;j&#x3D;1;
+	k&#x3D;0;
+
+	int la_len,lb_len;
+	la_len &#x3D; ListLength(la);
+	lb_len &#x3D; ListLength(lb);
+
+	ElemType ai,bj;
+	while((i&lt;&#x3D;la_len)&amp;&amp;(j&lt;&#x3D;lb_len))&#123;&#x2F;&#x2F; la与lb均非空
+		GetElem(la,i,ai);
+		GetElem(lb,j,bj);
+		if(ai&lt;&#x3D;bj)&#123;
+			ListInsert(lc,++k,ai);
+			++i;
+		&#125;else&#123;
+			ListInsert(lc,++k,bj);
+			++j;
+		&#125;
+	&#125;
+
+	while(i&lt;&#x3D;la_len)&#123;
+		GetElem(la,i++,ai);
+		ListInsert(lc,++k,ai);
+	&#125;
+
+	while(j&lt;&#x3D;lb_len)&#123;
+		GetElem(lb,j++,bj);
+		ListInsert(lc,++k,bj);
+	&#125;
+
+&#125;&#x2F;&#x2F; MergeList_L
+
+void print(ElemType c)&#123;
+	printf(&quot;%d  &quot;,c);
+&#125;
+
+int main()&#123;
+	LinkList la,lb,lc;
+	int j,a[4]&#x3D;&#123;1,3,5,7&#125;,b[5]&#x3D;&#123;2,4,6,8,10&#125;;
+
+	InitList(la);
+	InitList(lb);
+	
+	for(j&#x3D;1;j&lt;&#x3D;4;j++)&#123;
+		ListInsert(la,j,a[j-1]);
+	&#125;
+	printf(&quot;la&#x3D;&quot;);
+	ListTraverse(la,print);
+	printf(&quot;\n&quot;);
+
+	for(j&#x3D;1;j&lt;&#x3D;5;j++)&#123;
+		ListInsert(lb,j,b[j-1]);
+	&#125;
+	printf(&quot;lb&#x3D;&quot;);
+	ListTraverse(lb,print);
+	printf(&quot;\n&quot;);
+
+	MergeList_L(la,lb,lc);
+	printf(&quot;lc&#x3D;&quot;);
+	ListTraverse(lc,print);
+
+	DestroyList(la);
+	DestroyList(lb);
+	DestroyList(lc);
+	
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>实验结束后，请将源程序（ <code>.h</code> 或 <code>.cpp</code> ）和实验报告打包后上传至课程中心的网站</p>
+<h4 id="四、问题-1"><a href="#四、问题-1" class="headerlink" title="四、问题"></a>四、问题</h4><ol>
+<li><p>请另写一个算法：直接利用指针对链表操作实现两有序表合并</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">&#x2F;&#x2F; 问题一.cpp
+typedef int ElemType;&#x2F;&#x2F; 要加分号
+# include &quot;c1.h&quot;
+# include &quot;linklist.cpp&quot;
+
+void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
+	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
+	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
+	LinkList pa,pb,pc;
+	
+	pa &#x3D; la -&gt; next;
+	pb &#x3D; lb -&gt; next;
+	lc &#x3D; la;
+	pc &#x3D; la;
+	
+	while(pa &amp;&amp; pb)&#123;&#x2F;&#x2F;pa,pb皆非空 
+		if(pa-&gt;data &lt;&#x3D; pb-&gt;data)&#123;
+			pc-&gt;next &#x3D; pa;
+			pc &#x3D; pa;
+			pa &#x3D; pa-&gt;next;
+		&#125;
+		else&#123;
+			pc-&gt;next &#x3D; pb;
+			pc &#x3D; pb;
+			pb &#x3D; pb-&gt;next;
+		&#125;
+	&#125;
+	
+	pc-&gt;next &#x3D; pa?pa:pb;&#x2F;&#x2F;当la,lb中的一个空时，将未空的一个接入lc
+	free(lb);&#x2F;&#x2F;释放lb的头结点
+&#125;&#x2F;&#x2F; MergeList_L
+
+void print(ElemType c)&#123;
+	printf(&quot;%d  &quot;,c);
+&#125;
+
+int main()&#123;
+	LinkList la,lb,lc;
+	int j,a[4]&#x3D;&#123;1,3,5,7&#125;,b[5]&#x3D;&#123;2,4,6,8,10&#125;;
+
+	InitList(la);
+	InitList(lb);
+	
+	for(j&#x3D;1;j&lt;&#x3D;4;j++)&#123;
+		ListInsert(la,j,a[j-1]);
+	&#125;
+	printf(&quot;la&#x3D;&quot;);
+	ListTraverse(la,print);
+	printf(&quot;\n&quot;);
+
+	for(j&#x3D;1;j&lt;&#x3D;5;j++)&#123;
+		ListInsert(lb,j,b[j-1]);
+	&#125;
+	printf(&quot;lb&#x3D;&quot;);
+	ListTraverse(lb,print);
+	printf(&quot;\n&quot;);
+
+	MergeList_L(la,lb,lc);
+	printf(&quot;lc&#x3D;&quot;);
+	ListTraverse(lc,print);
+
+	DestroyList(la);
+	DestroyList(lb);
+	DestroyList(lc);
+	
+	return 0;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+</li>
+</ol>
+<ol start="2">
+<li><p>认真体会并回答：基本操作集以外的操作通过调用基本操作来实现，而不是直接对顺序表或链表操作，有什么好处？</p>
+<p>答：通过调用基本操作来实现，而不是直接对顺序表或链表操作可以提高代码的复用性，从而在成功编写一次代码后不必担心调用的函数会出现错误，从而减少检查量。</p>
+</li>
+</ol>
+<h4 id="五、附件-1"><a href="#五、附件-1" class="headerlink" title="五、附件"></a>五、附件</h4><p>同实验一</p>
+<h4 id="六、发现-1"><a href="#六、发现-1" class="headerlink" title="六、发现"></a>六、发现</h4><h5 id="两个程序卡死问题"><a href="#两个程序卡死问题" class="headerlink" title="两个程序卡死问题"></a>两个程序卡死问题</h5><p>当 <code>ListTraverse</code> 函数为</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">Status ListTraverse(LinkList L,void(*vi)(ElemType))	&#x2F;&#x2F;*************
+&#x2F;&#x2F; vi的形参类型为ElemType，与bo2-1.cpp中相应函数的形参类型ElemType&amp;不同
+&#123; &#x2F;&#x2F; 初始条件：线性表L已存在
+&#x2F;&#x2F; 操作结果:依次对L的每个数据元素调用函数vi()。一旦vi()失败,则操作失败
+	LinkList p;
+	p &#x3D; L; &#x2F;&#x2F;p指向头结点 
+	while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+		p &#x3D; p -&gt; next;
+		vi(p -&gt; data);
+	&#125; 
+	printf(&quot;\n&quot;);
+	return OK;
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>时，输出结果为</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+--------------------------------
+Process exited after 5.842 seconds with return value 3221225477
+请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而当</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+	p &#x3D; p -&gt; next;
+	vi(p -&gt; data);
+&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>更换为</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">while(p !&#x3D; NULL)&#123; &#x2F;&#x2F;p非空 
+	vi(p -&gt; data);
+	p &#x3D; p -&gt; next;
+&#125; <span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>时，输出结果为</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+
+lb&#x3D;2  4  6  8  10
+
+lc&#x3D;1  1  1  1  2  2  2  2  2
+
+--------------------------------
+Process exited after 0.07741 seconds with return value 0
+请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我认为这样的结果出现的原因在于：</p>
+<p>出错的函数中的 <code>p = p -&gt; next;</code> 语句在 <code>vi(p -&gt; data);</code> 语句之前，这样就会导致当 <code>p</code> 指向 <code>NULL</code> 时，<code>vi</code> 继续对 <code>NULL -&gt; data</code> 进行操作，导致程序卡死</p>
+<p>与此同时，当问题一中 <code>MergeList_L</code> 函数为</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">void MergeList_L(LinkList la,LinkList lb,LinkList &amp;lc)&#123;
+	&#x2F;&#x2F; 已知顺序线性表La和Lb的元素按值非递减排序
+	&#x2F;&#x2F; 归并La和Lb得到新的肾虚线性表Lc，Lc的元素也按值非递减排列
+	LinkList pa,pb,pc;
+	
+	pa &#x3D; la -&gt; next;
+	pb &#x3D; lb -&gt; next;
+	lc &#x3D; la;
+	pc &#x3D; pa;
+	
+	while(pa &amp;&amp; pb)&#123;&#x2F;&#x2F;pa,pb皆非空 
+		if(pa-&gt;data &lt;&#x3D; pb-&gt;data)&#123;
+			pc-&gt;next &#x3D; pa;
+			pc &#x3D; pa;
+			pa &#x3D; pa-&gt;next;
+		&#125;
+		else&#123;
+			pc-&gt;next &#x3D; pb;
+			pc &#x3D; pb;
+			pb &#x3D; pb-&gt;next;
+		&#125;
+	&#125;
+	
+	pc-&gt;next &#x3D; pa?pa:pb;&#x2F;&#x2F;当la,lb中的一个空时，将未空的一个接入lc
+	free(lb);&#x2F;&#x2F;释放lb的头结点
+&#125;&#x2F;&#x2F; MergeList_L<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>时，输出结果卡死在</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+
+lb&#x3D;2  4  6  8  10
+
+<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span></span></code></pre>
+<p>而当 <code>pc = pa;</code> 调整为 <code>pc = la;</code> 时，输出结果正常：</p>
+<pre class="line-numbers language-none"><code class="language-none">la&#x3D;1  3  5  7
+
+lb&#x3D;2  4  6  8  10
+
+lc&#x3D;1  2  3  4  5  6  7  8  10
+
+--------------------------------
+Process exited after 2.031 seconds with return value 3221226356
+请按任意键继续. . .<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>我认为这样的结果出现的原因在于：</p>
+<p>错误程序中的 <code>pc = pa;</code> 使函数 <code>MergeList_L(la,lb,lc);</code> 中无法正常进行</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">pc-&gt;next &#x3D; pa;
+pc &#x3D; pa;
+pa &#x3D; pa-&gt;next;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span></span></code></pre>
+<p>操作，致使主函数卡在函数 <code>MergeList_L(la,lb,lc);</code> 中无法离开，造成程序卡死</p>
+<h3 id="实验三-表达式求值-2021-10-30"><a href="#实验三-表达式求值-2021-10-30" class="headerlink" title="实验三 表达式求值$(2021.10.30)$"></a>实验三 表达式求值$(2021.10.30)$</h3><h4 id="一、实验目的-2"><a href="#一、实验目的-2" class="headerlink" title="一、实验目的"></a>一、实验目的</h4><ol>
+<li><p>熟悉栈的基本操作及应用。</p>
+</li>
+<li><p>了解算术表达式求值问题的解决方法。</p>
+</li>
+</ol>
+<h4 id="二、实验内容-2"><a href="#二、实验内容-2" class="headerlink" title="二、实验内容"></a>二、实验内容</h4><ol>
+<li><p>利用栈的基本操作实现算术表达式求值</p>
+</li>
+<li><p>将其扩展到多位数的运算并增加指数运算。</p>
+</li>
+<li><p>记录实验过程并总结实验经验，完成实验报告。</p>
+</li>
+</ol>
+<h4 id="三、实验步骤-2"><a href="#三、实验步骤-2" class="headerlink" title="三、实验步骤"></a>三、实验步骤</h4><ol>
+<li><p>新建一个文件夹，并命名。</p>
+</li>
+<li><p>将实验材料(附件)中的 <code>c1.h</code> 和 <code>sqstack.cpp</code> 文件复制到同一个文件夹中。</p>
+<p>其中，<code>c1.h</code> 中包含程序中常用的头文件及宏定义，以后每次都要记得将该文件包括到你的源程序中。</p>
+</li>
+</ol>
+<p><code>sqstack.cpp</code> 中包含线性表顺序存储结构的定义和部分基本操作的实现。</p>
+<p>3.新建一个 <code>caculater.cpp</code> 源文件(主文件)中，在其中输入以下三个命令(语句)及一个空的 <code>main</code> 函数</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">typedef char SElemType;
+＃include &quot;c1.h&quot;
+＃include &quot;sqstack.cpp&quot;
+main()&#123;
+    
+&#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<ol start="4">
+<li><p>在 <code>caculater.cpp</code> 中实现下列函数：<code>In</code> , <code>Precede</code> , <code>Operate</code> , <code>EvaluateExpression</code>.</p>
+<p>请注意：写完一个函数后，应回到进行调用及编译，检查错误。测试正确后，再开始写其它函数。</p>
+</li>
+<li><p>在 <code>main</code> 函数中调用 <code>EvaluateExpression</code> ，编译运行，检查结果是否正确。</p>
+</li>
+<li><p>修改使其能实现多位数的运算，并能进行指数计算。</p>
+</li>
+</ol>
+<p>实验结束后，请将源程序（ <code>.h</code> 或 <code>.cpp</code> ）和实验报告打包后上传至课程中心的网站</p>
+<h4 id="四、问题-2"><a href="#四、问题-2" class="headerlink" title="四、问题"></a>四、问题</h4><ol>
+<li>运算符栈和操作数栈中的元素应定义为何类型？</li>
+</ol>
+<p>答：定义为字符类型（$SElemType$）。</p>
+<ol start="2">
+<li>输入的数字字符如何转换成整型？</li>
+</ol>
+<p>答：首先在定义元素变量时定义为整型，再在计算时增加一个数组用于储存数字，并且将之后 $ASCII$ 码的计算改为数值的计算。</p>
+<ol start="3">
+<li>算法的输入数据、中间结果及最终结果最大为多少？如何使算法能处理任意整数、小数的算术运算？</li>
+</ol>
+<p>答：最大为 $9$ ，要任意处理整数或小数，要更改元素类型，并使用数组来储存每一个数值。</p>
+<ol start="4">
+<li>如果要加入指数运算，如何实现？</li>
+</ol>
+<p>答：增加一个对指数计算的优先级的判断。</p>
+<h4 id="五、附件-2"><a href="#五、附件-2" class="headerlink" title="五、附件"></a>五、附件</h4><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++"> &#x2F;&#x2F;SqStack.cpp
+ &#x2F;&#x2F; 栈的顺序存储表示
+ #define STACK_INIT_SIZE 10 &#x2F;&#x2F; 存储空间初始分配量
+ #define STACKINCREMENT 2 &#x2F;&#x2F; 存储空间分配增量
+ struct SqStack
+ &#123;
+   SElemType *base; &#x2F;&#x2F; 在栈构造之前和销毁之后，base的值为NULL
+   SElemType *top; &#x2F;&#x2F; 栈顶指针
+   int stacksize; &#x2F;&#x2F; 当前已分配的存储空间，以元素为单位
+ &#125;; &#x2F;&#x2F; 顺序栈 
+
+&#x2F;&#x2F; 顺序栈的基本操作（9个）
+ Status InitStack(SqStack &amp;S)
+ &#123; &#x2F;&#x2F; 构造一个空栈S
+   if(!(S.base&#x3D;(SElemType *)malloc(STACK_INIT_SIZE*sizeof(SElemType))))
+     exit(OVERFLOW); &#x2F;&#x2F; 存储分配失败
+   S.top&#x3D;S.base;
+   S.stacksize&#x3D;STACK_INIT_SIZE;
+   return OK;
+ &#125;
+
+ Status DestroyStack(SqStack &amp;S)
+ &#123; &#x2F;&#x2F; 销毁栈S，S不再存在
+   free(S.base);
+   S.base&#x3D;NULL;
+   S.top&#x3D;NULL;
+   S.stacksize&#x3D;0;
+   return OK;
+ &#125;
+
+ Status ClearStack(SqStack &amp;S)
+ &#123; &#x2F;&#x2F; 把S置为空栈
+   S.top&#x3D;S.base;
+   return OK;
+ &#125;
+
+ Status StackEmpty(SqStack S)
+ &#123; &#x2F;&#x2F; 若栈S为空栈，则返回TRUE，否则返回FALSE
+   if(S.top&#x3D;&#x3D;S.base)
+     return TRUE;
+   else
+     return FALSE;
+ &#125;
+
+ int StackLength(SqStack S)
+ &#123; &#x2F;&#x2F; 返回S的元素个数，即栈的长度
+   return S.top-S.base;
+ &#125;
+
+ Status GetTop(SqStack S,SElemType &amp;e)
+ &#123; &#x2F;&#x2F; 若栈不空，则用e返回S的栈顶元素，并返回OK；否则返回ERROR
+   if(S.top&gt;S.base)
+   &#123;
+     e&#x3D;*(S.top-1);
+     return OK;
+   &#125;
+   else
+     return ERROR;
+ &#125;
+
+ Status Push(SqStack &amp;S,SElemType e)
+ &#123; &#x2F;&#x2F; 插入元素e为新的栈顶元素
+   if(S.top-S.base&gt;&#x3D;S.stacksize) &#x2F;&#x2F; 栈满，追加存储空间
+   &#123;
+     S.base&#x3D;(SElemType *)realloc(S.base,(S.stacksize+STACKINCREMENT)*sizeof(SElemType));
+     if(!S.base)
+       exit(OVERFLOW); &#x2F;&#x2F; 存储分配失败
+     S.top&#x3D;S.base+S.stacksize;
+     S.stacksize+&#x3D;STACKINCREMENT;
+   &#125;
+   *(S.top)++&#x3D;e;
+   return OK;
+ &#125;
+
+ Status Pop(SqStack &amp;S,SElemType &amp;e)
+ &#123; &#x2F;&#x2F; 若栈不空，则删除S的栈顶元素，用e返回其值，并返回OK；否则返回ERROR
+   if(S.top&#x3D;&#x3D;S.base)
+     return ERROR;
+   e&#x3D;*--S.top;
+   return OK;
+ &#125;
+
+ Status StackTraverse(SqStack S,Status(*visit)(SElemType))
+ &#123; &#x2F;&#x2F; 从栈底到栈顶依次对栈中每个元素调用函数visit()。
+   &#x2F;&#x2F; 一旦visit()失败，则操作失败
+   while(S.top&gt;S.base)
+     visit(*S.base++);
+   printf(&quot;\n&quot;);
+   return OK;
+ &#125;<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<h4 id="六、发现-2"><a href="#六、发现-2" class="headerlink" title="六、发现"></a>六、发现</h4><h5 id="return-优化"><a href="#return-优化" class="headerlink" title="return 优化"></a><code>return</code> 优化</h5><pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">int Operate(char a,char theta,char b)&#123;
+	&#x2F;&#x2F; 运算a theta b 
+	a -&#x3D; 48;&#x2F;&#x2F; &#39;0&#39;对应的数值为48
+	b -&#x3D; 48;
+	switch(theta)&#123;
+		case&#39;+&#39;: return a+b;
+		case&#39;-&#39;: return a-b;
+		case&#39;*&#39;: return a*b;
+		case&#39;&#x2F;&#39;: if(b&#x3D;&#x3D;0)&#123;
+			printf(&quot;除数b不能为0！&quot;);
+		&#125;
+		else&#123;
+			return a&#x2F;b;
+		&#125;
+	&#125; 
+&#125;&#x2F;&#x2F;Operate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+<p>首先 $return$ 的值需要为字符型，那么函数就需要为 $char$ 型，不能使用 $int$ 型，且 $return$ 值需要加 $48\ (‘0’的ASC码)$ </p>
+<p>其次我们可以采用全函数只使用一个 $return$ 的方式以简化函数</p>
+<p>如下</p>
+<pre class="line-numbers language-c++" data-language="c++"><code class="language-c++">SElemType Operate(SElemType a,SElemType theta,SElemType b)&#123;
+	&#x2F;&#x2F; 运算a theta b
+	SElemType c; 
+	a -&#x3D; 48;&#x2F;&#x2F; &#39;0&#39;对应的数值为48
+	b -&#x3D; 48;
+	switch(theta)&#123;
+		case&#39;+&#39;: c &#x3D; a+b+48; break;
+		case&#39;-&#39;: c &#x3D; a-b+48; break;
+		case&#39;*&#39;: c &#x3D; a*b+48; break;
+		case&#39;&#x2F;&#39;: if(b&#x3D;&#x3D;0)&#123;
+			printf(&quot;除数b不能为0！&quot;);
+		&#125;
+		else&#123;
+			c &#x3D; (a&#x2F;b)+48;
+		&#125;
+		break;
+	&#125;
+	return c;
+&#125;&#x2F;&#x2F;Operate<span aria-hidden="true" class="line-numbers-rows"><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span><span></span></span></code></pre>
+
+
+<h5 id="return-与-exit-函数的区别"><a href="#return-与-exit-函数的区别" class="headerlink" title="return 与 exit 函数的区别"></a><code>return</code> 与 <code>exit</code> 函数的区别</h5><blockquote>
+<p>摘自<a target="_blank" rel="noopener" href="https://www.yht7.com/news/159456">C语言 exit 函数 - C语言零基础入门教程</a></p>
+</blockquote>
+<p><strong>return 返回函数值，是关键字； exit 是一个函数。</strong></p>
+<p>return 是语言级别的，它表示了调用堆栈的返回；而 exit 是系统调用级别的，它表示了一个进程的结束。</p>
+<p><strong>return 是函数的退出(返回)；exit 是进程的退出。</strong></p>
+<p>return 是 C 语言提供的，exit 是操作系统提供的（或者函数库中给出的）。</p>
+<p>return 用于结束一个函数的执行，将函数的执行信息传出个其他调用函数使用；exit 函数是退出应用程序，删除进程使用的内存空间，并将应用程序的一个状态返回给 OS (操作系统)，这个状态标识了应用程序的一些运行信息，这个信息和机器和操作系统有关，一般是 0 为正常退出，非 0 为非正常退出。</p>
+<p>非主函数中调用 return 和 exit 效果很明显，但是在 main 函数中调用 return 和 exit 的现象就很模糊，多数情况下现象都是一致的。</p>
+<h5 id="atoi-函数"><a href="#atoi-函数" class="headerlink" title="atoi 函数"></a><code>atoi</code> 函数</h5><p><code>atoi</code> (表示 <code>ascii to integer</code>)是把字符串转换成 整型 数的一个函数，应用在计算机程序和办公软件中。 <code>int atoi (const char *nptr)</code> 函数会扫描参数 <code>nptr</code> 字符串，会跳过前面的空白字符（例如空格，<code>tab</code> 缩进）等。 如果 <code>nptr</code> 不能转换成 <code>int</code> 或者 <code>nptr</code> 为空字符串，那么将返回 $0$ 。</p>
 
                 
             </div>
@@ -2379,7 +2577,7 @@ Status ListTraverse(LinkList L,void(*vi)(ElemType))	&#x2F;&#x2F;*************
             <br>
             
             &nbsp;<i class="fas fa-chart-area"></i>&nbsp;站点总字数:&nbsp;<span
-                class="white-color">88.3k</span>&nbsp;字
+                class="white-color">90k</span>&nbsp;字
             
             
             
@@ -2651,13 +2849,13 @@ $(function () {
 
     <canvas class="fireworks" style="position: fixed;left: 0;top: 0;z-index: 1; pointer-events: none;" ></canvas> 
     <script type="text/javascript" src="//cdn.bootcss.com/animejs/2.2.0/anime.min.js"></script> 
-    <script type="text/javascript" src="/js/fireworks.js"></script><!-- hexo-inject:begin --><!-- hexo-inject:end -->
+    <script type="text/javascript" src="/js/fireworks.js"></script>
     
 <script>
             window.imageLazyLoadSetting = {
                 isSPA: false,
                 processImages: null,
             };
-        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script></body>
+        </script><script>window.addEventListener("load",function(){var t=/\.(gif|jpg|jpeg|tiff|png)$/i,r=/^data:image\/[a-z]+;base64,/;Array.prototype.slice.call(document.querySelectorAll("img[data-original]")).forEach(function(a){var e=a.parentNode;"A"===e.tagName&&(e.href.match(t)||e.href.match(r))&&(e.href=a.dataset.original)})});</script><script>!function(n){n.imageLazyLoadSetting.processImages=i;var e=n.imageLazyLoadSetting.isSPA,r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]"));function i(){e&&(r=Array.prototype.slice.call(document.querySelectorAll("img[data-original]")));for(var t,a=0;a<r.length;a++)0<=(t=(t=r[a]).getBoundingClientRect()).bottom&&0<=t.left&&t.top<=(n.innerHeight||document.documentElement.clientHeight)&&function(){var t,e,n,i,o=r[a];t=o,e=function(){r=r.filter(function(t){return o!==t})},n=new Image,i=t.getAttribute("data-original"),n.onload=function(){t.src=i,e&&e()},n.src=i}()}i(),n.addEventListener("scroll",function(){var t,e;t=i,e=n,clearTimeout(t.tId),t.tId=setTimeout(function(){t.call(e)},500)})}(this);</script><!-- hexo-inject:begin --><!-- hexo-inject:end --></body>
 
 </html>
